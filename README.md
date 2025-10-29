@@ -32,7 +32,8 @@ All the files used during the INTUITIVE project.
        - 'datasetPath' -> spike dataset 
 
 -------------------------------------------------------
-# TBCAS24 (JOURNAL) [submitted]
+# TBCAS24 (JOURNAL) 
+- published at: https://doi.org/10.1109/TBCAS.2024.3387545
 - intuitive_classifier
 	- contains result of characterization of effect of circuit non-idealities to classification accuracy
 - intuitive_classifier_sensor
@@ -59,6 +60,14 @@ All the files used during the INTUITIVE project.
 	- various useful MATLAB scripts.
  - intuitivechip_classifier_lcsvsnlcs_teensy_run2 -> contains LCS vs N-LCS comparisons (using chip spikes)
  	-  SENSOR_DATASETS -> LCS and N-LCS spike datasets;   SNN_SVM_PLOTS -> contains code to plot SNN+SVM results
+
+-------------------------------------------------------
+# ISCAS25
+- published at: https://doi.org/10.1109/ISCAS56072.2025.11043712
+- DERMIS/ISCAS25
+	- AD7746_DERMIS_ALLCHANNELS: Arduino code used to control the capacitive-to-digital evalboard
+	- arduino_yy_YshearForce1_F1.3_TR167.csv: Measurement results for the capacitive sensor
+	- plot_sensor.m: code to plot measurement results
 
    
      
