@@ -1,4 +1,4 @@
-function [maxSR,sig_ave] = print_textures(current_loc,stim,MR_type,plot_trials,hem_cnt)
+function [maxSR,sig_ave,sig_pp] = print_textures(current_loc,stim,MR_type,plot_trials,hem_cnt)
 
 
 tex_rs = stim.tex_rs;
@@ -246,6 +246,8 @@ for k = 1:size(tex_rs,1)
             SR{h,k,trial} = gradient(tex_rs_chunk)/(t(2)-t(1));
             maxSR(h,k,trial) = max(abs(SR{h,k,trial}));
             sig_ave(h,k,trial) = mean(tex_rs_chunk);
+            start_i=round(length(tex_rs_chunk)*0.1) % start at 0.2s to discard ramp up from 0
+            sig_pp(h,k,trial) = max(tex_rs_chunk(start_i:end)) - min(tex_rs_chunk(start_i:end));
         end
     end
     %subplot(3,4,k);

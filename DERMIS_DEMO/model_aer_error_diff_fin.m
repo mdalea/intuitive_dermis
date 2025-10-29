@@ -1,0 +1,430 @@
+%% Level-Crossing (ON/OFF spikes) with Welch PSD (your method) + random stalling
+clear; clc;
+close all;
+
+%% ------------------------ User parameters -----------------------------
+Vamp    = 6;              % sine amplitude [V]
+fin     = 1;              % sine frequency [Hz]  (a.k.a. freqin)
+LSB     = 12e-3;          % quantization step [V]  (spike step)
+
+Fs      = 1e6;            % simulation sample rate [Hz]
+Tsec    = 10;             % total duration [s]
+
+% Global RNG scheme: same seed per fin everywhere for comparability
+baseSeed = 41;            % seedFor(fin) = baseSeed + round(fin)
+
+% Welch PSD controls
+windowTime  = 10;                         % seconds per Welch segment
+windowSize  = round(Fs * windowTime);
+overlap     = round(windowSize/2);
+
+% Full-scale definition (for dBFS)
+FS_Vpp  = 6;
+FS_RMS  = FS_Vpp / (2 * sqrt(2));
+FS_Power = FS_RMS^2;
+
+% Noise-band & guards
+flo_default = 1;          % Hz, default lower bound for noise integration
+fbw = 500;                % Hz, upper bound for noise integration
+harmonics = 10;           % number of harmonics to exclude from noise
+
+% Stalling spec (formerly "blanking") — ALWAYS these relations:
+blank_us    = 200;        % each stalling window length [microseconds]
+gapMin_ms   = 3000/fin;     % minimum inter-stall spacing [ms]
+gapMax_ms   = 5000/fin;    % maximum inter-stall spacing [ms]
+
+% Optional thermal noise injection
+addThermalNoise = true;   % <-- toggle this flag
+noiseRMS = 0.1;           % noise RMS amplitude [V]
+%% ----------------------------------------------------------------------
+
+%% ------------------------ Timebase and stimulus ------------------------
+N   = round(Tsec*Fs);
+t   = (0:N-1).'/Fs;
+
+% First run uses the per-fin seed so it matches the sweep/overlays
+seed_rng_for(fin, baseSeed);
+x   = Vamp * sin(2*pi*fin*t);
+if addThermalNoise
+    x = x + noiseRMS * randn(size(x));
+end
+
+%% ------------------------ Encode to ON/OFF spikes ----------------------
+[spk_on, spk_off, y_rec_ideal] = lc_encode_and_reconstruct(x, LSB);
+
+%% ---------------- PSD + metrics (ideal reconstruction, Welch) ----------
+flo_eff = pick_flo(fin, flo_default);
+[f1, PSD1_dBFSbin, M1] = your_welch_psd_and_metrics(y_rec_ideal, Fs, fin, ...
+    windowSize, overlap, FS_Power, flo_eff, fbw, harmonics, windowTime);
+
+fprintf('\n=== Metrics (no stalling) ===\n');
+fprintf('flo=%.3g Hz | ', flo_eff);
+fprintf('SNR: %6.2f dB | ',  M1.SNR_dB);
+fprintf('SNDR: %6.2f dB | ', M1.SNDR_dB);
+fprintf('SFDR: %6.2f dB | ', M1.SFDR_dB);
+fprintf('ENOB: %6.3f bits\n', M1.ENOB_bits);
+
+%% -------------------- Random stalling of spike trains ------------------
+% Use the SAME seed used for this fin so PSDs match across blocks
+seed_rng_for(fin, baseSeed);
+mask_blank = make_blanking_mask(N, Fs, blank_us, gapMin_ms, gapMax_ms);
+spk_on_b   = spk_on; spk_off_b = spk_off;
+spk_on_b(mask_blank)  = 0;
+spk_off_b(mask_blank) = 0;
+
+% Reconstruction with induced error (explicit double to avoid integer ops)
+y_rec_err = LSB * (cumsum(double(spk_on_b)) - cumsum(double(spk_off_b)));
+
+%% ------------- PSD + metrics (with stalling error, Welch) -------------
+flo_eff = pick_flo(fin, flo_default);
+[f2, PSD2_dBFSbin, M2] = your_welch_psd_and_metrics(y_rec_err, Fs, fin, ...
+    windowSize, overlap, FS_Power, flo_eff, fbw, harmonics, windowTime);
+
+fprintf('\n=== Metrics (with stalling) ===\n');
+fprintf('flo=%.3g Hz | ', flo_eff);
+fprintf('SNR: %6.2f dB | ',  M2.SNR_dB);
+fprintf('SNDR: %6.2f dB | ', M2.SNDR_dB);
+fprintf('SFDR: %6.2f dB | ', M2.SFDR_dB);
+fprintf('ENOB: %6.3f bits\n', M2.ENOB_bits);
+
+%% ------------------------------ Plots ----------------------------------
+% Time-domain view
+tview = t < Tsec;
+figure('Name','Time domain');
+subplot(3,1,1);
+plot(t(tview), x(tview), 'LineWidth',1); grid on;
+xlabel('Time [s]'); ylabel('x(t) [V]');
+
+subplot(3,1,2);
+plot(t(tview), y_rec_ideal(tview), 'LineWidth',1); grid on;
+xlabel('Time [s]'); ylabel('\itŷ\rm (ideal) [V]');
+
+subplot(3,1,3);
+plot(t(tview), y_rec_err(tview), 'LineWidth',1); grid on;
+xlabel('Time [s]'); ylabel('\itŷ\rm (stalled) [V]');
+
+% Spike rasters (zoomed for readability)
+figure('Name','Spike trains (zoomed)');
+Tzoom = min(1e-3, Tsec);
+tzoom = t < Tzoom;
+yyaxis left
+stem(t(tzoom)*1e3, spk_on(tzoom), '.', 'Marker','none'); hold on;
+ylabel('ON spikes')
+yyaxis right
+stem(t(tzoom)*1e3, -spk_off(tzoom), '.', 'Marker','none');
+ylabel('OFF spikes (negative)');
+grid on; xlabel('Time [ms]');
+
+% Welch PSD plots (log frequency)
+figure('Name','Welch PSD (log f)');
+kpos1 = find(f1>0,1,'first');
+kpos2 = find(f2>0,1,'first');
+semilogx(f1(kpos1:end), PSD1_dBFSbin(kpos1:end), 'LineWidth',1); hold on; grid on; grid minor;
+semilogx(f2(kpos2:end), PSD2_dBFSbin(kpos2:end), 'LineWidth',1);
+xlabel('Frequency [Hz]');
+ylabel('PSD [dBFS]');
+legend('No stalling','With stalling','Location','southwest');
+xlim([0.5 1000])
+
+% Stalling mask
+figure('Name','Stalling mask');
+stairs(t*1e3, mask_blank, 'LineWidth',1); grid on;
+xlabel('Time [ms]'); ylabel('Stalled? (1=yes)');
+
+%% -------- Extra figure: PSD vs fin (with noise) ------------------------
+% Overlay PSDs for fin = [1, 10, 100, 500] with SAME stalling rule & RNG per fin
+useStalling = true;                   % true -> PSD of stalled reconstruction
+fins_show   = [1, 10, 100, 500];
+
+figure('Name','PSD vs fin (with noise)');
+hold on; grid on; grid minor;
+for ff = fins_show
+    % Seed per fin to make PSD comparable across figures
+    seed_rng_for(ff, baseSeed);
+
+    % Stimulus + noise
+    x_tmp = Vamp * sin(2*pi*ff*t);
+    if addThermalNoise
+        x_tmp = x_tmp + noiseRMS * randn(size(x_tmp));
+    end
+
+    % Encode & reconstruct
+    [spk_on_tmp, spk_off_tmp, y_rec_ideal_tmp] = lc_encode_and_reconstruct(x_tmp, LSB);
+
+    if useStalling
+        gapMin_ms_tmp = 3000/ff; gapMax_ms_tmp = 5000/ff;
+        % Same seed (already set above) -> consistent stalling mask for this fin
+        mask_b = make_blanking_mask(N, Fs, blank_us, gapMin_ms_tmp, gapMax_ms_tmp);
+        spk_on_tmp(mask_b)  = 0;
+        spk_off_tmp(mask_b) = 0;
+        y_tmp = LSB * (cumsum(double(spk_on_tmp)) - cumsum(double(spk_off_tmp)));
+    else
+        y_tmp = y_rec_ideal_tmp;
+    end
+
+    % PSD via Welch
+    flo_eff = pick_flo(ff, flo_default);
+    [f_tmp, PSD_tmp_dBFSbin, ~] = your_welch_psd_and_metrics( ...
+        y_tmp, Fs, ff, windowSize, overlap, FS_Power, flo_eff, fbw, harmonics, windowTime);
+
+    % Plot positive freqs
+    kpos = find(f_tmp > 0, 1, 'first');
+    semilogx(f_tmp(kpos:end), PSD_tmp_dBFSbin(kpos:end), 'LineWidth', 1);
+end
+xlabel('Frequency [Hz]');
+ylabel('PSD [dBFS]');
+xscale('log'); %xlim([0.5 1000])
+legend(arrayfun(@(ff) sprintf('f_{in} = %g Hz', ff), fins_show, 'UniformOutput', false), ...
+       'Location','southwest');
+
+% Optional styling/export
+if exist('micasplot','file'), micasplot, end
+width = 800; height = 600;
+set(gcf, 'Position', [100, 100, width, height]);
+saveas(gcf, ['./model_aer_error_diff_fin_psd_oneplot.png']);
+
+%% -------- PSD (with noise) on 4 subplots (2x2) -------------------------
+fins_grid = [1, 10, 100, 500];
+figure('Name','PSD (with noise) – 4 subplots');
+for i = 1:numel(fins_grid)
+    ff = fins_grid(i);
+    subplot(2,2,i); hold on; grid on; grid minor;
+
+    seed_rng_for(ff, baseSeed);
+
+    % Stimulus + noise
+    x_tmp = Vamp * sin(2*pi*ff*t);
+    if addThermalNoise
+        x_tmp = x_tmp + noiseRMS * randn(size(x_tmp));
+    end
+
+    % Encode
+    [spk_on_tmp, spk_off_tmp, y_ideal_tmp] = lc_encode_and_reconstruct(x_tmp, LSB);
+
+    % PSD (no stalling)
+    flo_eff = pick_flo(ff, flo_default);
+    [f_nb, PSD_nb_dBFSbin, ~] = your_welch_psd_and_metrics( ...
+        y_ideal_tmp, Fs, ff, windowSize, overlap, FS_Power, flo_eff, fbw, harmonics, windowTime);
+
+    % Apply stalling (ALWAYS 30/fin..300/fin)
+    gapMin_ms_tmp = 3000/ff; gapMax_ms_tmp = 5000/ff;
+    mask_b = make_blanking_mask(N, Fs, blank_us, gapMin_ms_tmp, gapMax_ms_tmp);
+    spk_on_b = spk_on_tmp; spk_off_b = spk_off_tmp;
+    spk_on_b(mask_b)  = 0; spk_off_b(mask_b) = 0;
+    y_stalled_tmp = LSB * (cumsum(double(spk_on_b)) - cumsum(double(spk_off_b)));
+
+    % PSD (with stalling)
+    [f_bl, PSD_bl_dBFSbin, ~] = your_welch_psd_and_metrics( ...
+        y_stalled_tmp, Fs, ff, windowSize, overlap, FS_Power, flo_eff, fbw, harmonics, windowTime);
+
+    % Plot
+    k1 = find(f_nb>0,1,'first'); k2 = find(f_bl>0,1,'first');
+    semilogx(f_nb(k1:end), PSD_nb_dBFSbin(k1:end), 'LineWidth',1);
+    semilogx(f_bl(k2:end), PSD_bl_dBFSbin(k2:end), 'LineWidth',1);
+    xscale('log');% xlim([0.5 1000])
+    xlabel('Frequency [Hz]'); ylabel('PSD [dBFS]');
+    legend('No stalling','With stalling','Location','best');
+end
+
+if exist('micasplot','file'), micasplot, end
+width = 800; height = 600;
+set(gcf, 'Position', [100, 100, width, height]);
+saveas(gcf, ['./model_aer_error_diff_fin_psd.png']);
+
+%% -------- SNDR & SFDR vs fin sweep (example set) -----------------------
+sweepWindowTime  = windowTime; % keep same Welch settings as first run
+sweepWindowSize  = round(Fs * sweepWindowTime);
+sweepOverlap     = round(sweepWindowSize/2);
+
+fins_sweep = [1 10 100 500];
+SNDR_nb = nan(size(fins_sweep));  SFDR_nb = nan(size(fins_sweep));
+SNDR_bl = nan(size(fins_sweep));  SFDR_bl = nan(size(fins_sweep));
+
+for k = 1:numel(fins_sweep)
+    ff = fins_sweep(k);
+
+    seed_rng_for(ff, baseSeed);
+
+    % Stimulus + noise
+    x_tmp = Vamp * sin(2*pi*ff*t);
+    if addThermalNoise
+        x_tmp = x_tmp + noiseRMS * randn(size(x_tmp));
+    end
+
+    % Encode once
+    [spk_on_tmp, spk_off_tmp, y_ideal_tmp] = lc_encode_and_reconstruct(x_tmp, LSB);
+
+    % Metrics: no stalling
+    flo_eff = pick_flo(ff, flo_default);
+    [~, ~, Mnb] = your_welch_psd_and_metrics( ...
+        y_ideal_tmp, Fs, ff, sweepWindowSize, sweepOverlap, ...
+        FS_Power, flo_eff, fbw, harmonics, sweepWindowTime);
+    SNDR_nb(k) = Mnb.SNDR_dB; SFDR_nb(k) = Mnb.SFDR_dB;
+
+    % Apply stalling (ALWAYS 30/fin..300/fin)
+    gapMin_ms_tmp = 3000/ff; gapMax_ms_tmp = 5000/ff;
+    mask_b = make_blanking_mask(N, Fs, blank_us, gapMin_ms_tmp, gapMax_ms_tmp);
+    spk_on_b = spk_on_tmp; spk_off_b = spk_off_tmp;
+    spk_on_b(mask_b)  = 0; spk_off_b(mask_b) = 0;
+    y_blanked_tmp = LSB * (cumsum(double(spk_on_b)) - cumsum(double(spk_off_b)));
+
+    % Metrics: with stalling
+    [~, ~, Mbl] = your_welch_psd_and_metrics( ...
+        y_blanked_tmp, Fs, ff, sweepWindowSize, sweepOverlap, ...
+        FS_Power, flo_eff, fbw, harmonics, sweepWindowTime);
+    SNDR_bl(k) = Mbl.SNDR_dB; SFDR_bl(k) = Mbl.SFDR_dB;
+end
+
+% Plot metrics vs fin
+figure('Name','SNDR & SFDR vs fin (1–500 Hz)');
+subplot(2,1,1);
+semilogx(fins_sweep, SNDR_nb, 'LineWidth',1); hold on; grid on; grid minor;
+semilogx(fins_sweep, SNDR_bl, 'LineWidth',1);
+ylabel('SNDR [dB]');
+legend('No stalling','With stalling','Location','best');
+
+% Superimpose provided reference SNDR points
+fin_ref      = [1 10 20 100 500];
+sndr_ref_dB  = [38.86 32.78 28.45 25.14 11];
+plot(fin_ref, sndr_ref_dB, 'o', 'LineWidth',1); % markers on top
+ylabel('SNDR [dB]');
+legend('No stalling','With stalling','Measured SNDR','Location','best');
+
+subplot(2,1,2);
+semilogx(fins_sweep, SFDR_nb, 'LineWidth',1); hold on; grid on; grid minor;
+semilogx(fins_sweep, SFDR_bl, 'LineWidth',1);
+xlabel('f_{in} [Hz]'); ylabel('SFDR [dB]');
+legend('No stalling','With stalling','Location','best');
+
+% Superimpose provided reference SFDR points
+sfdr_ref_dB  = [54.21 44.33 35.95 32.50 14.70];
+plot(fin_ref, sfdr_ref_dB, 'o', 'LineWidth',1); % markers on top
+xlabel('f_{in} [Hz]'); ylabel('SFDR [dB]');
+legend('No stalling','With stalling','Measured SFDR','Location','best');
+
+if exist('micasplot','file'), micasplot, end
+width = 800; height = 600;
+set(gcf, 'Position', [100, 100, width, height]);
+saveas(gcf, ['./model_aer_error_diff_fin.png']);
+
+%% =========================== FUNCTIONS ================================
+
+function seed_rng_for(fin, baseSeed)
+% seed_rng_for: deterministic RNG per input frequency
+% Ensures the same noise & stalling mask for a given fin across all figures.
+    rng(baseSeed + round(fin));
+end
+
+function [spk_on, spk_off, yhat] = lc_encode_and_reconstruct(x, LSB)
+    N = numel(x);
+    spk_on  = zeros(N,1,'int16');
+    spk_off = zeros(N,1,'int16');
+    yhat    = zeros(N,1);
+    ycurr   = 0;
+    half    = LSB/2;
+    for n = 1:N
+        e = x(n) - ycurr;
+        while e >= half
+            spk_on(n) = spk_on(n) + 1;
+            ycurr = ycurr + LSB;
+            e = x(n) - ycurr;
+        end
+        while e <= -half
+            spk_off(n) = spk_off(n) + 1;
+            ycurr = ycurr - LSB;
+            e = x(n) - ycurr;
+        end
+        yhat(n) = ycurr;
+    end
+end
+
+function mask = make_blanking_mask(N, Fs, blank_us, gapMin_ms, gapMax_ms)
+    mask = false(N,1);
+    blankSamp = max(1, round(blank_us*1e-6 * Fs));
+    startIdx  = 1;
+    while startIdx <= N
+        gapSamp = round( (gapMin_ms + (gapMax_ms-gapMin_ms)*rand) * 1e-3 * Fs );
+        startIdx = startIdx + gapSamp;
+        if startIdx > N, break; end
+        stopIdx = min(N, startIdx + blankSamp - 1);
+        mask(startIdx:stopIdx) = true;
+        startIdx = stopIdx + 1;
+    end
+end
+
+function flo_eff = pick_flo(fin, flo_default)
+% pick_flo: integrate from 10–500 Hz for fin == 100 or 500; else default
+    if fin == 100 || fin == 500
+        flo_eff = 10;
+    else
+        flo_eff = flo_default;
+    end
+end
+
+function [f, PSD_dBFSbin, M] = your_welch_psd_and_metrics( ...
+        sig, Fs, freqin, windowSize, overlap, FS_Power, flo, fbw, harmonics, windowTime)
+
+    y = double(sig(:));
+    y = y - mean(y);
+
+    win = hann(windowSize,'periodic');
+    noverlap = overlap;
+    nfft = windowSize;
+    [Pxx, f] = pwelch(y, win, noverlap, nfft, Fs, 'psd');  % one-sided
+
+    % Convert PSD to "power in bin" normalized to full-scale power
+    deltaF = Fs / windowSize;
+    windowGain = sum(win.^2) / windowSize;
+    psdEstimate = (Pxx * deltaF) / windowGain;
+    psdEstimate = psdEstimate ./ FS_Power;
+
+    % Fundamental bin selection
+    if ~isempty(freqin) && freqin > 0
+        [~, fundIndex] = min(abs(f - freqin));
+    else
+        [~, fundIndex] = max(psdEstimate(2:end)); fundIndex = fundIndex + 1;
+    end
+
+    % Signal band around the fundamental (± 2/windowTime Hz)
+    sideband = 2 / windowTime;
+    signalIndices = find(f >= (f(fundIndex) - sideband) & f <= (f(fundIndex) + sideband));
+    signalPower   = sum(psdEstimate(signalIndices));
+
+    % Harmonics (exclude from noise band and count as distortion)
+    harmonicIndices = zeros(harmonics,1);
+    for h = 2:harmonics+1
+        f_h = h * f(fundIndex);
+        if f_h > f(end), break; end
+        [~, harmonicIndices(h-1)] = min(abs(f - f_h));
+    end
+    harmonicIndices = harmonicIndices(harmonicIndices>0);
+    harmonicPower   = sum(psdEstimate(harmonicIndices));
+
+    % Noise band (guards & band limits)
+    lowerFreqLimit = flo + 1/windowTime;
+    upperFreqLimit = fbw;
+    noiseIndices = find(f > lowerFreqLimit & f <= upperFreqLimit);
+    noiseIndices = setdiff(noiseIndices, harmonicIndices);
+    noiseIndices = setdiff(noiseIndices, signalIndices);
+    noisePower = sum(psdEstimate(noiseIndices));
+
+    % Metrics
+    distortionPower = harmonicPower;
+    SNDR_dB = 10*log10(signalPower / max(noisePower + distortionPower, eps));
+    SNR_dB  = 10*log10(signalPower / max(noisePower, eps));
+    if isempty(noiseIndices)
+        SFDR_dB = NaN;
+    else
+        spuriousPower = max(psdEstimate(noiseIndices));
+        SFDR_dB = 10*log10(signalPower / max(spuriousPower, eps));
+    end
+    ENOB_bits = (SNDR_dB - 1.76)/6.02;
+
+    PSD_dBFSbin = 10*log10(psdEstimate + eps);
+
+    M = struct('SNR_dB', SNR_dB, 'SNDR_dB', SNDR_dB, ...
+               'SFDR_dB', SFDR_dB, 'ENOB_bits', ENOB_bits, ...
+               'fundHz', f(fundIndex), 'sidebandHz', sideband, ...
+               'noiseBandHz', [lowerFreqLimit, upperFreqLimit], ...
+               'deltaF_Hz', deltaF, 'windowSize', windowSize, 'overlap', overlap);
+end

@@ -18,3 +18,12 @@ TBCAS24/PYVISA_measurements/sim_csv/cix_pulse_tau.csv
 TBCAS24/PYVISA_measurements/sim_csv/Ix.csv
 TBCAS24/PYVISA_measurements/sim_csv/Ix_fast.csv
 TBCAS24/PYVISA_measurements/output/
+DERMIS/ideal_model_VOD_FILT.csv
+DERMIS/reconstruct_sndr_read_fit_4.m
+DERMIS/reconstruct_sndr_read_fit_3.m
+DERMIS/reconstruct_sndr_read_fit_2.m
+DERMIS/out\sample_5_adc_ibias_5n_ibias_adapt_5n_islew_100n_vtrig_0p5_vpp_0p2_fin_0p1_vddadc_3-2024-11-15_14-09-21_sorted_sorted
+DERMIS/rasterplot
+DERMIS/nmos_char
+DERMIS/V_files_sel_off_long_dis_ext_norlatch
+DERMIS/out

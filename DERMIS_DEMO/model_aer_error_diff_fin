@@ -1,0 +1,53 @@
+%% -------- Extra figure: PSD vs fin (with added noise) ------------------
+% Overlay PSDs for fin = [1, 10, 100, 500] Hz, using your Welch method.
+% Toggle whether we plot the blanked reconstruction or not:
+useBlanking = true;   % true -> plot PSD of y_rec_err (blanked)
+                      % false -> plot PSD of y_rec_ideal (no blanking)
+
+fins = [1, 10, 100, 500];
+
+% (Optional) make noise/blanking patterns reproducible for this block:
+rng(4242);
+
+figure('Name','PSD vs fin (with noise)');
+hold on; grid on; grid minor;
+
+for ff = fins
+    % --- Build input with same settings, but new fin and fresh noise ---
+    x_tmp = Vamp * sin(2*pi*ff*t);
+    if addThermalNoise
+        x_tmp = x_tmp + noiseRMS * randn(size(x_tmp));
+    end
+
+    % --- Encode & reconstruct ---
+    [spk_on_tmp, spk_off_tmp, y_rec_ideal_tmp] = lc_encode_and_reconstruct(x_tmp, LSB);
+
+    if useBlanking
+        % Recompute blanking timing based on this fin (matches your spec)
+        gapMin_ms = 0.1/ff;
+        gapMax_ms = 10/ff;
+        mask_b = make_blanking_mask(N, Fs, blank_us, gapMin_ms, gapMax_ms);
+        spk_on_tmp(mask_b)  = 0;
+        spk_off_tmp(mask_b) = 0;
+        y_tmp = LSB * (cumsum(double(spk_on_tmp)) - cumsum(double(spk_off_tmp)));
+    else
+        y_tmp = y_rec_ideal_tmp;
+    end
+
+    % --- PSD via your function ---
+    [f_tmp, PSD_tmp_dBFSbin, ~] = your_welch_psd_and_metrics( ...
+        y_tmp, Fs, ff, windowSize, overlap, FS_Power, flo, fbw, harmonics, windowTime);
+
+    % --- Overlay (positive freqs only) ---
+    kpos = find(f_tmp > 0, 1, 'first');
+    semilogx(f_tmp(kpos:end), PSD_tmp_dBFSbin(kpos:end), 'LineWidth', 1);
+end
+
+xlabel('Frequency [Hz]');
+ylabel('PSD per bin [dBFS]');
+legend(arrayfun(@(ff) sprintf('f_{in} = %g Hz', ff), fins, 'UniformOutput', false), ...
+       'Location','southwest');
+
+nm = 'OFF'; if addThermalNoise, nm = 'ON'; end
+bm = 'no blanking'; if useBlanking, bm = 'blanked'; end
+title(sprintf('Welch PSD vs f_{in} (noise %s, %s)', nm, bm));

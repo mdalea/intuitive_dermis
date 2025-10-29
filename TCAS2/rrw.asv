@@ -1,0 +1,33 @@
+close all
+
+% Define input values
+no_of_channels = [16, 70, 70, 19, 10, 4];
+adc_bits = [24, 12, 12, 12, 14, 6];
+sampling_rate = [300, 30, 30, 4.4e3, 390, 2*50];
+power = [42e-3, 5*10e-3, 5*10e-3, 5*5e-3, 5*258e-6+100e-3*3.3, 7.6e-6*4+0.6e-3*3]; % Power consumption in mW
+labels = {sprintf('[2]''20\nADS1258'), sprintf('[14]''14\nDSA9210'),  sprintf('[15]''15\nDSA9210'), sprintf('[16]''15\nPIC\muC'), sprintf('[17]''23\nADPD1080+Teensy4.1')};
+markers = {'p', 's', 'o', 'd', '^', 'v'}; % Star, Square, Circle, Diamond, Triangle, Downward Triangle % Same markers for same category
+
+% Compute raw data rate
+raw_data_rate = no_of_channels .* adc_bits .* sampling_rate;
+
+% Plot the results as a scatter plot
+figure;
+hold on;
+for i = 1:length(raw_data_rate)
+    scatter(raw_data_rate(i), power(i), 500, 'filled', markers{i});
+    text(raw_data_rate(i), power(i), labels{i}, 'VerticalAlignment', 'bottom', 'HorizontalAlignment', 'right');
+end
+% Set xlim and ylim dynamically
+xlim([min(raw_data_rate) max(raw_data_rate)]);
+ylim([min(power) max(power)]);
+
+hold off;
+
+grid on;
+xlabel('Raw Data Rate (bps)');
+ylabel('Power Consumption (mW)');
+title('System Power Consumption vs. Raw Data Rate');
+legend('Envelope Detection', 'Transforms', 'Cross-Correlation', 'Classifier', 'Friction Coefficient','Friction Coefficient (on-chip)', 'Location', 'northwest');
+
+micasplot

@@ -1,0 +1,21 @@
+% MATLAB script to plot VOUT(FN)
+
+% Parameters
+Cf  = 10e-15;        % Feedback capacitance [F]
+VTX = 3;             % Transmit voltage [V]
+
+% Sweep values for Csp = Csn
+Csp = linspace(0, 6.12e-15, 500);   % from 0 to 6.12 fF
+Csn = Csp;                          % identical to Csp
+
+% Equation:
+% VOUT(FN) = VTX * (2*Csp*Csn + Cf*(Csp+Csn)) / (Csp + Csn + 2*Cf)
+Vout = VTX .* (2 .* Csp .* Csn + Cf .* (Csp + Csn)) ./ (Csp + Csn + 2*Cf);
+
+% Plot
+figure;
+plot(Csp*1e15, Vout, 'LineWidth', 2);
+xlabel('Csp = Csn [fF]');
+ylabel('VOUT [V]');
+title('VOUT vs. Csp = Csn');
+grid on;
