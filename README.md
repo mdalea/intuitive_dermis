@@ -70,4 +70,15 @@ All the files used during the INTUITIVE project.
 	- plot_sensor.m: code to plot measurement results
 
    
-     
+# VLSI25
+- published at: https://doi.org/10.23919/VLSITechnologyandCir65189.2025.11074978
+- DERMIS/VLSI25/for_paper/BODEPLOT
+	- process_gain_cmgain_freq_sweep_multisample.m -> code to plot gain and cmgain
+- DERMIS/VLSI25/for_paper/NOISe
+	- noise_psd_welsch_inband_inputcsv_wav_ave_Cs_referred.m -> code to plot the noise PSD 
+	- link_to_data_sample4.txt -> google drive link for the results (files too big to be downloaded)
+- DERMIS/VLSI25/for_paper/SPIKES
+	- reconstruct_sndr_read_fit_fin_1_vpp_3.m -> code to reconstruct the signal PSD from spikes
+- DERMIS/VLSI25/out -> contains ADC output spikes
+- DERMIS/VLSI25/output -> contains gain and cmgain data
+- DERMIS/VLSI25/PYVISA -> code to control the instruments via Pyvisa     
