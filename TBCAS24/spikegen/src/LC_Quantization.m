@@ -84,8 +84,9 @@ if noiseVar(1) > 0    % only do expensive processing if needed
 %         td = td-1;
 %     end
 %    [trialNoise_filt_scaled] = fill_array(trialNoise_stitched,1,stim.tdelaycnt,mr_cnt); 
-%    [trialNoise_filt_scaled] = fill_array(trialNoise_stitched,1,1,stim.tdelaycnt,mr_cnt,scandir);
-   [trialNoise_filt_scaled] = fill_array_12x16(trialNoise_stitched,1,1,stim.tdelaycnt,mr_cnt,scandir);  
+    [trialNoise_filt_scaled] = fill_array(trialNoise_stitched,1,1,stim.tdelaycnt,mr_cnt,scandir);
+   %commented out!!!!!
+    %[trialNoise_filt_scaled] = fill_array_12x16(trialNoise_stitched,1,1,stim.tdelaycnt,mr_cnt,scandir);  
 
 
 else

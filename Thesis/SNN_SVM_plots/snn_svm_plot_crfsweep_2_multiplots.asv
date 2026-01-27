@@ -1,0 +1,377 @@
+%% Sweep sensor count and sensor pitch (plot only what exists) - SNN+SVM RESULTS ONLY
+% - Plots ONLY SNN+SVM (i.e., SVM-stage results) from results_svm_linear_max.txt
+% - ONLY vertical Merkel reference lines (NO horizontal red dashed lines anywhere)
+% - "Merkel cell pitch" label text is 4x larger
+% - Vertical Merkel dashed line is 4x thicker
+% - Legends for sensor pitch include "mm"
+% - NO figi increment (every run overwrites same figure numbers and filenames)
+% - Always runs micasplot before saving each figure
+clearvars -except figi
+close all
+
+figi = 69;          % base figure number (kept constant)
+
+% ---------------- USER OPTIONS: FILTERING ----------------
+mr_cnt_keep     = [];   % [] = keep all
+spatialres_keep = [];   % [] = keep all
+mr_cnt_exclude     = [];  % [] = exclude none
+spatialres_exclude = [];  % [] = exclude none
+% ---------------------------------------------------------
+
+% Full grids
+spatialres_array_full = [0.2];   % sensor pitch (mm)
+mr_cnt_array_full     = [ 14*14];         % sensor count
+
+baseRoot = '../spikeclassifier_2/';  % where your sweep outputs live
+
+% ---------------- Apply filtering ----------------
+mr_cnt_array = mr_cnt_array_full;
+spatialres_array = spatialres_array_full;
+
+if ~isempty(mr_cnt_keep)
+    mr_cnt_array = mr_cnt_array(ismember(mr_cnt_array, mr_cnt_keep));
+end
+if ~isempty(mr_cnt_exclude)
+    mr_cnt_array = mr_cnt_array(~ismember(mr_cnt_array, mr_cnt_exclude));
+end
+
+if ~isempty(spatialres_keep)
+    spatialres_array = spatialres_array(ismember(spatialres_array, spatialres_keep));
+end
+if ~isempty(spatialres_exclude)
+    spatialres_array = spatialres_array(~ismember(spatialres_array, spatialres_exclude));
+end
+
+if isempty(mr_cnt_array) || isempty(spatialres_array)
+    error('After filtering, sensor count or sensor pitch array is empty. Adjust keep/exclude options.');
+end
+
+% Merkel cell pitch reference (for sensor pitch axis)
+ref_sr = 0.4;
+use_merkel_vertical = any(abs(spatialres_array - ref_sr) < 1e-12); % only draw line if in current x-grid
+
+%% Storage (NaN means missing) : SNN+SVM only
+snnsvm_mean = nan(numel(mr_cnt_array), numel(spatialres_array));
+snnsvm_std  = nan(numel(mr_cnt_array), numel(spatialres_array));
+snnsvm_vals = cell(numel(mr_cnt_array), numel(spatialres_array)); % best vector per grid point
+
+% Track best mean encountered per (mr_cnt, spatialres) across ALL matching files
+bestMeanMat = -inf(numel(mr_cnt_array), numel(spatialres_array));
+
+%% ---------------- Collect SNN+SVM results by scanning all results_svm_linear_max.txt ----------------
+% Robust to your newer folder naming (e.g., SNN_dsetPath-... and arbitrary SVM run IDs).
+svmFiles = dir(fullfile(baseRoot, '**', 'results_svm_linear_max.txt'));
+
+for k = 1:numel(svmFiles)
+    fpath = fullfile(svmFiles(k).folder, svmFiles(k).name);
+
+    % Extract mr_cnt and spatialres from the path (works for ...-mr_cnt-196-... and ...-spatialres-0.2...).
+    mrTok = regexp(fpath, 'mr_cnt-(\d+)', 'tokens', 'once');
+    srTok = regexp(fpath, 'spatialres-([0-9]+(?:\.[0-9]+)?)', 'tokens', 'once');
+
+    if isempty(mrTok) || isempty(srTok)
+        continue;
+    end
+
+    mr_val = str2double(mrTok{1});
+    sr_val = str2double(srTok{1});
+
+    % Map extracted values onto the *current* filtered grids (exact-match-ish with tolerance)
+    [mr_minerr, im] = min(abs(mr_cnt_array - mr_val));
+    [sr_minerr, is] = min(abs(spatialres_array - sr_val));
+
+    if mr_minerr > 1e-12 || sr_minerr > 1e-12
+        continue; % file is not part of our requested grid
+    end
+
+    v = parse_result_file(fpath, 10); % vector (0..1)
+    if isempty(v) || any(isnan(v))
+        continue;
+    end
+
+    m = mean(v);
+    if m > bestMeanMat(im,is)
+        bestMeanMat(im,is) = m;
+        snnsvm_vals{im,is} = v;
+        snnsvm_mean(im,is) = m;
+        snnsvm_std(im,is)  = std(v);
+    end
+end
+
+%% ---------------- Normalize SNN+SVM vs sensor pitch = 0.4 (Merkel cell pitch) ----------------
+[~, ref_idx] = min(abs(spatialres_array - ref_sr));
+can_normalize = (abs(spatialres_array(ref_idx) - ref_sr) < 1e-12);
+
+snnsvm_mean_norm = nan(size(snnsvm_mean));
+snnsvm_std_norm  = nan(size(snnsvm_std));
+
+if can_normalize
+    for im = 1:numel(mr_cnt_array)
+        ref = snnsvm_mean(im, ref_idx);
+        if ~isnan(ref) && ref ~= 0
+            snnsvm_mean_norm(im,:) = snnsvm_mean(im,:) ./ ref;
+            snnsvm_std_norm(im,:)  = snnsvm_std(im,:)  ./ ref;
+        end
+    end
+else
+    warning('sensor pitch=0.4 not included after filtering; normalized plots will be all-NaN and will say no results.');
+end
+
+%% ---------------- Plot helpers ----------------
+% Vertical Merkel line with manual big label (compatible with older MATLAB).
+add_merkel_vertical = @() add_merkel_vertical_manual(ref_sr);
+
+% Always run micasplot + standard save sizing
+width = 800; height = 700;
+save_micas = @(fname_base) local_save_with_micasplot(fname_base, width, height);
+
+% Multi-line ylabel strings (use newline, never "\n")
+yl_raw  = ['Classification Accuracy' newline '(SNN+SVM)'];
+yl_norm = ['Normalized accuracy to accuracy' newline ...
+           'at Merkel cell pitch' newline '(SNN+SVM)'];
+
+% ----------- OUTPUT PREFIX (CHANGED) -----------
+outPrefix = './crf_sweep';
+% ---------------------------------------------
+
+%% =======================================================================
+%% 1) sensor pitch-sweep plots (SNN+SVM)  [Merkel vertical line ON]
+%% =======================================================================
+
+% Figure A: raw - errorbars
+figure(figi); clf; hold on;
+hLeg = gobjects(0); legTxt = {};
+for im = 1:numel(mr_cnt_array)
+    x = spatialres_array;
+    y = snnsvm_mean(im,:);
+    e = snnsvm_std(im,:);
+    mask = ~isnan(y) & ~isnan(e);
+    if nnz(mask) >= 1
+        h = errorbar(x(mask), y(mask), e(mask), '-o', 'LineWidth', 2);
+        hLeg(end+1) = h; %#ok<AGROW>
+        legTxt{end+1} = sprintf('sensor count=%d', mr_cnt_array(im)); %#ok<AGROW>
+    end
+end
+set(gca,'XScale','log'); grid on;
+xlabel('sensor pitch'); ylabel(yl_raw);
+if use_merkel_vertical, add_merkel_vertical(); end
+if ~isempty(hLeg)
+    legend(hLeg, legTxt, 'Location','best');
+else
+    text(0.5,0.5,'No SNN+SVM results found','Units','normalized','HorizontalAlignment','center');
+end
+save_micas([outPrefix '_sensorPitch_sweep-SNNplusSVM-raw-errorbar']);
+
+% Figure B: normalized - errorbars
+figure(figi+1); clf; hold on;
+hLeg = gobjects(0); legTxt = {};
+for im = 1:numel(mr_cnt_array)
+    x = spatialres_array;
+    y = snnsvm_mean_norm(im,:);
+    e = snnsvm_std_norm(im,:);
+    mask = ~isnan(y) & ~isnan(e);
+    if nnz(mask) >= 1
+        h = errorbar(x(mask), y(mask), e(mask), '-o', 'LineWidth', 2);
+        hLeg(end+1) = h; %#ok<AGROW>
+        legTxt{end+1} = sprintf('sensor count=%d', mr_cnt_array(im)); %#ok<AGROW>
+    end
+end
+set(gca,'XScale','log'); grid on;
+xlabel('sensor pitch'); ylabel(yl_norm);
+if use_merkel_vertical, add_merkel_vertical(); end
+if ~isempty(hLeg)
+    legend(hLeg, legTxt, 'Location','best');
+else
+    text(0.5,0.5,'No SNN+SVM results found (or missing 0.4 ref)','Units','normalized','HorizontalAlignment','center');
+end
+save_micas([outPrefix '_sensorPitch_sweep-SNNplusSVM-norm-errorbar']);
+
+%% =======================================================================
+%% 2) Shaded variance envelope plots (SNN+SVM) [Merkel vertical line ON]
+%% =======================================================================
+
+% Figure C: raw - shaded variance
+figure(figi+2); clf; hold on;
+hLeg = gobjects(0); legTxt = {};
+for im = 1:numel(mr_cnt_array)
+    x = spatialres_array;
+    y = snnsvm_mean(im,:);
+    e = snnsvm_std(im,:);
+    mask = ~isnan(y) & ~isnan(e);
+    if nnz(mask) >= 1
+        h = plot(x(mask), y(mask), '-o', 'LineWidth', 2);
+        if nnz(mask) >= 2
+            band_from_line(x(mask), y(mask), e(mask), h);
+            uistack(h,'top');
+        end
+        hLeg(end+1) = h; %#ok<AGROW>
+        legTxt{end+1} = sprintf('sensor count=%d', mr_cnt_array(im)); %#ok<AGROW>
+    end
+end
+set(gca,'XScale','log'); grid on;
+xlabel('sensor pitch'); ylabel(yl_raw);
+if use_merkel_vertical, add_merkel_vertical(); end
+if ~isempty(hLeg)
+    legend(hLeg, legTxt, 'Location','best');
+else
+    text(0.5,0.5,'No SNN+SVM results found','Units','normalized','HorizontalAlignment','center');
+end
+save_micas([outPrefix '_sensorPitch_sweep-SNNplusSVM-raw-band']);
+
+% Figure D: normalized - shaded variance
+figure(figi+3); clf; hold on;
+hLeg = gobjects(0); legTxt = {};
+for im = 1:numel(mr_cnt_array)
+    x = spatialres_array;
+    y = snnsvm_mean_norm(im,:);
+    e = snnsvm_std_norm(im,:);
+    mask = ~isnan(y) & ~isnan(e);
+    if nnz(mask) >= 1
+        h = plot(x(mask), y(mask), '-o', 'LineWidth', 2);
+        if nnz(mask) >= 2
+            band_from_line(x(mask), y(mask), e(mask), h);
+            uistack(h,'top');
+        end
+        hLeg(end+1) = h; %#ok<AGROW>
+        legTxt{end+1} = sprintf('sensor count=%d', mr_cnt_array(im)); %#ok<AGROW>
+    end
+end
+set(gca,'XScale','log'); grid on;
+xlabel('sensor pitch'); ylabel(yl_norm);
+if use_merkel_vertical, add_merkel_vertical(); end
+if ~isempty(hLeg)
+    legend(hLeg, legTxt, 'Location','best');
+else
+    text(0.5,0.5,'No SNN+SVM results found (or missing 0.4 ref)','Units','normalized','HorizontalAlignment','center');
+end
+save_micas([outPrefix '_sensorPitch_sweep-SNNplusSVM-norm-band']);
+
+%% =======================================================================
+%% 3) sensor count sweep plots for each sensor pitch (SNN+SVM) [NO Merkel vertical line]
+%%     Legend entries: "sensor pitch = X mm"
+%% =======================================================================
+
+% Figure E: raw - sweep sensor count (by sensor pitch) + bands
+figure(figi+4); clf; hold on;
+hLeg = gobjects(0); legTxt = {};
+for is = 1:numel(spatialres_array)
+    sr = spatialres_array(is);
+    x  = mr_cnt_array(:);
+    y  = snnsvm_mean(:,is);
+    e  = snnsvm_std(:,is);
+    mask = ~isnan(y) & ~isnan(e);
+    if nnz(mask) >= 1
+        h = plot(x(mask), y(mask), '-o', 'LineWidth', 2);
+        if nnz(mask) >= 2
+            band_from_line(x(mask), y(mask), e(mask), h);
+            uistack(h,'top');
+        end
+        hLeg(end+1) = h; %#ok<AGROW>
+        legTxt{end+1} = sprintf('sensor pitch = %g mm', sr); %#ok<AGROW>
+    end
+end
+grid on;
+xlabel('sensor count'); ylabel(yl_raw);
+if ~isempty(hLeg)
+    legend(hLeg, legTxt, 'Location','best');
+else
+    text(0.5,0.5,'No SNN+SVM results found','Units','normalized','HorizontalAlignment','center');
+end
+save_micas([outPrefix '_sensorCount_sweep-SNNplusSVM-raw-band']);
+
+% Figure F: normalized - sweep sensor count (by sensor pitch) + bands
+figure(figi+5); clf; hold on;
+hLeg = gobjects(0); legTxt = {};
+for is = 1:numel(spatialres_array)
+    sr = spatialres_array(is);
+    x  = mr_cnt_array(:);
+    y  = snnsvm_mean_norm(:,is);
+    e  = snnsvm_std_norm(:,is);
+    mask = ~isnan(y) & ~isnan(e);
+    if nnz(mask) >= 1
+        h = plot(x(mask), y(mask), '-o', 'LineWidth', 2);
+        if nnz(mask) >= 2
+            band_from_line(x(mask), y(mask), e(mask), h);
+            uistack(h,'top');
+        end
+        hLeg(end+1) = h; %#ok<AGROW>
+        legTxt{end+1} = sprintf('sensor pitch = %g mm', sr); %#ok<AGROW>
+    end
+end
+grid on;
+xlabel('sensor count'); ylabel(yl_norm);
+if ~isempty(hLeg)
+    legend(hLeg, legTxt, 'Location','best');
+else
+    text(0.5,0.5,'No SNN+SVM results found (or missing 0.4 ref)','Units','normalized','HorizontalAlignment','center');
+end
+save_micas([outPrefix '_sensorCount_sweep-SNNplusSVM-norm-band']);
+
+%% ---------------- Local functions (MUST be at end of script) ----------------
+function vals01 = parse_result_file(fname, maxN)
+    % Parse "key: value" lines; return vector in [0..1] (divides by 100).
+    vals01 = [];
+    fid = fopen(fname, 'r');
+    if fid < 0, return; end
+
+    tline = fgets(fid);
+    while ischar(tline) && ~isempty(strtrim(tline))
+        toks = split(tline, ':');
+        if numel(toks) >= 2
+            v = str2double(strtrim(toks{2}));
+            vals01 = [vals01; v]; %#ok<AGROW>
+        end
+        if numel(vals01) >= maxN, break; end
+        tline = fgets(fid);
+    end
+    fclose(fid);
+
+    vals01 = vals01 ./ 100;
+    vals01 = vals01(~isnan(vals01));
+end
+
+function hb = band_from_line(x, y, e, hline)
+    c = hline.Color;
+    hb = fill([x(:); flipud(x(:))], [ (y(:)+e(:)); flipud(y(:)-e(:)) ], ...
+              c, 'FaceAlpha',0.18, 'EdgeColor','none');
+end
+
+function add_merkel_vertical_manual(x0)
+    % Draw the dashed vertical line (4x thicker than default)
+    xl = xline(x0, 'r--', 'LineWidth', 4);
+    xl.HandleVisibility = 'off';
+
+    % Big label via text() near the top of axes
+    ax = gca;
+    yl = ylim(ax);
+    y_text = yl(2) - 0.06*(yl(2)-yl(1)); % slightly below top
+
+    % On log-x axes, offset multiplicatively; on linear, offset additively
+    if strcmpi(ax.XScale,'log')
+        x_text = x0 * 1.08;
+    else
+        xlimv = xlim(ax);
+        x_text = x0 + 0.02*(xlimv(2)-xlimv(1));
+    end
+
+    % Use axes font size as baseline, 4x larger
+    fs = get(ax, 'FontSize');
+    text(x_text, y_text, 'Merkel cell pitch', ...
+        'Color','r', 'FontSize', fs*4, ...
+        'HorizontalAlignment','left', 'VerticalAlignment','top', ...
+        'Clipping','on');
+end
+
+function local_save_with_micasplot(fname_base, width, height)
+    % Always run micasplot (assumed available on path)
+    micasplot;
+
+    % Standard size
+    set(gcf, 'Position', [100, 100, width, height]);
+
+    % Save both png + fig (overwrites each run)
+    saveas(gcf, [fname_base '.png']);
+    saveas(gcf, [fname_base '.fig']);
+end
+
+

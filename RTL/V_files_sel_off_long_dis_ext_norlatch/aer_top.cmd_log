@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "/users/micas/malea/RTL/aer_interface/aer_top.xst" -ofn "/users/micas/malea/RTL/aer_interface/aer_top.syr" 
+xst -intstyle ise -ifn "/users/micas/malea/RTL/aer_interface/aer_top.xst" -ofn "/users/micas/malea/RTL/aer_interface/aer_top.syr" 
+xst -intstyle ise -ifn "/users/micas/malea/RTL/aer_interface/aer_top.xst" -ofn "/users/micas/malea/RTL/aer_interface/aer_top.syr" 
+xst -intstyle ise -ifn "/users/micas/malea/RTL/aer_interface/aer_top.xst" -ofn "/users/micas/malea/RTL/aer_interface/aer_top.syr" 

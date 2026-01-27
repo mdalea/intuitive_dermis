@@ -1,0 +1,166 @@
+% fv = linspace(0, 1, 20);                                % Normalised Frequencies
+% a = zeros(1,20);
+% a(1:10) = 1./(1 + fv(1:10)*2);                          % Amplitudes Of  1/fv until 0.5
+% a(11:20) = a(10);                                       % after 0.5 it gets flat
+% b = firls(42, fv, a);                                   % Filter Numerator Coefficients
+% figure(1)
+% freqz(b, 1, 2^17)                                       % Filter Bode Plot
+% N = 1E+6;
+% ns = sqrt(1e-6)*randn(1, N);
+% invfn = filtfilt(b, 1, ns);                             % Create ‘1/f’ Noise
+% figure(2)
+% plot([0:N-1], invfn)                                    % Plot Noise In Time Domain
+% grid
+% FTn = fft(invfn-mean(invfn))/N;                         % Fourier Transform
+% figure(3)
+% plot([0:N/2], abs(FTn(1:N/2+1))*2)                      % Plot Fourier Transform Of Noise
+% grid
+
+fs = 1e6;                  % Sampling Frequency
+T = 1/fs;                   % Sampling Period
+record_time=10*1.5;
+N = fs*record_time;                   % Number of Samples
+t = (0:N-1) * T;            % Time vector
+
+fv = linspace(0, fs/2, 20);              % Frequencies up to Nyquist
+normalized_fv = fv / (fs/2);             % Normalized Frequencies
+a = zeros(1, 20);
+noise_power = 1e-6;                         % Desired noise power at 1Hz
+
+a(1:10) = 1 ./ (1 + fv(1:10) * 2);  % Amplitudes Of 1/fv until 0.5
+a(11:20) = a(10);                              % after 0.5 it gets flat
+
+b = firls(42, normalized_fv, a);              % Filter Numerator Coefficients
+
+figure(1)
+freqz(b, 1, 2^17)                          % Filter Bode Plot
+title('Filter Bode Plot')
+xlabel('Frequency (Hz)')
+ylabel('Magnitude')
+
+ns = sqrt(noise_power)*randn(1, N);
+invfn = filtfilt(b, 1, ns);                 % Create ‘1/f’ Noise
+
+figure(2)
+plot(t, invfn)                              % Plot Noise In Time Domain
+title('Generated Noise in Time Domain')
+xlabel('Time (s)')
+ylabel('Amplitude')
+grid
+
+% FTn = fft(invfn - mean(invfn)) / N;         % Fourier Transform
+% frequencies = 0:fs/N:fs/2;
+% 
+% figure(3)
+% plot(frequencies, abs(FTn(1:N/2+1)) * 2)     % Plot Fourier Transform Of Noise
+% title('Fourier Transform of Generated Noise')
+% xlabel('Frequency (Hz)')
+% ylabel('Magnitude')
+% grid
+
+%%
+% Configure measurement parameters
+samplingRate = fs; % Sampling rate (5 MHz in this example)
+windowTime = 1;
+windowSize = samplingRate * windowTime;
+overlap = windowSize / 2;
+
+
+% Calculate and plot the power ((Vpk^2/2) -> if with input
+%[psdEstimate, freq] = pwelch(waveform, windowSize, overlap, windowSize, samplingRate, 'power', 'onesided');
+% Calculate and plot the power spectral density (PSD) ((V^2/Hz)
+[psdEstimate, freq] = pwelch(invfn, windowSize, overlap, windowSize, samplingRate, 'psd', 'onesided'); % psd not power matches better with sim
+
+% Plot the power spectral density
+figure;
+loglog(freq, psdEstimate); 
+
+%%https://ccrma.stanford.edu/~jos/sasp/Example_Synthesis_1_F_Noise.html
+Nx = N %2^16;  % number of samples to synthesize
+B = [0.049922035 -0.095993537 0.050612699 -0.004408786];
+A = [1 -2.494956002   2.017265875  -0.522189400];
+%A = A * 0.01;
+B = B*0.01;
+nT60 = round(log(1000)/(1-max(abs(roots(A))))); % T60 est.
+v = randn(1,Nx+nT60); % Gaussian white noise: N(0,1)
+x = filter(B,A,v);    % Apply 1/F roll-off to PSD
+x = x(nT60+1:end);    % Skip transient response
+
+figure
+plot(x)
+
+[psdEstimate, freq] = pwelch(x, windowSize, overlap, windowSize, samplingRate, 'psd', 'onesided'); % psd not power matches better with sim
+
+% Plot the power spectral density
+figure;
+loglog(freq, psdEstimate); 
+
+
+%%
+% Configure measurement parameters
+fs=1e6;
+samplingRate = fs; % Sampling rate (5 MHz in this example)
+windowTime = 1;
+windowSize = samplingRate * windowTime;
+totalSize=windowSize*10.5;
+totalSize=windowSize
+overlap = windowSize / 2;
+df=1/windowTime;
+
+mult=1;
+
+f=0:1/df:totalSize-1/df;
+S=1./sqrt(f); 
+S=S.*exp(j*2*pi*randn(size(f))); 
+S=(8.75/7)*1e3.*S; % normalize
+S=sqrt(mult).*S;
+
+figure;
+loglog(abs(S));
+S(1)=0;
+figure;
+plot(real(ifft(S)))
+
+[psdEstimate, freq] = pwelch(real(ifft(S)), windowSize, overlap, windowSize, samplingRate, 'psd', 'onesided'); % psd not power matches better with sim
+
+% Plot the power spectral density
+figure;
+loglog(freq, psdEstimate); 
+grid on;
+
+%% MODEL AFE flicker noise - used in LC_Quantization.m
+
+sigbw=100;
+osr=1;
+fs=2*sigbw*osr;
+noiseVar(5)=1; % multiplier to 1e-6 V^2/Hz at 1Hz
+
+cnt=1;
+
+totalSize=19176 %length(t);
+df=1;
+f=0:1/df:totalSize-1/df;
+for titi=1:cnt
+    S=1./sqrt(f); 
+    S=S.*exp(j*2*pi*randn(size(f))); 
+    %S=(8.75/7)*1e3.*S; % normalize
+    S=sqrt(noiseVar(5)).*S; % multiplier from 1e-6 V^2 at 1Hz
+    S=sqrt(10).*S;
+    S(1)=0;
+    sensorxtalk_flicker(titi,:) = real(ifft(S));
+end    
+
+samplingRate = fs; % Sampling rate (5 MHz in this example)
+% windowTime = 1;
+% windowSize = samplingRate * windowTime;
+% totalSize=windowSize
+% overlap = windowSize / 2;
+windowSize=19176; %length(t);
+overlap=0;
+[psdEstimate, freq] = pwelch(sensorxtalk_flicker(1,:), windowSize, overlap, windowSize, samplingRate, 'psd', 'onesided'); % psd not power matches better with sim
+
+% Plot the power spectral density
+figure;
+loglog(freq, psdEstimate); 
+grid on;
+

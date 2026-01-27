@@ -1,0 +1,152 @@
+%% Uniform vs Level-Crossing Quantization (both amplitude-quantized)
+clear; clc; 
+
+%% ---------------------- User parameters --------------------------------
+Fs_sim   = 1e6;           % high-rate simulation grid [Hz]
+Tsim     = 0.02;          % total simulation time [s]
+fin      = 1234.567;      % input sine frequency [Hz]
+A        = 1.0;           % sine amplitude
+Delta    = 0.1;           % amplitude quantization step (LSB)
+
+Funi     = 100e3;          % uniform ADC sampling rate [Hz] (>> 2*fin, so NO alias)
+rng(1);                   % reproducible dither
+
+% Dither toggles (input-referred, added BEFORE quantization)
+addDither_uniform = true;    % dither on uniform ADC path
+addDither_LC      = false;   % dither on LC ADC path
+ditherRMS         = Delta/2; % typical dither scale
+
+% PSD settings
+nfft      = 16384;
+%% -----------------------------------------------------------------------
+
+%% ------------------------ Time base & input -----------------------------
+N   = round(Tsim * Fs_sim);
+t   = (0:N-1).' / Fs_sim;
+x   = A * sin(2*pi*fin*t);        % clean input sine
+
+%% ------------------------ Uniform ADC path ------------------------------
+% 1) Sample x(t) at Funi
+% 2) Add optional dither
+% 3) Amplitude-quantize with step Delta
+% 4) ZOH back to Fs_sim grid
+
+M          = max(1, round(Fs_sim / Funi));   % samples per hold
+idx_samp   = 1:M:N;                          % sample indices on Fs_sim grid
+Nsamp      = numel(idx_samp);
+
+x_samp     = x(idx_samp);    % ideal samples of sine
+
+if addDither_uniform
+    d_uni  = ditherRMS * randn(size(x_samp));
+else
+    d_uni  = zeros(size(x_samp));
+end
+
+x_samp_d   = x_samp + d_uni;
+x_samp_q   = Delta * round(x_samp_d / Delta);   % amplitude quantization
+
+% ZOH reconstruction back to Fs_sim grid
+y_uni      = zeros(N,1);
+for k = 1:Nsamp
+    n1 = idx_samp(k);
+    if k < Nsamp
+        n2 = idx_samp(k+1) - 1;
+    else
+        n2 = N;
+    end
+    y_uni(n1:n2) = x_samp_q(k);
+end
+
+e_uni = y_uni - x;       % quantization error (uniform path)
+
+%% ------------------------ Level-Crossing ADC path -----------------------
+% LC amplitude quantizer on the Fs_sim grid with SAME Delta
+
+if addDither_LC
+    d_lc = ditherRMS * randn(N,1);
+else
+    d_lc = zeros(N,1);
+end
+
+x_lc_in = x + d_lc;
+
+y_lc  = zeros(N,1);
+ycurr = 0;
+half  = Delta/2;
+
+for n = 1:N
+    e = x_lc_in(n) - ycurr;
+    % step up/down until within +/-Delta/2 of input
+    while e >= half
+        ycurr = ycurr + Delta;
+        e     = x_lc_in(n) - ycurr;
+    end
+    while e <= -half
+        ycurr = ycurr - Delta;
+        e     = x_lc_in(n) - ycurr;
+    end
+    y_lc(n) = ycurr;
+end
+
+e_lc = y_lc - x;         % quantization error (LC path)
+
+%% ------------------- Time-domain error (few cycles) --------------------
+cyclesToShow = 5;
+T0           = 1/fin;
+Ns_show      = min(N, round(cyclesToShow * T0 * Fs_sim));
+tt           = t(1:Ns_show);
+
+figure('Name','Quantization error (time domain)');
+subplot(2,1,1);
+plot(tt, e_uni(1:Ns_show), 'LineWidth',1); grid on;
+xlabel('Time [s]'); ylabel('e_{uni}(t)');
+if addDither_uniform
+    title(sprintf('Uniform ADC error (with dither, F_s = %.0f Hz)', Funi));
+else
+    title(sprintf('Uniform ADC error (no dither, F_s = %.0f Hz)', Funi));
+end
+
+subplot(2,1,2);
+plot(tt, e_lc(1:Ns_show), 'LineWidth',1); grid on;
+xlabel('Time [s]'); ylabel('e_{LC}(t)');
+if addDither_LC
+    title('Level-crossing ADC error (with dither)');
+else
+    title('Level-crossing ADC error (no dither)');
+end
+
+%% ------------------------ Spectra of outputs ----------------------------
+% Use Welch for both quantized outputs
+win      = hann(N,'periodic');
+noverlap = 0;
+
+[Pu,f] = pwelch(y_uni - mean(y_uni), win, noverlap, nfft, Fs_sim, 'psd');
+[Pl,~] = pwelch(y_lc  - mean(y_lc),  win, noverlap, nfft, Fs_sim, 'psd');
+
+% Normalize each to its own fundamental peak
+[~,k0]   = min(abs(f - fin));
+Pu_norm  = 10*log10(Pu / max(Pu(k0), eps));
+Pl_norm  = 10*log10(Pl / max(Pl(k0), eps));
+
+figure('Name','Output spectra: Uniform vs LC ADC');
+plot(f, Pu_norm, 'LineWidth',1); hold on; grid on;
+plot(f, Pl_norm, 'LineWidth',1);
+xlim([0 20e3]);   % show up to 20 kHz (a few harmonics)
+ylim([-120 5]);
+xlabel('Frequency [Hz]');
+ylabel('PSD [dB rel. fundamental]');
+
+leg = {};
+if addDither_uniform
+    leg{end+1} = sprintf('Uniform ADC (dither, F_s = %.0f Hz)', Funi);
+else
+    leg{end+1} = sprintf('Uniform ADC (no dither, F_s = %.0f Hz)', Funi);
+end
+if addDither_LC
+    leg{end+1} = 'LC ADC (with dither)';
+else
+    leg{end+1} = 'LC ADC (no dither)';
+end
+legend(leg,'Location','southwest');
+title('Quantized output spectra (normalized to fundamental)');
