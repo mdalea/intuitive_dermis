@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=SCLK Pin=J18-H04
+Removed Pin From Net: NetName=SDI Pin=J18-H05
+Added Pin To Net: NetName=Y1_CSN_SDA Pin=J18-G09
+Added Pin To Net: NetName=Y1_CSN_SCL Pin=J18-G10
+Added Pin To Net: NetName=SDI Pin=J18-H04
+Added Pin To Net: NetName=SCLK Pin=J18-H05

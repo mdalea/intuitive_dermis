@@ -1,0 +1,3 @@
+Removed Pin From Net: NetName=VCM Pin=P73-3
+Added Pin To Net: NetName=VDAC_RESERVED2 Pin=P73-3
+Change Net Name : Old Net Name=VDAC_RESERVED2 New Net Name=VCM_INAMP

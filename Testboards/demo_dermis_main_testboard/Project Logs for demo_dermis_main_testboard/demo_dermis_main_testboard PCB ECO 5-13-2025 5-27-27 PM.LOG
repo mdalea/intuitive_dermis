@@ -1,0 +1,12 @@
+Removed Pin From Net: NetName=VOUTP_X0_INAMP Pin=C118-1
+Removed Pin From Net: NetName=VOUTN_X0_INAMP Pin=C122-2
+Removed Pin From Net: NetName=VINN_X0_0 Pin=R70-2
+Removed Pin From Net: NetName=VINP_X0_0 Pin=R72-2
+Removed Pin From Net: NetName=VOUTN_X0_INAMP Pin=U67-10
+Removed Pin From Net: NetName=VOUTP_X0_INAMP Pin=U67-11
+Added Pin To Net: NetName=VOUTN_X0_INAMP Pin=C118-1
+Added Pin To Net: NetName=VOUTP_X0_INAMP Pin=C122-2
+Added Pin To Net: NetName=VINP_X0_0 Pin=R70-2
+Added Pin To Net: NetName=VINN_X0_0 Pin=R72-2
+Added Pin To Net: NetName=VOUTP_X0_INAMP Pin=U67-10
+Added Pin To Net: NetName=VOUTN_X0_INAMP Pin=U67-11

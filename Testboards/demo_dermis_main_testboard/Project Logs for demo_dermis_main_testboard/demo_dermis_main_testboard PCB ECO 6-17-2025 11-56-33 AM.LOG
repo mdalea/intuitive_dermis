@@ -1,0 +1,10 @@
+Added Component: Designator=U39(DCK5)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Mfr_Name"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Type"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=RST_EXT Pin=U39-2
+Added Pin To Net: NetName=PCB_DGND Pin=U39-3
+Added Pin To Net: NetName=RST Pin=U39-4
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=U39-5
+Added Member To Class: ClassName=demo_dermis_main_testboard_dig Member=Component U39 SN74AUP1T17DCKR

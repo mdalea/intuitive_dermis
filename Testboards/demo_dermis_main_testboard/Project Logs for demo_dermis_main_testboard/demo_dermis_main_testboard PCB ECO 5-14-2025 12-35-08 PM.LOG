@@ -1,0 +1,12 @@
+Added Pin To Net: NetName=VINP_COMP Pin=C130-1
+Added Pin To Net: NetName=PCB_AGND Pin=C130-2
+Added Pin To Net: NetName=VINN_COMP Pin=C132-1
+Added Pin To Net: NetName=PCB_AGND Pin=C132-2
+Added Pin To Net: NetName=NetC133_1 Pin=C133-1
+Added Pin To Net: NetName=PCB_AGND Pin=C133-2
+Added Pin To Net: NetName=VINP_COMP Pin=R78-1
+Added Pin To Net: NetName=NetC131_1 Pin=R78-2
+Added Pin To Net: NetName=VINN_COMP Pin=R80-1
+Added Pin To Net: NetName=NetC133_1 Pin=R80-2
+Added Pin To Net: NetName=NetC133_1 Pin=R81-1
+Added Pin To Net: NetName=VINN_COMP_PREFILT Pin=R81-2

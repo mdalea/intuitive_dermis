@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=SER_CLK_EXT Pin=U50-1
+Removed Pin From Net: NetName=SER_IN_EXT Pin=U50-2
+Removed Pin From Net: NetName=SER_OUT_EXT Pin=U50-3
+Removed Pin From Net: NetName=SER_EN_EXT Pin=U50-4
+Removed Pin From Net: NetName=SPKGATE Pin=U50-5
+Removed Pin From Net: NetName=AER_DIS Pin=U50-6
+Removed Pin From Net: NetName=RATIOMODE0 Pin=U50-7
+Added Pin To Net: NetName=Y1_CSN_SDA Pin=U50-1
+Added Pin To Net: NetName=Y1_CSP_SCL Pin=U50-2
+Added Pin To Net: NetName=Y1_CSP_SDA Pin=U50-3
+Added Pin To Net: NetName=X1_CSN_SCL Pin=U50-4
+Added Pin To Net: NetName=X1_CSN_SDA Pin=U50-5
+Added Pin To Net: NetName=X1_CSP_SCL Pin=U50-6
+Added Pin To Net: NetName=X1_CSP_SDA Pin=U50-7

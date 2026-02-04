@@ -1,0 +1,112 @@
+Removed Pin From Net: NetName=VINP_COMP Pin=U69-2
+Removed Pin From Net: NetName=VINN_COMP Pin=U69-3
+Added Component: Designator=C130(CAPMP2012X150USR)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Manufacturer 1"; Value = "AVX Corporation"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number 1"; Value = "TAJP106M010RNJ"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Material"; Value = "Tantalum"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package / Case"; Value = "0805 (2012 metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ratings"; Value = "10V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "478-3281-1-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "±20%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10µ"; VariantName = "[No Variations]"
+Added Component: Designator=C131(CAPMP2012X150USR)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Manufacturer 1"; Value = "AVX Corporation"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number 1"; Value = "TAJP106M010RNJ"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Material"; Value = "Tantalum"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package / Case"; Value = "0805 (2012 metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ratings"; Value = "10V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "478-3281-1-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "±20%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10µ"; VariantName = "[No Variations]"
+Added Component: Designator=C132(CAPMP2012X150USR)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Manufacturer 1"; Value = "AVX Corporation"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number 1"; Value = "TAJP106M010RNJ"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Material"; Value = "Tantalum"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package / Case"; Value = "0805 (2012 metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ratings"; Value = "10V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "478-3281-1-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "±20%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10µ"; VariantName = "[No Variations]"
+Added Component: Designator=C133(CAPMP2012X150USR)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Manufacturer 1"; Value = "AVX Corporation"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number 1"; Value = "TAJP106M010RNJ"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Material"; Value = "Tantalum"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package / Case"; Value = "0805 (2012 metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ratings"; Value = "10V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "478-3281-1-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "±20%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10µ"; VariantName = "[No Variations]"
+Added Component: Designator=P74(HDR1X2)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=P75(HDR1X2)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=R78(STA_RNCF0603_STP)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Mfr_Name"; Value = "Stackpole International"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RefDes"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R79(STA_RNCF0603_STP)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Mfr_Name"; Value = "Stackpole International"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RefDes"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R80(STA_RNCF0603_STP)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Mfr_Name"; Value = "Stackpole International"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RefDes"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R81(STA_RNCF0603_STP)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Mfr_Name"; Value = "Stackpole International"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RefDes"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VINP_COMP Pin=C130-1
+Added Pin To Net: NetName=PCB_AGND Pin=C130-2
+Added Pin To Net: NetName=PCB_AGND Pin=C131-2
+Added Pin To Net: NetName=VINN_COMP Pin=C132-1
+Added Pin To Net: NetName=PCB_AGND Pin=C132-2
+Added Pin To Net: NetName=PCB_AGND Pin=C133-2
+Added Pin To Net: NetName=VINP_COMP Pin=P74-1
+Added Pin To Net: NetName=VINN_COMP Pin=P75-1
+Added Pin To Net: NetName=VINP_COMP Pin=R78-1
+Added Pin To Net: NetName=VINN_COMP Pin=R80-1
+Added Pin To Net: NetName=NetC131_1 Pin=C131-1
+Added Pin To Net: NetName=NetC131_1 Pin=R78-2
+Added Pin To Net: NetName=NetC131_1 Pin=R79-1
+Added Net: Name=NetC131_1
+Added Pin To Net: NetName=NetC133_1 Pin=C133-1
+Added Pin To Net: NetName=NetC133_1 Pin=R80-2
+Added Pin To Net: NetName=NetC133_1 Pin=R81-1
+Added Net: Name=NetC133_1
+Added Pin To Net: NetName=VINN_COMP_PREFILT Pin=P75-2
+Added Pin To Net: NetName=VINN_COMP_PREFILT Pin=R81-2
+Added Pin To Net: NetName=VINN_COMP_PREFILT Pin=U69-3
+Added Net: Name=VINN_COMP_PREFILT
+Added Pin To Net: NetName=VINP_COMP_PREFILT Pin=P74-2
+Added Pin To Net: NetName=VINP_COMP_PREFILT Pin=R79-2
+Added Pin To Net: NetName=VINP_COMP_PREFILT Pin=U69-2
+Added Net: Name=VINP_COMP_PREFILT
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component C130 10µ
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component C131 10µ
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component C132 10µ
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component C133 10µ
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component P74 Header 2
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component P75 Header 2
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component R78 RNCF0603TKY10K0
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component R79 RNCF0603TKY10K0
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component R80 RNCF0603TKY10K0
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component R81 RNCF0603TKY10K0

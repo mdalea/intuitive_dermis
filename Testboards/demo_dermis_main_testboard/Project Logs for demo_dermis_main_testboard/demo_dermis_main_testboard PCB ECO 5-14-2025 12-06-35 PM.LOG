@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=GND Pin=J19-71
+Removed Pin From Net: NetName=GND Pin=J19-95
+Added Pin To Net: NetName=CSb_VDAC_COMP Pin=J18-D27
+Added Pin To Net: NetName=CSb_VDAC_COMP Pin=J19-95
+Added Pin To Net: NetName=CSb_VDAC_COMP Pin=U50-41

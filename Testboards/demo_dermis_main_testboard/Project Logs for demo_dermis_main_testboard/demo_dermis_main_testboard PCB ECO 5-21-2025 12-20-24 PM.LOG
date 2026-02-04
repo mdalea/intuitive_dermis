@@ -1,0 +1,10 @@
+Removed Pin From Net: NetName=GND Pin=P40-2
+Removed Pin From Net: NetName=GND Pin=P41-2
+Removed Pin From Net: NetName=GND Pin=P42-2
+Removed Pin From Net: NetName=GND Pin=P43-2
+Added Pin To Net: NetName=PCB_DGND Pin=J19-47
+Added Pin To Net: NetName=PCB_DGND Pin=J19-65
+Added Pin To Net: NetName=PCB_DGND Pin=P40-2
+Added Pin To Net: NetName=PCB_DGND Pin=P41-2
+Added Pin To Net: NetName=PCB_DGND Pin=P42-2
+Added Pin To Net: NetName=PCB_DGND Pin=P43-2

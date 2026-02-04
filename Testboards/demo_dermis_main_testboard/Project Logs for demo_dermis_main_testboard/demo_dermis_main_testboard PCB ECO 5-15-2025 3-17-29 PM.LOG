@@ -1,0 +1,12 @@
+Removed Pin From Net: NetName=GND Pin=J26-1
+Removed Pin From Net: NetName=VINP_COMP Pin=J26-2
+Removed Pin From Net: NetName=GND Pin=J27-1
+Removed Pin From Net: NetName=VINN_COMP Pin=J27-2
+Removed Pin From Net: NetName=GND Pin=P49-1
+Removed Pin From Net: NetName=VINP_COMP Pin=P49-2
+Removed Pin From Net: NetName=VCM_COMP Pin=P49-3
+Removed Pin From Net: NetName=GND Pin=P50-1
+Removed Pin From Net: NetName=VINN_COMP Pin=P50-2
+Removed Pin From Net: NetName=VCM_COMP Pin=P50-3
+Removed Member From Class: ClassName=demo_dermis_main_testboard_inamps Member=P49
+Removed Member From Class: ClassName=demo_dermis_main_testboard_inamps Member=P50

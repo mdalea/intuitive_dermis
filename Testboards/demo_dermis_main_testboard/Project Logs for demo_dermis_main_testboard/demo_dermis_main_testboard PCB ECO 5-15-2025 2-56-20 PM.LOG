@@ -1,0 +1,8 @@
+Removed Pin From Net: NetName=VINP_COMP_PREFILT Pin=P72-1
+Removed Pin From Net: NetName=VINN_COMP_PREFILT Pin=P72-3
+Removed Pin From Net: NetName=VDAC_RESERVED1 Pin=P72-5
+Removed Pin From Net: NetName=VDAC_RESERVED2 Pin=P72-7
+Added Pin To Net: NetName=VDAC_RESERVED2 Pin=P72-1
+Added Pin To Net: NetName=VDAC_RESERVED1 Pin=P72-3
+Added Pin To Net: NetName=VINN_COMP_PREFILT Pin=P72-5
+Added Pin To Net: NetName=VINP_COMP_PREFILT Pin=P72-7

@@ -1,0 +1,8 @@
+Removed Pin From Net: NetName=GND Pin=P49-1
+Removed Pin From Net: NetName=GND Pin=P49-2
+Removed Pin From Net: NetName=RST_EXT Pin=U50-23
+Added Pin To Net: NetName=RST_EXT Pin=P49-2
+Added Pin To Net: NetName=RST_EXT_PRE Pin=P49-1
+Added Pin To Net: NetName=RST_EXT_PRE Pin=U50-23
+Added Net: Name=RST_EXT_PRE
+Added Member To Class: ClassName=demo_dermis_main_testboard_dig Member=Component P49 Header 2

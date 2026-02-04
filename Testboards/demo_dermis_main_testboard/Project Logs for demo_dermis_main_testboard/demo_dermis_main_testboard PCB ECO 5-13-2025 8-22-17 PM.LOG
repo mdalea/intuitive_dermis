@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=VOCM_SEL Pin=P62-2
+Removed Pin From Net: NetName=VOCM_SEL Pin=U63-13
+Added Pin To Net: NetName=VOCM_SEL2 Pin=P62-2
+Added Pin To Net: NetName=VOCM_SEL2 Pin=U63-13
+Added Net: Name=VOCM_SEL2

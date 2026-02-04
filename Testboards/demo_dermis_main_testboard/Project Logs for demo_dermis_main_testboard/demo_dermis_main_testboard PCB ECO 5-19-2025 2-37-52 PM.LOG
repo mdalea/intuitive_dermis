@@ -1,0 +1,10 @@
+Removed Pin From Net: NetName=X0_CSP_SDA Pin=U50-33
+Removed Pin From Net: NetName=X0_CSP_SCL Pin=U50-34
+Removed Pin From Net: NetName=X0_CSN_SDA Pin=U50-35
+Removed Pin From Net: NetName=X0_CSN_SCL Pin=U50-36
+Removed Pin From Net: NetName=CATTP_SDA Pin=U50-37
+Added Pin To Net: NetName=STATE_OUT_EXT Pin=U50-33
+Added Pin To Net: NetName=SER_CLK_EXT Pin=U50-34
+Added Pin To Net: NetName=SER_IN_EXT Pin=U50-35
+Added Pin To Net: NetName=SER_OUT_EXT Pin=U50-36
+Added Pin To Net: NetName=SER_EN_EXT Pin=U50-37

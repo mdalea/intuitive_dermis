@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=VOUTN_OTA_INAMP Pin=J28-2
+Removed Pin From Net: NetName=VOUTP_OTA_INAMP Pin=J29-2
+Added Pin To Net: NetName=VOUTP_OTA_INAMP Pin=J28-2
+Added Pin To Net: NetName=VOUTN_OTA_INAMP Pin=J29-2

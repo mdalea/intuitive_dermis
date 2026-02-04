@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=X0_CSN_SDA Pin=U50-13
+Removed Pin From Net: NetName=X0_CSP_SCL Pin=U50-14
+Removed Pin From Net: NetName=X0_CSP_SDA Pin=U50-15
+Added Pin To Net: NetName=RESETb Pin=U50-13
+Added Pin To Net: NetName=LDACb Pin=U50-14
+Added Pin To Net: NetName=CSb_VDAC Pin=U50-15
+Added Pin To Net: NetName=X0_CSN_SDA Pin=U50-24
+Added Pin To Net: NetName=X0_CSP_SCL Pin=U50-25
+Added Pin To Net: NetName=X0_CSP_SDA Pin=U50-26

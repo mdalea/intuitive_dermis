@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=VINN_Y0_0 Pin=P56-2
+Removed Pin From Net: NetName=VINN_Y0_0 Pin=P58-1
+Removed Pin From Net: NetName=VINN_Y0_0 Pin=R53-2
+Added Pin To Net: NetName=VINP_Y0_0 Pin=P56-2
+Added Pin To Net: NetName=VINP_Y0_0 Pin=P58-1
+Added Pin To Net: NetName=VINP_Y0_0 Pin=R53-2
+Added Net: Name=VINP_Y0_0

@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=CSb_IDAC Pin=U50-18
+Removed Pin From Net: NetName=SCLK Pin=U50-19
+Added Pin To Net: NetName=SCLK Pin=U50-18
+Added Pin To Net: NetName=SDI Pin=U50-19

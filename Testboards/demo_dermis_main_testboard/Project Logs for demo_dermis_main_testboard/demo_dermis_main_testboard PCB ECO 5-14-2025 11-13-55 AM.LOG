@@ -1,0 +1,28 @@
+Removed Pin From Net: NetName=VBIAS_ADAPT Pin=U69-12
+Removed Pin From Net: NetName=VBIAS_2P5V Pin=U69-13
+Removed Pin From Net: NetName=CSb_VDAC Pin=U69-14
+Added Pin To Net: NetName=GND Pin=C127-2
+Added Pin To Net: NetName=GND Pin=C128-2
+Added Pin To Net: NetName=VBIAS_2P5V Pin=C129-1
+Added Pin To Net: NetName=GND Pin=C129-2
+Added Pin To Net: NetName=VINP_COMP Pin=P72-1
+Added Pin To Net: NetName=VINN_COMP Pin=P72-3
+Added Pin To Net: NetName=VINP_COMP Pin=U69-2
+Added Pin To Net: NetName=VINN_COMP Pin=U69-3
+Added Pin To Net: NetName=VBIAS_2P5V Pin=U69-7
+Added Pin To Net: NetName=GND Pin=U69-11
+Added Pin To Net: NetName=SDI Pin=U69-12
+Added Pin To Net: NetName=SCLK Pin=U69-13
+Added Pin To Net: NetName=CSb_VDAC_COMP Pin=U69-14
+Added Net: Name=CSb_VDAC_COMP
+Added Pin To Net: NetName=VDAC_RESERVED1 Pin=P72-5
+Added Pin To Net: NetName=VDAC_RESERVED1 Pin=U69-8
+Added Net: Name=VDAC_RESERVED1
+Added Pin To Net: NetName=VDAC_RESERVED2 Pin=P72-7
+Added Pin To Net: NetName=VDAC_RESERVED2 Pin=U69-9
+Added Net: Name=VDAC_RESERVED2
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component C127 approved sub OK
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component C128 10µ
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component C129 approved sub OK
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component P72 Header 4X2
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component U69 DAC7614EB

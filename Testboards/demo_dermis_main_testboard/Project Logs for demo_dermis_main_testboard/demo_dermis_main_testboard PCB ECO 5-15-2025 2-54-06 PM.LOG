@@ -1,0 +1,15 @@
+Removed Pin From Net: NetName=VINP_COMP Pin=P72-1
+Removed Pin From Net: NetName=VINN_COMP Pin=P72-3
+Added Pin To Net: NetName=VINP_COMP_PREFILT Pin=P72-1
+Added Pin To Net: NetName=VINN_COMP_PREFILT Pin=P72-3
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component C113 10µ
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component C114 approved sub OK
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component C130 10µ
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component C132 10µ
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component C133 10µ
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component P53 Header 2
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component P75 Header 2
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component R78 RNCF0603TKY10K0
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component R80 RNCF0603TKY10K0
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component R81 RNCF0603TKY10K0
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component U66 SN74AUP1T17DCKR

@@ -1,0 +1,2297 @@
+Removed Pin From Net: NetName=VNEG Pin=C97-1
+Removed Pin From Net: NetName=GND Pin=C97-2
+Removed Pin From Net: NetName=VNEG Pin=C104-1
+Removed Pin From Net: NetName=GND Pin=C104-2
+Removed Pin From Net: NetName=VNEG Pin=C119-1
+Removed Pin From Net: NetName=GND Pin=C119-2
+Removed Pin From Net: NetName=VNEG Pin=C124-1
+Removed Pin From Net: NetName=GND Pin=C124-2
+Removed Pin From Net: NetName=CHIPA_VCM Pin=J11-1
+Removed Pin From Net: NetName=CHIPA_VCM Pin=J11-3
+Removed Pin From Net: NetName=CHIPA_VCM Pin=J11-5
+Removed Pin From Net: NetName=CHIPA_VCM Pin=J11-7
+Removed Pin From Net: NetName=CHIPA_VCM Pin=J11-9
+Removed Pin From Net: NetName=CHIPA_VCM Pin=J11-11
+Removed Pin From Net: NetName=CHIPA_VCM Pin=J11-13
+Removed Pin From Net: NetName=CHIPA_VCM Pin=J11-14
+Removed Pin From Net: NetName=CHIPA_VCM Pin=J11-15
+Removed Pin From Net: NetName=CHIPA_VCM Pin=J11-17
+Removed Pin From Net: NetName=CHIPA_VCM Pin=J11-18
+Removed Pin From Net: NetName=CHIPA_VCM Pin=J11-22
+Removed Pin From Net: NetName=CHIPA_VCM Pin=J11-23
+Removed Pin From Net: NetName=CHIPA_VCM Pin=J11-26
+Removed Pin From Net: NetName=CHIPA_VCM Pin=J11-27
+Removed Pin From Net: NetName=CHIPA_VCM Pin=J11-33
+Removed Pin From Net: NetName=CHIPA_VCM Pin=J11-34
+Removed Pin From Net: NetName=CHIPA_VCM Pin=J11-40
+Removed Pin From Net: NetName=CHIPA_VCM Pin=J11-S1
+Removed Pin From Net: NetName=CHIPA_VCM Pin=J11-S2
+Removed Pin From Net: NetName=VDD_DIG_3V Pin=J13-18
+Removed Pin From Net: NetName=VSS Pin=J13-20
+Removed Pin From Net: NetName=VDD_DIG_6V Pin=J13-22
+Removed Pin From Net: NetName=VDD_DIG_6V Pin=J13-27
+Removed Pin From Net: NetName=AGND Pin=J13-28
+Removed Pin From Net: NetName=VSS Pin=J13-29
+Removed Pin From Net: NetName=CHIPA_VCM Pin=J13-30
+Removed Pin From Net: NetName=VDD_IO_3P3V Pin=J13-31
+Removed Pin From Net: NetName=GND Pin=J13-36
+Removed Pin From Net: NetName=GND Pin=J13-38
+Removed Pin From Net: NetName=GND Pin=J13-40
+Removed Pin From Net: NetName=AER_DIS Pin=J18-C22
+Removed Pin From Net: NetName=RATIOMODE0 Pin=J18-C23
+Removed Pin From Net: NetName=RATIOMODE1 Pin=J18-C26
+Removed Pin From Net: NetName=CT_MODE Pin=J18-C27
+Removed Pin From Net: NetName=RESETb Pin=J18-D15
+Removed Pin From Net: NetName=LDACb Pin=J18-D17
+Removed Pin From Net: NetName=CSb_VDAC Pin=J18-D18
+Removed Pin From Net: NetName=CSb_IDAC Pin=J18-D20
+Removed Pin From Net: NetName=SCLK Pin=J18-D21
+Removed Pin From Net: NetName=SDI Pin=J18-D23
+Removed Pin From Net: NetName=RST Pin=J19-2
+Removed Pin From Net: NetName=ACK Pin=J19-5
+Removed Pin From Net: NetName=REQON Pin=J19-8
+Removed Pin From Net: NetName=REQOFF Pin=J19-11
+Removed Pin From Net: NetName=ADDRX0 Pin=J19-14
+Removed Pin From Net: NetName=ADDRY0 Pin=J19-17
+Removed Pin From Net: NetName=AER_DIS Pin=J19-20
+Removed Pin From Net: NetName=RATIOMODE0 Pin=J19-23
+Removed Pin From Net: NetName=RATIOMODE1 Pin=J19-26
+Removed Pin From Net: NetName=CT_MODE Pin=J19-29
+Removed Pin From Net: NetName=GAIN_HI Pin=J19-32
+Removed Pin From Net: NetName=RESETb Pin=J19-47
+Removed Pin From Net: NetName=LDACb Pin=J19-50
+Removed Pin From Net: NetName=CSb_VDAC Pin=J19-53
+Removed Pin From Net: NetName=CSb_IDAC Pin=J19-56
+Removed Pin From Net: NetName=SCLK Pin=J19-59
+Removed Pin From Net: NetName=SDI Pin=J19-62
+Removed Pin From Net: NetName=GND Pin=J19-73
+Removed Pin From Net: NetName=GND Pin=J19-74
+Removed Pin From Net: NetName=GND Pin=J19-75
+Removed Pin From Net: NetName=GND Pin=J19-76
+Removed Pin From Net: NetName=GND Pin=J19-77
+Removed Pin From Net: NetName=GND Pin=J19-78
+Removed Pin From Net: NetName=GND Pin=J19-79
+Removed Pin From Net: NetName=GND Pin=J19-80
+Removed Pin From Net: NetName=GND Pin=J19-81
+Removed Pin From Net: NetName=GND Pin=J19-82
+Removed Pin From Net: NetName=GND Pin=J19-83
+Removed Pin From Net: NetName=GND Pin=J19-84
+Removed Pin From Net: NetName=GND Pin=J19-85
+Removed Pin From Net: NetName=GND Pin=J19-86
+Removed Pin From Net: NetName=GND Pin=J19-87
+Removed Pin From Net: NetName=GND Pin=J19-88
+Removed Pin From Net: NetName=GND Pin=J19-89
+Removed Pin From Net: NetName=GND Pin=J19-90
+Removed Pin From Net: NetName=GND Pin=J19-91
+Removed Pin From Net: NetName=GND Pin=J19-92
+Removed Pin From Net: NetName=VDD_5V_IN Pin=J23-5
+Removed Pin From Net: NetName=PCB_AGND Pin=J26-3
+Removed Pin From Net: NetName=CHIPA_VCM Pin=P12-1
+Removed Pin From Net: NetName=ADDRY0 Pin=P37-1
+Removed Pin From Net: NetName=CHIPA_VCM Pin=P44-1
+Removed Pin From Net: NetName=CHIPA_VCM Pin=P61-1
+Removed Pin From Net: NetName=NetC5_2 Pin=R65-1
+Removed Pin From Net: NetName=NetC4_2 Pin=R67-1
+Removed Pin From Net: NetName=GND Pin=U13-3
+Removed Pin From Net: NetName=PCB_DGND Pin=U43-3
+Removed Pin From Net: NetName=ADDRY0 Pin=U47-2
+Removed Pin From Net: NetName=RST_EXT Pin=U50-0
+Removed Pin From Net: NetName=ACK_EXT Pin=U50-1
+Removed Pin From Net: NetName=REQON_EXT Pin=U50-2
+Removed Pin From Net: NetName=REQOFF_EXT Pin=U50-3
+Removed Pin From Net: NetName=ADDRX0_EXT Pin=U50-4
+Removed Pin From Net: NetName=ADDRY0_EXT Pin=U50-5
+Removed Pin From Net: NetName=CHIPA_VCM Pin=U52-9
+Removed Member From Class: ClassName=demo_dermis_main_testboard_ncd2400 Member=C5
+Removed Member From Class: ClassName=demo_dermis_main_testboard_ncd2400 Member=C9
+Removed Member From Class: ClassName=demo_dermis_main_testboard_ncd2400 Member=C15
+Removed Member From Class: ClassName=demo_dermis_main_testboard_ncd2400 Member=C16
+Removed Member From Class: ClassName=demo_dermis_main_testboard_ncd2400 Member=C17
+Removed Member From Class: ClassName=demo_dermis_main_testboard_ncd2400 Member=C18
+Removed Member From Class: ClassName=demo_dermis_main_testboard_ncd2400 Member=C21
+Removed Member From Class: ClassName=demo_dermis_main_testboard_ncd2400 Member=C22
+Removed Member From Class: ClassName=demo_dermis_main_testboard_ncd2400 Member=C25
+Removed Member From Class: ClassName=demo_dermis_main_testboard_ncd2400 Member=C26
+Removed Member From Class: ClassName=demo_dermis_main_testboard_ncd2400 Member=C29
+Removed Member From Class: ClassName=demo_dermis_main_testboard_ncd2400 Member=C30
+Removed Member From Class: ClassName=demo_dermis_main_testboard_dig Member=C34
+Removed Member From Class: ClassName=demo_dermis_main_testboard_ncd2400 Member=C40
+Removed Member From Class: ClassName=demo_dermis_main_testboard_ncd2400 Member=C41
+Removed Member From Class: ClassName=demo_dermis_main_testboard_ncd2400 Member=C42
+Removed Member From Class: ClassName=demo_dermis_main_testboard_back Member=C43
+Removed Member From Class: ClassName=demo_dermis_main_testboard_ncd2400 Member=C64
+Removed Member From Class: ClassName=demo_dermis_main_testboard_dig Member=C85
+Removed Member From Class: ClassName=demo_dermis_main_testboard_dig Member=C86
+Removed Member From Class: ClassName=demo_dermis_main_testboard_dig Member=C87
+Removed Member From Class: ClassName=demo_dermis_main_testboard_dig Member=C88
+Removed Member From Class: ClassName=demo_dermis_main_testboard_dig Member=J11
+Removed Member From Class: ClassName=demo_dermis_main_testboard Member=J11
+Removed Member From Class: ClassName=demo_dermis_main_testboard Member=J12
+Removed Member From Class: ClassName=demo_dermis_main_testboard Member=J13
+Removed Member From Class: ClassName=demo_dermis_main_testboard Member=J19
+Removed Member From Class: ClassName=demo_dermis_main_testboard_inamps Member=J20
+Removed Member From Class: ClassName=demo_dermis_main_testboard Member=J20
+Removed Member From Class: ClassName=demo_dermis_main_testboard Member=J25
+Removed Member From Class: ClassName=demo_dermis_main_testboard Member=J32
+Removed Member From Class: ClassName=demo_dermis_main_testboard Member=P3
+Removed Member From Class: ClassName=demo_dermis_main_testboard_dig Member=P11
+Removed Member From Class: ClassName=demo_dermis_main_testboard Member=P11
+Removed Member From Class: ClassName=demo_dermis_main_testboard_dig Member=P13
+Removed Member From Class: ClassName=demo_dermis_main_testboard Member=P13
+Removed Member From Class: ClassName=demo_dermis_main_testboard_inamps Member=P14
+Removed Member From Class: ClassName=demo_dermis_main_testboard Member=P14
+Removed Member From Class: ClassName=demo_dermis_main_testboard_dig Member=P15
+Removed Member From Class: ClassName=demo_dermis_main_testboard_ncd2400 Member=P15
+Removed Member From Class: ClassName=demo_dermis_main_testboard Member=P15
+Removed Member From Class: ClassName=demo_dermis_main_testboard_dig Member=P16
+Removed Member From Class: ClassName=demo_dermis_main_testboard_dig Member=P18
+Removed Member From Class: ClassName=demo_dermis_main_testboard_dig Member=P19
+Removed Member From Class: ClassName=demo_dermis_main_testboard_dig Member=P20
+Removed Member From Class: ClassName=demo_dermis_main_testboard_dig Member=P21
+Removed Member From Class: ClassName=demo_dermis_main_testboard_inamps Member=P23
+Removed Member From Class: ClassName=demo_dermis_main_testboard_inamps Member=P24
+Removed Member From Class: ClassName=demo_dermis_main_testboard_dig Member=P25
+Removed Member From Class: ClassName=demo_dermis_main_testboard_inamps Member=P25
+Removed Member From Class: ClassName=demo_dermis_main_testboard Member=P25
+Removed Member From Class: ClassName=demo_dermis_main_testboard_inamps Member=P26
+Removed Member From Class: ClassName=demo_dermis_main_testboard_inamps Member=P34
+Removed Member From Class: ClassName=demo_dermis_main_testboard Member=P34
+Removed Member From Class: ClassName=demo_dermis_main_testboard Member=P36
+Removed Member From Class: ClassName=demo_dermis_main_testboard Member=P37
+Removed Member From Class: ClassName=demo_dermis_main_testboard_inamps Member=P45
+Removed Member From Class: ClassName=demo_dermis_main_testboard_inamps Member=P46
+Removed Member From Class: ClassName=demo_dermis_main_testboard_inamps Member=P47
+Removed Member From Class: ClassName=demo_dermis_main_testboard Member=R7
+Removed Member From Class: ClassName=demo_dermis_main_testboard_back Member=R22
+Removed Member From Class: ClassName=demo_dermis_main_testboard_ncd2400 Member=U14
+Removed Member From Class: ClassName=demo_dermis_main_testboard_ncd2400 Member=U17
+Removed Member From Class: ClassName=demo_dermis_main_testboard_ncd2400 Member=U43
+Removed Member From Class: ClassName=demo_dermis_main_testboard_ncd2400 Member=U44
+Removed Member From Class: ClassName=demo_dermis_main_testboard_ncd2400 Member=U45
+Removed Member From Class: ClassName=demo_dermis_main_testboard_ncd2400 Member=U49
+Removed Member From Class: ClassName=demo_dermis_main_testboard_ncd2400 Member=U50
+Removed Member From Class: ClassName=demo_dermis_main_testboard_ncd2400 Member=U51
+Removed Member From Class: ClassName=demo_dermis_main_testboard_ncd2400 Member=U52
+Removed Member From Class: ClassName=demo_dermis_main_testboard_ncd2400 Member=U53
+Removed Member From Class: ClassName=demo_dermis_main_testboard_ncd2400 Member=U54
+Removed Member From Class: ClassName=demo_dermis_main_testboard_ncd2400 Member=U55
+Removed Member From Class: ClassName=demo_dermis_main_testboard_ncd2400 Member=U56
+Removed Member From Class: ClassName=demo_dermis_main_testboard_ncd2400 Member=U57
+Removed Member From Class: ClassName=demo_dermis_main_testboard_ncd2400 Member=U58
+Removed Member From Class: ClassName=demo_dermis_main_testboard_ncd2400 Member=U59
+Removed Member From Class: ClassName=demo_dermis_main_testboard_ncd2400 Member=U60
+Removed Member From Class: ClassName=demo_dermis_main_testboard_ncd2400 Member=U61
+Removed Member From Class: ClassName=demo_dermis_main_testboard Member=VDD_1
+Change component parameters: Designator = "R7"; Footprint = "STA_RMCF0603_STP"; UniqueID = "\SZSBZPKQ"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Stackpole International"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "R22"; Footprint = "STA_RMCF0603_STP"; UniqueID = "\WXUICDVR"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Stackpole International"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "R30"; Footprint = "RC0603N_PAN"; UniqueID = "\UPTKVNOM"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Panasonic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "R31"; Footprint = "RC0603N_PAN"; UniqueID = "\HNBVKNQU"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Panasonic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "R32"; Footprint = "RC0603N_PAN"; UniqueID = "\AYLAUJAR"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Panasonic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "R35"; Footprint = "RC0603N_PAN"; UniqueID = "\FXJPXKOA"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Panasonic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "R36"; Footprint = "RC0603N_PAN"; UniqueID = "\PVUCOKLD"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Panasonic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "R37"; Footprint = "RC0603N_PAN"; UniqueID = "\SCKKKIPR"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Panasonic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "R38"; Footprint = "RC0603N_PAN"; UniqueID = "\WWGRNCWA"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Panasonic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "R39"; Footprint = "RC0603N_PAN"; UniqueID = "\IVHMOEQS"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Panasonic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "R40"; Footprint = "RC0603N_PAN"; UniqueID = "\BQLGRJYN"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Panasonic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "R41"; Footprint = "RC0603N_PAN"; UniqueID = "\WOWWBQRH"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Panasonic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "R42"; Footprint = "RC0603N_PAN"; UniqueID = "\WUHSOPVL"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Panasonic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "R43"; Footprint = "RC0603N_PAN"; UniqueID = "\FIQGJAON"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Panasonic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "R44"; Footprint = "RC0603N_PAN"; UniqueID = "\RGLGXFNC"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Panasonic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "R45"; Footprint = "RC0603N_PAN"; UniqueID = "\ENIWOSIR"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Panasonic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "R46"; Footprint = "RC0603N_PAN"; UniqueID = "\PKURSNQM"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Panasonic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "R50"; Footprint = "RES_ERA6A_0805_PAN"; UniqueID = "\WZUMKXUY"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Panasonic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "R65"; Footprint = "STA_RMCF0603_STP"; UniqueID = "\YTQLAWJN"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Stackpole International"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "U39"; Footprint = "DCK5"; UniqueID = "\AIGIRFNL"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "Type"; VariantName = "[No Variations]"
+Change component parameters: Designator = "U40"; Footprint = "DCK5"; UniqueID = "\MGIQNKRX"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "Type"; VariantName = "[No Variations]"
+Change component parameters: Designator = "U41"; Footprint = "DCK5"; UniqueID = "\WLPCIIKI"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "Type"; VariantName = "[No Variations]"
+Change component parameters: Designator = "U42"; Footprint = "DCK5"; UniqueID = "\IUVAPIOC"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "Type"; VariantName = "[No Variations]"
+Change component parameters: Designator = "U53"; Footprint = "P3_064_INR"; UniqueID = "\TFUHIDFK"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Renesas / Intersil"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "Type"; VariantName = "[No Variations]"
+Change component parameters: Designator = "U56"; Footprint = "SOT-323-3_2P2X1P35_ONS"; UniqueID = "\GGEHOYBR"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "onsemi"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "Type"; VariantName = "[No Variations]"
+Change component parameters: Designator = "U58"; Footprint = "SOT-323-3_2P2X1P35_ONS"; UniqueID = "\CEUCGTXH"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "onsemi"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "Type"; VariantName = "[No Variations]"
+Change component parameters: Designator = "U61"; Footprint = "SOT-323-3_2P2X1P35_ONS"; UniqueID = "\SSOKQEQW"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "onsemi"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "Type"; VariantName = "[No Variations]"
+Change component parameters: Designator = "U64"; Footprint = "D8"; UniqueID = "\MNOUOTUU"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "Type"; VariantName = "[No Variations]"
+Change component parameters: Designator = "J6"; Footprint = "CONN1_FCR7350R_CLF"; UniqueID = "\BFOBVOJC"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Copyright"; Value = "Copyright (C) 2022 Ultra Librarian. All rights reserved."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "FCR7350R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Cliff"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "DEV"; VariantName = "[No Variations]"
+Change component parameters: Designator = "J8"; Footprint = "CONN1_FCR7350R_CLF"; UniqueID = "\VJUAIASN"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Copyright"; Value = "Copyright (C) 2022 Ultra Librarian. All rights reserved."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "FCR7350R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Cliff"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "DEV"; VariantName = "[No Variations]"
+Change component parameters: Designator = "J17"; Footprint = "CONN_90120-0761_MOL"; UniqueID = "\KJYWYUFF"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Copyright"; Value = "Copyright (C) 2022 Ultra Librarian. All rights reserved."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "901200761"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Molex Connector Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "DEV"; VariantName = "[No Variations]"
+Change component parameters: Designator = "J16"; Footprint = "CONN5_VB335_CIN"; UniqueID = "\CESFBEEP"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Cinch Connectivity Solutions"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "Coaxial Connectors(RF) Assemblies"; VariantName = "[No Variations]"
+Change component parameters: Designator = "U62"; Footprint = "VQFN16_RGT_TEX"; UniqueID = "\HEMWLTHX"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "Linear"; VariantName = "[No Variations]"
+Change component parameters: Designator = "U67"; Footprint = "VQFN16_RGT_TEX"; UniqueID = "\BSMVCYQS"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "Linear"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R51"; Footprint = "RES_ERA6A_0805_PAN"; UniqueID = "\YKJRBDED"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Panasonic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "1.02k"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R54"; Footprint = "RC0805N_PAN"; UniqueID = "\CCYRDVDY"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Panasonic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "1k"; VariantName = "[No Variations]"
+Change component parameters: Designator = "J9"; Footprint = "CONN1_FCR7350R_CLF"; UniqueID = "\UDIUVOCH"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Copyright"; Value = "Copyright (C) 2022 Ultra Librarian. All rights reserved."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "FCR7350R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Cliff"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "DEV"; VariantName = "[No Variations]"
+Change component parameters: Designator = "J10"; Footprint = "CONN1_FCR7350R_CLF"; UniqueID = "\QJDDHUZX"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Copyright"; Value = "Copyright (C) 2022 Ultra Librarian. All rights reserved."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "FCR7350R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Cliff"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "DEV"; VariantName = "[No Variations]"
+Change component parameters: Designator = "J20"; Footprint = "CONN_90120-0761_MOL"; UniqueID = "\GEBHPRDZ"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Copyright"; Value = "Copyright (C) 2022 Ultra Librarian. All rights reserved."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "901200761"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Molex Connector Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "DEV"; VariantName = "[No Variations]"
+Change component parameters: Designator = "J21"; Footprint = "CONN_CONBN_LNX"; UniqueID = "\ADJLSAZW"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Linx Technologies"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "Type"; VariantName = "[No Variations]"
+Change component parameters: Designator = "J22"; Footprint = "CONN_CONBN_LNX"; UniqueID = "\VRIAPGFB"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Linx Technologies"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "Type"; VariantName = "[No Variations]"
+Change component parameters: Designator = "J25"; Footprint = "CONN_CONBN_LNX"; UniqueID = "\VHRDPYYB"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Linx Technologies"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "Type"; VariantName = "[No Variations]"
+Change component parameters: Designator = "J30"; Footprint = "CONN_CONBN_LNX"; UniqueID = "\ZVYJAZSO"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Linx Technologies"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "Type"; VariantName = "[No Variations]"
+Change component parameters: Designator = "J31"; Footprint = "CONN_CONBN_LNX"; UniqueID = "\CIKALGRM"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Linx Technologies"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "Type"; VariantName = "[No Variations]"
+Change component parameters: Designator = "J32"; Footprint = "CONN_CONBN_LNX"; UniqueID = "\XKLMZNYA"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Linx Technologies"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "Type"; VariantName = "[No Variations]"
+Change component parameters: Designator = "J33"; Footprint = "CONN_CONBN_LNX"; UniqueID = "\XCKWXRMO"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Linx Technologies"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "Type"; VariantName = "[No Variations]"
+Change component parameters: Designator = "U52"; Footprint = "DB20"; UniqueID = "\IDFQUTZT"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Copyright"; Value = "Copyright (C) 2022 Ultra Librarian. All rights reserved."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "DAC7614EB"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "DEV"; VariantName = "[No Variations]"
+Change component parameters: Designator = "U54"; Footprint = "DB20"; UniqueID = "\JMFDUOIC"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Copyright"; Value = "Copyright (C) 2022 Ultra Librarian. All rights reserved."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "DAC7614EB"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "DEV"; VariantName = "[No Variations]"
+Change component parameters: Designator = "U55"; Footprint = "DBV5"; UniqueID = "\XIHRNEQC"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Copyright"; Value = "Copyright (C) 2022 Ultra Librarian. All rights reserved."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "TLV2771CDBVR"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "DEV"; VariantName = "[No Variations]"
+Change component parameters: Designator = "U57"; Footprint = "DBV5"; UniqueID = "\PURVBVNY"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Copyright"; Value = "Copyright (C) 2022 Ultra Librarian. All rights reserved."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "TLV2771CDBVR"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "DEV"; VariantName = "[No Variations]"
+Change component parameters: Designator = "U59"; Footprint = "TS5B_TEX"; UniqueID = "\ERGOAFBB"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Copyright"; Value = "Copyright (C) 2022 Ultra Librarian. All rights reserved."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "LP3961ES-2.5"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "DEV"; VariantName = "[No Variations]"
+Change component parameters: Designator = "U60"; Footprint = "DBV5"; UniqueID = "\TWUDHHXG"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Copyright"; Value = "Copyright (C) 2022 Ultra Librarian. All rights reserved."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "TLV2771CDBVR"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "DEV"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R67"; Footprint = "STA_RMCF0603_STP"; UniqueID = "\IFWVEIMK"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Stackpole International"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "J12"; Footprint = "HRS_DF17(4.0)-40DP-0.5V(57)"; UniqueID = "\WEXPOJWH"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "DF17(4.0)-40DP-0.5V(57)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "J13"; Footprint = "HRS_DF17(4.0)-40DP-0.5V(57)"; UniqueID = "\IELBASLC"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "DF17(4.0)-40DP-0.5V(57)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "U50"; Footprint = "MODULE_DEV-16771"; UniqueID = "\PZAKURPH"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/DEV-16771/SparkFun+Electronics/view-part/?ref=eda"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "SparkFun Electronics"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "DEV-16771"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/DEV-16771/SparkFun+Electronics/view-part/?ref=snap"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "U51"; Footprint = "MODULE_DEV-16771"; UniqueID = "\STPVZYOR"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/DEV-16771/SparkFun+Electronics/view-part/?ref=eda"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "SparkFun Electronics"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "DEV-16771"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/DEV-16771/SparkFun+Electronics/view-part/?ref=snap"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "J2"; Footprint = "CONN1_FCR7350R_CLF"; UniqueID = "\VFHKGGVQ"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Copyright"; Value = "Copyright (C) 2022 Ultra Librarian. All rights reserved."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "FCR7350R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Cliff"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "DEV"; VariantName = "[No Variations]"
+Change component parameters: Designator = "J4"; Footprint = "CONN1_FCR7350R_CLF"; UniqueID = "\PRDDXIFR"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Copyright"; Value = "Copyright (C) 2022 Ultra Librarian. All rights reserved."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "FCR7350R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Cliff"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "DEV"; VariantName = "[No Variations]"
+Change component parameters: Designator = "J5"; Footprint = "CONN1_FCR7350R_CLF"; UniqueID = "\LXQNVVNB"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Copyright"; Value = "Copyright (C) 2022 Ultra Librarian. All rights reserved."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "FCR7350R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Cliff"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "DEV"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R27"; Footprint = "RC0603N_PAN"; UniqueID = "\ISDZFHTX"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Panasonic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "R49"; Footprint = "RESC1608N"; UniqueID = "\ACTSMFAB"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Manufacturer 1"; Value = "Yageo"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 1"; Value = "RC0603FR-0710KL"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "0603 (1608 Metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ratings"; Value = "1/10W"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "311-10.0KHRCT-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±1%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Change component parameters: Designator = "J14"; Footprint = "HARWIN_S1711-46R"; UniqueID = "\UDIUGNEX"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Availability"; Value = "Warning"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/S1711-46R/Harwin%20Inc./view-part/2172610/?ref=eda"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "Harwin Inc."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "S1711-46R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Purchase-URL"; Value = "https://pricing.snapeda.com/search/part/S1711-46R/?ref=eda"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/S1711-46R/Harwin%20Inc./view-part/2172610/?ref=snap"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "J15"; Footprint = "HARWIN_S1711-46R"; UniqueID = "\MQFKBSPZ"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Availability"; Value = "Warning"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/S1711-46R/Harwin%20Inc./view-part/2172610/?ref=eda"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "Harwin Inc."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "S1711-46R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Purchase-URL"; Value = "https://pricing.snapeda.com/search/part/S1711-46R/?ref=eda"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/S1711-46R/Harwin%20Inc./view-part/2172610/?ref=snap"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "J11"; Footprint = "HRS_DF17(4.0)-40DP-0.5V(57)"; UniqueID = "\KJPGFFTN"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "DF17(4.0)-40DP-0.5V(57)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "C93"; Footprint = "CAP_CML_0805_.3pF-1500pF,4700pF_STP"; UniqueID = "\LNMQGHVX"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Stackpole International"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "15p"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C102"; Footprint = "CAP_CML_0805_.3pF-1500pF,4700pF_STP"; UniqueID = "\NIKUSCGQ"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Stackpole International"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "3p"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C108"; Footprint = "CAPC17595_87N_KEM"; UniqueID = "\TVRNAWDN"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Kemet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "C122"; Footprint = "CAP_CML_0805_.3pF-1500pF,4700pF_STP"; UniqueID = "\DRTTBVII"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Stackpole International"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "3p"; VariantName = "[No Variations]"
+Change component parameters: Designator = "J7"; Footprint = "CONN1_FCR7350R_CLF"; UniqueID = "\HMPSQEIW"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Copyright"; Value = "Copyright (C) 2022 Ultra Librarian. All rights reserved."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "FCR7350R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Cliff"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "DEV"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C39"; Footprint = "CAPMP2012X150USR"; UniqueID = "\PGUKGAMY"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Manufacturer 1"; Value = "AVX Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 1"; Value = "TAJP106M010RNJ"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Material"; Value = "Tantalum"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "0805 (2012 metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ratings"; Value = "10V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "478-3281-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±20%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10µ"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C44"; Footprint = "CAPMP2012X150USR"; UniqueID = "\JICFWLCF"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Manufacturer 1"; Value = "AVX Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 1"; Value = "TAJP106M010RNJ"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Material"; Value = "Tantalum"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "0805 (2012 metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ratings"; Value = "10V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "478-3281-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±20%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10µ"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C82"; Footprint = "CAP_3216_TDK"; UniqueID = "\TROWMVPC"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Copyright"; Value = "Copyright (C) 2022 Ultra Librarian. All rights reserved."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "C3216X5R1A686M160AC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "TDK"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "DEV"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C83"; Footprint = "CAP_4532_TDK"; UniqueID = "\EDBYNHWL"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Copyright"; Value = "Copyright (C) 2022 Ultra Librarian. All rights reserved."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "C4532X7R1C336M250KC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "TDK"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = "RefDes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "DEV"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C11"; Footprint = "CAPMP2012X150USR"; UniqueID = "\FGOILXDH"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Manufacturer 1"; Value = "AVX Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 1"; Value = "TAJP106M010RNJ"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Material"; Value = "Tantalum"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "0805 (2012 metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ratings"; Value = "10V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "478-3281-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±20%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10µ"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C15"; Footprint = "CAPC1608N"; UniqueID = "\MSLODYTS"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "http://www.avx.com/docs/Catalogs/cx7r.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.avx.com/docs/Catalogs/cx7r.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "http://product.tdk.com/capacitor/mlcc/en/documents/mlcc_commercial_general_en.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "http://product.tdk.com/capacitor/mlcc/en/documents/mlcc_commercial_general_en.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer 1"; Value = "AVX Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer 2"; Value = "TDK Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 1"; Value = "06035C104KAT2A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 2"; Value = "C1608X7R1H104K"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Material"; Value = "ceramic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "0603 (1608 Metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ratings"; Value = "50V; X7R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 2"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "478-5052-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 2"; Value = "445-1314-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±10%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "100n"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C29"; Footprint = "CAPC1608N"; UniqueID = "\KISQEWYX"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "http://www.avx.com/docs/Catalogs/cx7r.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.avx.com/docs/Catalogs/cx7r.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "http://product.tdk.com/capacitor/mlcc/en/documents/mlcc_commercial_general_en.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "http://product.tdk.com/capacitor/mlcc/en/documents/mlcc_commercial_general_en.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer 1"; Value = "AVX Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer 2"; Value = "TDK Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 1"; Value = "06035C104KAT2A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 2"; Value = "C1608X7R1H104K"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Material"; Value = "ceramic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "0603 (1608 Metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ratings"; Value = "50V; X7R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 2"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "478-5052-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 2"; Value = "445-1314-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±10%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "100n"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C30"; Footprint = "CAPMP2012X150USR"; UniqueID = "\APUYAAAG"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Manufacturer 1"; Value = "AVX Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 1"; Value = "TAJP106M010RNJ"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Material"; Value = "Tantalum"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "0805 (2012 metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ratings"; Value = "10V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "478-3281-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±20%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10µ"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C33"; Footprint = "CAPC1608N"; UniqueID = "\TWARKSVE"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "http://www.avx.com/docs/Catalogs/cx7r.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.avx.com/docs/Catalogs/cx7r.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "http://product.tdk.com/capacitor/mlcc/en/documents/mlcc_commercial_general_en.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "http://product.tdk.com/capacitor/mlcc/en/documents/mlcc_commercial_general_en.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer 1"; Value = "AVX Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer 2"; Value = "TDK Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 1"; Value = "06035C104KAT2A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 2"; Value = "C1608X7R1H104K"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Material"; Value = "ceramic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "0603 (1608 Metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ratings"; Value = "50V; X7R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 2"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "478-5052-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 2"; Value = "445-1314-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±10%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "100n"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C37"; Footprint = "CAPMP2012X150USR"; UniqueID = "\QGWYERRK"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Manufacturer 1"; Value = "AVX Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 1"; Value = "TAJP106M010RNJ"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Material"; Value = "Tantalum"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "0805 (2012 metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ratings"; Value = "10V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "478-3281-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±20%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10µ"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C41"; Footprint = "CAPMP2012X150USR"; UniqueID = "\JUNLXWQY"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Manufacturer 1"; Value = "AVX Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 1"; Value = "TAJP106M010RNJ"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Material"; Value = "Tantalum"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "0805 (2012 metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ratings"; Value = "10V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "478-3281-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±20%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10µ"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C42"; Footprint = "CAPMP2012X150USR"; UniqueID = "\ROCJCMGB"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Manufacturer 1"; Value = "AVX Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 1"; Value = "TAJP106M010RNJ"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Material"; Value = "Tantalum"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "0805 (2012 metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ratings"; Value = "10V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "478-3281-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±20%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10µ"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C45"; Footprint = "CAPC1608N"; UniqueID = "\RZDTFRZQ"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "http://www.avx.com/docs/Catalogs/cx7r.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.avx.com/docs/Catalogs/cx7r.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "http://product.tdk.com/capacitor/mlcc/en/documents/mlcc_commercial_general_en.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "http://product.tdk.com/capacitor/mlcc/en/documents/mlcc_commercial_general_en.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer 1"; Value = "AVX Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer 2"; Value = "TDK Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 1"; Value = "06035C104KAT2A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 2"; Value = "C1608X7R1H104K"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Material"; Value = "ceramic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "0603 (1608 Metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ratings"; Value = "50V; X7R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 2"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "478-5052-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 2"; Value = "445-1314-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±10%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "100n"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C48"; Footprint = "CAPC1608N"; UniqueID = "\GHKMLVLA"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "http://www.avx.com/docs/Catalogs/cx7r.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.avx.com/docs/Catalogs/cx7r.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "http://product.tdk.com/capacitor/mlcc/en/documents/mlcc_commercial_general_en.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "http://product.tdk.com/capacitor/mlcc/en/documents/mlcc_commercial_general_en.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer 1"; Value = "AVX Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer 2"; Value = "TDK Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 1"; Value = "06035C104KAT2A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 2"; Value = "C1608X7R1H104K"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Material"; Value = "ceramic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "0603 (1608 Metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ratings"; Value = "50V; X7R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 2"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "478-5052-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 2"; Value = "445-1314-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±10%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "100n"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C52"; Footprint = "CAPMP2012X150USR"; UniqueID = "\IJYCDMUX"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Manufacturer 1"; Value = "AVX Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 1"; Value = "TAJP106M010RNJ"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Material"; Value = "Tantalum"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "0805 (2012 metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ratings"; Value = "10V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "478-3281-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±20%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10µ"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C54"; Footprint = "CAPMP2012X150USR"; UniqueID = "\OUBQVENB"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Manufacturer 1"; Value = "AVX Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 1"; Value = "TAJP106M010RNJ"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Material"; Value = "Tantalum"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "0805 (2012 metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ratings"; Value = "10V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "478-3281-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±20%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10µ"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C59"; Footprint = "CAPC1608N"; UniqueID = "\TNSKILKE"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "http://www.avx.com/docs/Catalogs/cx7r.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.avx.com/docs/Catalogs/cx7r.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "http://product.tdk.com/capacitor/mlcc/en/documents/mlcc_commercial_general_en.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "http://product.tdk.com/capacitor/mlcc/en/documents/mlcc_commercial_general_en.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer 1"; Value = "AVX Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer 2"; Value = "TDK Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 1"; Value = "06035C104KAT2A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 2"; Value = "C1608X7R1H104K"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Material"; Value = "ceramic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "0603 (1608 Metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ratings"; Value = "50V; X7R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 2"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "478-5052-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 2"; Value = "445-1314-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±10%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "100n"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C63"; Footprint = "CAPC1608N"; UniqueID = "\DSVINGOD"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "http://www.avx.com/docs/Catalogs/cx7r.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.avx.com/docs/Catalogs/cx7r.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "http://product.tdk.com/capacitor/mlcc/en/documents/mlcc_commercial_general_en.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "http://product.tdk.com/capacitor/mlcc/en/documents/mlcc_commercial_general_en.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer 1"; Value = "AVX Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer 2"; Value = "TDK Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 1"; Value = "06035C104KAT2A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 2"; Value = "C1608X7R1H104K"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Material"; Value = "ceramic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "0603 (1608 Metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ratings"; Value = "50V; X7R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 2"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "478-5052-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 2"; Value = "445-1314-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±10%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "100n"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C67"; Footprint = "CAPC1608N"; UniqueID = "\ZZCZTUGE"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "http://www.avx.com/docs/Catalogs/cx7r.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.avx.com/docs/Catalogs/cx7r.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "http://product.tdk.com/capacitor/mlcc/en/documents/mlcc_commercial_general_en.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "http://product.tdk.com/capacitor/mlcc/en/documents/mlcc_commercial_general_en.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer 1"; Value = "AVX Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer 2"; Value = "TDK Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 1"; Value = "06035C104KAT2A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 2"; Value = "C1608X7R1H104K"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Material"; Value = "ceramic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "0603 (1608 Metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ratings"; Value = "50V; X7R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 2"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "478-5052-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 2"; Value = "445-1314-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±10%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "100n"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C69"; Footprint = "CAPC1608N"; UniqueID = "\QCPSVKLP"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "http://www.avx.com/docs/Catalogs/cx7r.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.avx.com/docs/Catalogs/cx7r.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "http://product.tdk.com/capacitor/mlcc/en/documents/mlcc_commercial_general_en.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "http://product.tdk.com/capacitor/mlcc/en/documents/mlcc_commercial_general_en.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer 1"; Value = "AVX Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer 2"; Value = "TDK Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 1"; Value = "06035C104KAT2A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 2"; Value = "C1608X7R1H104K"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Material"; Value = "ceramic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "0603 (1608 Metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ratings"; Value = "50V; X7R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 2"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "478-5052-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 2"; Value = "445-1314-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±10%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "100n"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C71"; Footprint = "CAPC1608N"; UniqueID = "\VOKPZTGD"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "http://www.avx.com/docs/Catalogs/cx7r.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.avx.com/docs/Catalogs/cx7r.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "http://product.tdk.com/capacitor/mlcc/en/documents/mlcc_commercial_general_en.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "http://product.tdk.com/capacitor/mlcc/en/documents/mlcc_commercial_general_en.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer 1"; Value = "AVX Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer 2"; Value = "TDK Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 1"; Value = "06035C104KAT2A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 2"; Value = "C1608X7R1H104K"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Material"; Value = "ceramic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "0603 (1608 Metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ratings"; Value = "50V; X7R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 2"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "478-5052-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 2"; Value = "445-1314-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±10%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "100n"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C72"; Footprint = "CAPC1608N"; UniqueID = "\KNMDZRVC"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "http://www.avx.com/docs/Catalogs/cx7r.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.avx.com/docs/Catalogs/cx7r.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "http://product.tdk.com/capacitor/mlcc/en/documents/mlcc_commercial_general_en.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "http://product.tdk.com/capacitor/mlcc/en/documents/mlcc_commercial_general_en.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer 1"; Value = "AVX Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer 2"; Value = "TDK Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 1"; Value = "06035C104KAT2A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 2"; Value = "C1608X7R1H104K"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Material"; Value = "ceramic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "0603 (1608 Metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ratings"; Value = "50V; X7R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 2"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "478-5052-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 2"; Value = "445-1314-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±10%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "100n"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C75"; Footprint = "CAPMP2012X150USR"; UniqueID = "\FZTNUVVY"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Manufacturer 1"; Value = "AVX Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 1"; Value = "TAJP106M010RNJ"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Material"; Value = "Tantalum"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "0805 (2012 metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ratings"; Value = "10V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "478-3281-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±20%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10µ"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C78"; Footprint = "CAPMP2012X150USR"; UniqueID = "\JWOVZHCX"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Manufacturer 1"; Value = "AVX Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 1"; Value = "TAJP106M010RNJ"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Material"; Value = "Tantalum"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "0805 (2012 metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ratings"; Value = "10V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "478-3281-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±20%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10µ"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C80"; Footprint = "CAPMP2012X150USR"; UniqueID = "\MINSDPML"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Manufacturer 1"; Value = "AVX Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 1"; Value = "TAJP106M010RNJ"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Material"; Value = "Tantalum"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "0805 (2012 metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ratings"; Value = "10V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "478-3281-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±20%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10µ"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C85"; Footprint = "CAPMP2012X150USR"; UniqueID = "\BUOKBRMV"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Manufacturer 1"; Value = "AVX Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 1"; Value = "TAJP106M010RNJ"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Material"; Value = "Tantalum"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "0805 (2012 metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ratings"; Value = "10V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "478-3281-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±20%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10µ"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C97"; Footprint = "CAPMP2012X150USR"; UniqueID = "\ATRVNUJZ"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Manufacturer 1"; Value = "AVX Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 1"; Value = "TAJP106M010RNJ"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Material"; Value = "Tantalum"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "0805 (2012 metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ratings"; Value = "10V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "478-3281-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±20%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10µ"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C98"; Footprint = "CAPC1608N"; UniqueID = "\TOAKUOMS"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "http://www.avx.com/docs/Catalogs/cx7r.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.avx.com/docs/Catalogs/cx7r.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "http://product.tdk.com/capacitor/mlcc/en/documents/mlcc_commercial_general_en.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "http://product.tdk.com/capacitor/mlcc/en/documents/mlcc_commercial_general_en.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer 1"; Value = "AVX Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer 2"; Value = "TDK Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 1"; Value = "06035C104KAT2A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 2"; Value = "C1608X7R1H104K"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Material"; Value = "ceramic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "0603 (1608 Metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ratings"; Value = "50V; X7R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 2"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "478-5052-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 2"; Value = "445-1314-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±10%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "100n"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C100"; Footprint = "CAPMP2012X150USR"; UniqueID = "\GHKJYHWS"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Manufacturer 1"; Value = "AVX Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 1"; Value = "TAJP106M010RNJ"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Material"; Value = "Tantalum"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "0805 (2012 metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ratings"; Value = "10V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "478-3281-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±20%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10µ"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C103"; Footprint = "CAPC1608N"; UniqueID = "\XPGIPJKJ"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "http://www.avx.com/docs/Catalogs/cx7r.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.avx.com/docs/Catalogs/cx7r.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "http://product.tdk.com/capacitor/mlcc/en/documents/mlcc_commercial_general_en.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "http://product.tdk.com/capacitor/mlcc/en/documents/mlcc_commercial_general_en.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer 1"; Value = "AVX Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer 2"; Value = "TDK Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 1"; Value = "06035C104KAT2A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 2"; Value = "C1608X7R1H104K"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Material"; Value = "ceramic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "0603 (1608 Metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ratings"; Value = "50V; X7R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 2"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "478-5052-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 2"; Value = "445-1314-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±10%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "100n"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C104"; Footprint = "CAPC1608N"; UniqueID = "\WIRKRZAP"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "http://www.avx.com/docs/Catalogs/cx7r.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.avx.com/docs/Catalogs/cx7r.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "http://product.tdk.com/capacitor/mlcc/en/documents/mlcc_commercial_general_en.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "http://product.tdk.com/capacitor/mlcc/en/documents/mlcc_commercial_general_en.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer 1"; Value = "AVX Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer 2"; Value = "TDK Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 1"; Value = "06035C104KAT2A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 2"; Value = "C1608X7R1H104K"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Material"; Value = "ceramic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "0603 (1608 Metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ratings"; Value = "50V; X7R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 2"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "478-5052-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 2"; Value = "445-1314-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±10%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "100n"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C119"; Footprint = "CAPMP2012X150USR"; UniqueID = "\HGJJVABV"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Manufacturer 1"; Value = "AVX Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 1"; Value = "TAJP106M010RNJ"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Material"; Value = "Tantalum"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "0805 (2012 metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ratings"; Value = "10V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "478-3281-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±20%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10µ"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C53"; Footprint = "CAPMP2012X150USR"; UniqueID = "\MRPYXHGX"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Manufacturer 1"; Value = "AVX Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 1"; Value = "TAJP106M010RNJ"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Material"; Value = "Tantalum"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "0805 (2012 metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ratings"; Value = "10V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "478-3281-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±20%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10µ"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C60"; Footprint = "CAPMP2012X150USR"; UniqueID = "\WCCUZOCM"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Manufacturer 1"; Value = "AVX Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 1"; Value = "TAJP106M010RNJ"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Material"; Value = "Tantalum"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "0805 (2012 metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ratings"; Value = "10V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "478-3281-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±20%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10µ"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C81"; Footprint = "CAPC1608N"; UniqueID = "\SZALAIDS"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "http://www.avx.com/docs/Catalogs/ccog.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.avx.com/docs/Catalogs/ccog.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "http://www.tdk.com/pdf/tight_tol_B11.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.tdk.com/pdf/tight_tol_B11.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink3Description"; Value = "http://www.kemet.com/datasheets&C0603C221F5GACTU"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink3URL"; Value = "http://www.kemet.com/datasheets&C0603C221F5GACTU"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Operating Temperature"; Value = "-55°C ~ 125°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "0603 (1608 Metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ratings"; Value = "50V; NP0"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Size / Dimension"; Value = "0.063" L x 0.031" W (1.60mm x 0.80mm)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Thickness (Max)"; Value = "0.037" (0.95mm)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±5%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "47p"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C89"; Footprint = "CAPC17595_87N_KEM"; UniqueID = "\RTLGPVXT"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Kemet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "C91"; Footprint = "CAP_CML_0805_.3pF-1500pF,4700pF_STP"; UniqueID = "\NUABXJIG"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Stackpole International"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "15p"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C95"; Footprint = "CAP_CML_0805_.3pF-1500pF,4700pF_STP"; UniqueID = "\AJFXZRMH"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Stackpole International"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "3p"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C118"; Footprint = "CAP_CML_0805_.3pF-1500pF,4700pF_STP"; UniqueID = "\IMTQEEAU"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Mfr_Name"; Value = "Stackpole International"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RefDes"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "3p"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C57"; Footprint = "CAPC1608N"; UniqueID = "\OGICHLDD"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "http://www.avx.com/docs/Catalogs/cx7r.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.avx.com/docs/Catalogs/cx7r.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "http://product.tdk.com/capacitor/mlcc/en/documents/mlcc_commercial_general_en.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "http://product.tdk.com/capacitor/mlcc/en/documents/mlcc_commercial_general_en.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer 1"; Value = "AVX Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer 2"; Value = "TDK Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 1"; Value = "06035C104KAT2A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 2"; Value = "C1608X7R1H104K"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Material"; Value = "ceramic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "0603 (1608 Metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ratings"; Value = "50V; X7R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 2"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "478-5052-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 2"; Value = "445-1314-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±10%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "100n"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C76"; Footprint = "CAPC1608N"; UniqueID = "\ZESHYROC"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "http://www.avx.com/docs/Catalogs/ccog.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.avx.com/docs/Catalogs/ccog.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "http://www.tdk.com/pdf/tight_tol_B11.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.tdk.com/pdf/tight_tol_B11.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink3Description"; Value = "http://www.kemet.com/datasheets&C0603C221F5GACTU"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink3URL"; Value = "http://www.kemet.com/datasheets&C0603C221F5GACTU"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Operating Temperature"; Value = "-55°C ~ 125°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "0603 (1608 Metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ratings"; Value = "50V; NP0"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Size / Dimension"; Value = "0.063" L x 0.031" W (1.60mm x 0.80mm)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Thickness (Max)"; Value = "0.037" (0.95mm)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±5%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "47p"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C88"; Footprint = "CAPC1608N"; UniqueID = "\UTZYWKTF"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "http://www.avx.com/docs/Catalogs/ccog.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.avx.com/docs/Catalogs/ccog.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "http://www.tdk.com/pdf/tight_tol_B11.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.tdk.com/pdf/tight_tol_B11.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink3Description"; Value = "http://www.kemet.com/datasheets&C0603C221F5GACTU"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink3URL"; Value = "http://www.kemet.com/datasheets&C0603C221F5GACTU"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Operating Temperature"; Value = "-55°C ~ 125°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "0603 (1608 Metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ratings"; Value = "50V; NP0"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Size / Dimension"; Value = "0.063" L x 0.031" W (1.60mm x 0.80mm)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Thickness (Max)"; Value = "0.037" (0.95mm)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±5%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "47p"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C56"; Footprint = "CAPC1608N"; UniqueID = "\DTIWYVZS"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "http://www.avx.com/docs/Catalogs/cx7r.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.avx.com/docs/Catalogs/cx7r.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "http://product.tdk.com/capacitor/mlcc/en/documents/mlcc_commercial_general_en.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "http://product.tdk.com/capacitor/mlcc/en/documents/mlcc_commercial_general_en.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer 1"; Value = "AVX Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer 2"; Value = "TDK Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 1"; Value = "06035C104KAT2A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 2"; Value = "C1608X7R1H104K"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Material"; Value = "ceramic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "0603 (1608 Metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ratings"; Value = "50V; X7R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 2"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "478-5052-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 2"; Value = "445-1314-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±10%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "100n"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C61"; Footprint = "CAPC1608N"; UniqueID = "\ZVCUUZFT"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "http://www.avx.com/docs/Catalogs/cx7r.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.avx.com/docs/Catalogs/cx7r.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "http://product.tdk.com/capacitor/mlcc/en/documents/mlcc_commercial_general_en.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "http://product.tdk.com/capacitor/mlcc/en/documents/mlcc_commercial_general_en.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer 1"; Value = "AVX Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer 2"; Value = "TDK Corporation"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 1"; Value = "06035C104KAT2A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 2"; Value = "C1608X7R1H104K"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Material"; Value = "ceramic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package / Case"; Value = "0603 (1608 Metric)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Ratings"; Value = "50V; X7R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 2"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "478-5052-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 2"; Value = "445-1314-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "±10%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "100n"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=C1-1
+Added Pin To Net: NetName=GND Pin=C1-2
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=C2-1
+Added Pin To Net: NetName=GND Pin=C2-2
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=C4-1
+Added Pin To Net: NetName=GND Pin=C4-2
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=C6-1
+Added Pin To Net: NetName=GND Pin=C6-2
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=C7-1
+Added Pin To Net: NetName=GND Pin=C7-2
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=C8-1
+Added Pin To Net: NetName=GND Pin=C8-2
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=C10-1
+Added Pin To Net: NetName=GND Pin=C10-2
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=C12-1
+Added Pin To Net: NetName=GND Pin=C12-2
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=C13-1
+Added Pin To Net: NetName=GND Pin=C13-2
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=C14-1
+Added Pin To Net: NetName=GND Pin=C14-2
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=C19-1
+Added Pin To Net: NetName=GND Pin=C19-2
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=C20-1
+Added Pin To Net: NetName=GND Pin=C20-2
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=C23-1
+Added Pin To Net: NetName=GND Pin=C23-2
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=C24-1
+Added Pin To Net: NetName=GND Pin=C24-2
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=C27-1
+Added Pin To Net: NetName=GND Pin=C27-2
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=C28-1
+Added Pin To Net: NetName=GND Pin=C28-2
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=C31-1
+Added Pin To Net: NetName=GND Pin=C31-2
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=C32-1
+Added Pin To Net: NetName=GND Pin=C32-2
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=C35-1
+Added Pin To Net: NetName=GND Pin=C35-2
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=C36-1
+Added Pin To Net: NetName=GND Pin=C36-2
+Added Pin To Net: NetName=PCB_DGND Pin=C38-2
+Added Pin To Net: NetName=PCB_DGND Pin=C39-2
+Added Pin To Net: NetName=PCB_DGND Pin=C45-2
+Added Pin To Net: NetName=PCB_DGND Pin=C46-2
+Added Pin To Net: NetName=PCB_DGND Pin=C60-2
+Added Pin To Net: NetName=PCB_DGND Pin=C61-2
+Added Pin To Net: NetName=VOCM_IN Pin=C90-1
+Added Pin To Net: NetName=GND Pin=C90-2
+Added Pin To Net: NetName=GND Pin=C97-1
+Added Pin To Net: NetName=VNEG Pin=C97-2
+Added Pin To Net: NetName=VDD_5V_IN Pin=C99-1
+Added Pin To Net: NetName=GND Pin=C99-2
+Added Pin To Net: NetName=VDD_5V_IN Pin=C101-1
+Added Pin To Net: NetName=GND Pin=C101-2
+Added Pin To Net: NetName=GND Pin=C104-1
+Added Pin To Net: NetName=VNEG Pin=C104-2
+Added Pin To Net: NetName=GND Pin=C105-1
+Added Pin To Net: NetName=VNEG Pin=C105-2
+Added Pin To Net: NetName=VDD_5V_IN Pin=C109-1
+Added Pin To Net: NetName=GND Pin=C109-2
+Added Pin To Net: NetName=VDD_5V_IN Pin=C110-1
+Added Pin To Net: NetName=GND Pin=C110-2
+Added Pin To Net: NetName=GND Pin=C111-1
+Added Pin To Net: NetName=VNEG Pin=C111-2
+Added Pin To Net: NetName=VDD_5V_IN Pin=C112-1
+Added Pin To Net: NetName=GND Pin=C112-2
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=C113-1
+Added Pin To Net: NetName=PCB_DGND Pin=C113-2
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=C114-1
+Added Pin To Net: NetName=PCB_DGND Pin=C114-2
+Added Pin To Net: NetName=VOCM_IN Pin=C115-1
+Added Pin To Net: NetName=GND Pin=C115-2
+Added Pin To Net: NetName=NetC116_1 Pin=C116-1
+Added Pin To Net: NetName=NetC116_2 Pin=C116-2
+Added Pin To Net: NetName=NetC117_1 Pin=C117-1
+Added Pin To Net: NetName=NetC117_2 Pin=C117-2
+Added Pin To Net: NetName=GND Pin=C119-1
+Added Pin To Net: NetName=VNEG Pin=C119-2
+Added Pin To Net: NetName=VDD_5V_IN Pin=C120-1
+Added Pin To Net: NetName=GND Pin=C120-2
+Added Pin To Net: NetName=VDD_5V_IN Pin=C121-1
+Added Pin To Net: NetName=GND Pin=C121-2
+Added Pin To Net: NetName=GND Pin=C124-1
+Added Pin To Net: NetName=VNEG Pin=C124-2
+Added Pin To Net: NetName=VDD_5V_IN Pin=C126-1
+Added Pin To Net: NetName=GND Pin=C126-2
+Added Pin To Net: NetName=VDD_DIG_6V Pin=J13-1
+Added Pin To Net: NetName=VDD_DIG_6V Pin=J13-2
+Added Pin To Net: NetName=GND Pin=J13-3
+Added Pin To Net: NetName=VDD_DIG_6V Pin=J13-4
+Added Pin To Net: NetName=VSS Pin=J13-5
+Added Pin To Net: NetName=VDD_DIG_3V Pin=J13-6
+Added Pin To Net: NetName=VSS Pin=J13-7
+Added Pin To Net: NetName=VDD_DIG_3V Pin=J13-8
+Added Pin To Net: NetName=VSS Pin=J13-9
+Added Pin To Net: NetName=AGND Pin=J13-10
+Added Pin To Net: NetName=VSS Pin=J13-11
+Added Pin To Net: NetName=VDD_IO_3P3V Pin=J13-13
+Added Pin To Net: NetName=VDD_IO_3P3V Pin=J13-15
+Added Pin To Net: NetName=CT_MODE Pin=J13-19
+Added Pin To Net: NetName=RATIOMODE1 Pin=J13-21
+Added Pin To Net: NetName=RATIOMODE0 Pin=J13-23
+Added Pin To Net: NetName=ADDRY0 Pin=J13-25
+Added Pin To Net: NetName=ADDRX0 Pin=J13-31
+Added Pin To Net: NetName=REQOFF Pin=J13-33
+Added Pin To Net: NetName=REQON Pin=J13-35
+Added Pin To Net: NetName=AER_DIS Pin=J13-36
+Added Pin To Net: NetName=ACK Pin=J13-37
+Added Pin To Net: NetName=RST Pin=J13-39
+Added Pin To Net: NetName=GAIN_HI Pin=J13-40
+Added Pin To Net: NetName=AER_DIS Pin=J18-C26
+Added Pin To Net: NetName=RATIOMODE0 Pin=J18-C27
+Added Pin To Net: NetName=RATIOMODE1 Pin=J18-C30
+Added Pin To Net: NetName=CT_MODE Pin=J18-C31
+Added Pin To Net: NetName=RESETb Pin=J18-D17
+Added Pin To Net: NetName=LDACb Pin=J18-D18
+Added Pin To Net: NetName=CSb_VDAC Pin=J18-D20
+Added Pin To Net: NetName=CSb_IDAC Pin=J18-D21
+Added Pin To Net: NetName=SCLK Pin=J18-D23
+Added Pin To Net: NetName=SDI Pin=J18-D24
+Added Pin To Net: NetName=RST Pin=J19-1
+Added Pin To Net: NetName=GND Pin=J19-2
+Added Pin To Net: NetName=GND Pin=J19-3
+Added Pin To Net: NetName=ACK Pin=J19-4
+Added Pin To Net: NetName=GND Pin=J19-5
+Added Pin To Net: NetName=GND Pin=J19-6
+Added Pin To Net: NetName=REQON Pin=J19-7
+Added Pin To Net: NetName=GND Pin=J19-8
+Added Pin To Net: NetName=GND Pin=J19-9
+Added Pin To Net: NetName=REQOFF Pin=J19-10
+Added Pin To Net: NetName=GND Pin=J19-11
+Added Pin To Net: NetName=GND Pin=J19-12
+Added Pin To Net: NetName=ADDRX0 Pin=J19-13
+Added Pin To Net: NetName=GND Pin=J19-14
+Added Pin To Net: NetName=GND Pin=J19-15
+Added Pin To Net: NetName=GND Pin=J19-17
+Added Pin To Net: NetName=GND Pin=J19-18
+Added Pin To Net: NetName=GND Pin=J19-20
+Added Pin To Net: NetName=GND Pin=J19-21
+Added Pin To Net: NetName=ADDRY0 Pin=J19-22
+Added Pin To Net: NetName=GND Pin=J19-23
+Added Pin To Net: NetName=GND Pin=J19-24
+Added Pin To Net: NetName=RATIOMODE0 Pin=J19-25
+Added Pin To Net: NetName=GND Pin=J19-26
+Added Pin To Net: NetName=GND Pin=J19-27
+Added Pin To Net: NetName=RATIOMODE1 Pin=J19-28
+Added Pin To Net: NetName=GND Pin=J19-29
+Added Pin To Net: NetName=GND Pin=J19-30
+Added Pin To Net: NetName=GND Pin=J19-32
+Added Pin To Net: NetName=GND Pin=J19-33
+Added Pin To Net: NetName=GND Pin=J19-35
+Added Pin To Net: NetName=GND Pin=J19-36
+Added Pin To Net: NetName=GND Pin=J19-38
+Added Pin To Net: NetName=GND Pin=J19-39
+Added Pin To Net: NetName=GND Pin=J19-41
+Added Pin To Net: NetName=GND Pin=J19-42
+Added Pin To Net: NetName=GND Pin=J19-44
+Added Pin To Net: NetName=GND Pin=J19-45
+Added Pin To Net: NetName=AER_DIS Pin=J19-46
+Added Pin To Net: NetName=GND Pin=J19-48
+Added Pin To Net: NetName=GND Pin=J19-50
+Added Pin To Net: NetName=GND Pin=J19-51
+Added Pin To Net: NetName=GAIN_HI Pin=J19-52
+Added Pin To Net: NetName=GND Pin=J19-53
+Added Pin To Net: NetName=GND Pin=J19-54
+Added Pin To Net: NetName=RESETb Pin=J19-55
+Added Pin To Net: NetName=GND Pin=J19-56
+Added Pin To Net: NetName=GND Pin=J19-57
+Added Pin To Net: NetName=LDACb Pin=J19-58
+Added Pin To Net: NetName=GND Pin=J19-59
+Added Pin To Net: NetName=GND Pin=J19-60
+Added Pin To Net: NetName=CSb_VDAC Pin=J19-61
+Added Pin To Net: NetName=GND Pin=J19-62
+Added Pin To Net: NetName=GND Pin=J19-63
+Added Pin To Net: NetName=CSb_IDAC Pin=J19-64
+Added Pin To Net: NetName=GND Pin=J19-66
+Added Pin To Net: NetName=SCLK Pin=J19-67
+Added Pin To Net: NetName=GND Pin=J19-68
+Added Pin To Net: NetName=GND Pin=J19-69
+Added Pin To Net: NetName=SDI Pin=J19-70
+Added Pin To Net: NetName=GND Pin=J19-71
+Added Pin To Net: NetName=GND Pin=J19-72
+Added Pin To Net: NetName=CHIPA_Y1_CSP_SDA Pin=J19-73
+Added Pin To Net: NetName=CHIPA_Y1_CSP_SCL Pin=J19-74
+Added Pin To Net: NetName=CHIPA_Y1_CSN_SDA Pin=J19-75
+Added Pin To Net: NetName=CHIPA_Y1_CSN_SCL Pin=J19-76
+Added Pin To Net: NetName=CHIPA_Y0_CSP_SDA Pin=J19-77
+Added Pin To Net: NetName=CHIPA_Y0_CSP_SCL Pin=J19-78
+Added Pin To Net: NetName=CHIPA_Y0_CSN_SDA Pin=J19-79
+Added Pin To Net: NetName=CHIPA_Y0_CSN_SCL Pin=J19-80
+Added Pin To Net: NetName=CHIPA_X1_CSP_SDA Pin=J19-81
+Added Pin To Net: NetName=CHIPA_X1_CSP_SCL Pin=J19-82
+Added Pin To Net: NetName=CHIPA_X1_CSN_SDA Pin=J19-83
+Added Pin To Net: NetName=CHIPA_X1_CSN_SCL Pin=J19-84
+Added Pin To Net: NetName=CHIPA_X0_CSP_SDA Pin=J19-85
+Added Pin To Net: NetName=CHIPA_X0_CSP_SCL Pin=J19-86
+Added Pin To Net: NetName=CHIPA_X0_CSN_SDA Pin=J19-87
+Added Pin To Net: NetName=CHIPA_X0_CSN_SCL Pin=J19-88
+Added Pin To Net: NetName=CHIPA_CATTP_SDA Pin=J19-89
+Added Pin To Net: NetName=CHIPA_CATTP_SCL Pin=J19-90
+Added Pin To Net: NetName=CHIPA_CATTN_SDA Pin=J19-91
+Added Pin To Net: NetName=CHIPA_CATTN_SCL Pin=J19-92
+Added Pin To Net: NetName=GND Pin=J23-1
+Added Pin To Net: NetName=GND Pin=J24-1
+Added Pin To Net: NetName=GND Pin=J26-1
+Added Pin To Net: NetName=GND Pin=J27-1
+Added Pin To Net: NetName=GND Pin=J28-1
+Added Pin To Net: NetName=GND Pin=J29-1
+Added Pin To Net: NetName=ADDRY0 Pin=P39-1
+Added Pin To Net: NetName=GND Pin=P49-1
+Added Pin To Net: NetName=GND Pin=P50-1
+Added Pin To Net: NetName=PCB_AGND Pin=P52-1
+Added Pin To Net: NetName=VOCM_IN Pin=P52-3
+Added Pin To Net: NetName=PCB_AGND Pin=P54-1
+Added Pin To Net: NetName=PCB_AGND Pin=P55-1
+Added Pin To Net: NetName=PCB_AGND Pin=P56-1
+Added Pin To Net: NetName=PCB_AGND Pin=P57-1
+Added Pin To Net: NetName=PCB_AGND Pin=P60-2
+Added Pin To Net: NetName=NetP18_2 Pin=P62-2
+Added Pin To Net: NetName=PCB_AGND Pin=P62-3
+Added Pin To Net: NetName=PCB_AGND Pin=P63-2
+Added Pin To Net: NetName=PCB_AGND Pin=P67-1
+Added Pin To Net: NetName=VOCM_IN Pin=P67-3
+Added Pin To Net: NetName=PCB_AGND Pin=P68-1
+Added Pin To Net: NetName=PCB_AGND Pin=P69-1
+Added Pin To Net: NetName=PCB_AGND Pin=P73-1
+Added Pin To Net: NetName=PCB_AGND Pin=R64-2
+Added Pin To Net: NetName=NetC5_2 Pin=R65-2
+Added Pin To Net: NetName=NetC4_2 Pin=R67-2
+Added Pin To Net: NetName=NetC116_1 Pin=R69-2
+Added Pin To Net: NetName=NetC117_1 Pin=R71-1
+Added Pin To Net: NetName=NetC117_1 Pin=R73-1
+Added Pin To Net: NetName=NetC117_2 Pin=R73-2
+Added Pin To Net: NetName=NetC116_1 Pin=R74-1
+Added Pin To Net: NetName=NetC116_2 Pin=R74-2
+Added Pin To Net: NetName=PCB_AGND Pin=R75-2
+Added Pin To Net: NetName=NetC117_2 Pin=R76-2
+Added Pin To Net: NetName=NetC116_2 Pin=R77-2
+Added Pin To Net: NetName=CHIPA_X0_CSN_SDA Pin=U1-1
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=U1-4
+Added Pin To Net: NetName=GND Pin=U1-5
+Added Pin To Net: NetName=CHIPA_X0_CSN_SCL Pin=U1-6
+Added Pin To Net: NetName=GND Pin=U1-7
+Added Pin To Net: NetName=CHIPA_Y0_CSN_SDA Pin=U3-1
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=U3-4
+Added Pin To Net: NetName=GND Pin=U3-5
+Added Pin To Net: NetName=CHIPA_Y0_CSN_SCL Pin=U3-6
+Added Pin To Net: NetName=GND Pin=U3-7
+Added Pin To Net: NetName=CHIPA_CATTN_SDA Pin=U4-1
+Added Pin To Net: NetName=AGND_VCM Pin=U4-3
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=U4-4
+Added Pin To Net: NetName=GND Pin=U4-5
+Added Pin To Net: NetName=CHIPA_CATTN_SCL Pin=U4-6
+Added Pin To Net: NetName=GND Pin=U4-7
+Added Pin To Net: NetName=CHIPA_CATTN_SDA Pin=U6-1
+Added Pin To Net: NetName=AGND_VCM Pin=U6-3
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=U6-4
+Added Pin To Net: NetName=GND Pin=U6-5
+Added Pin To Net: NetName=CHIPA_CATTN_SCL Pin=U6-6
+Added Pin To Net: NetName=GND Pin=U6-7
+Added Pin To Net: NetName=CHIPA_X0_CSP_SDA Pin=U7-1
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=U7-4
+Added Pin To Net: NetName=GND Pin=U7-5
+Added Pin To Net: NetName=CHIPA_X0_CSP_SCL Pin=U7-6
+Added Pin To Net: NetName=GND Pin=U7-7
+Added Pin To Net: NetName=CHIPA_Y0_CSP_SDA Pin=U9-1
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=U9-4
+Added Pin To Net: NetName=GND Pin=U9-5
+Added Pin To Net: NetName=CHIPA_Y0_CSP_SCL Pin=U9-6
+Added Pin To Net: NetName=GND Pin=U9-7
+Added Pin To Net: NetName=CHIPA_CATTP_SDA Pin=U10-1
+Added Pin To Net: NetName=AGND_VCM Pin=U10-3
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=U10-4
+Added Pin To Net: NetName=GND Pin=U10-5
+Added Pin To Net: NetName=CHIPA_CATTP_SCL Pin=U10-6
+Added Pin To Net: NetName=GND Pin=U10-7
+Added Pin To Net: NetName=CHIPA_CATTP_SDA Pin=U12-1
+Added Pin To Net: NetName=AGND_VCM Pin=U12-3
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=U12-4
+Added Pin To Net: NetName=GND Pin=U12-5
+Added Pin To Net: NetName=CHIPA_CATTP_SCL Pin=U12-6
+Added Pin To Net: NetName=GND Pin=U12-7
+Added Pin To Net: NetName=CHIPA_Y0_CSN_SDA Pin=U13-1
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=U13-4
+Added Pin To Net: NetName=GND Pin=U13-5
+Added Pin To Net: NetName=CHIPA_Y0_CSN_SCL Pin=U13-6
+Added Pin To Net: NetName=GND Pin=U13-7
+Added Pin To Net: NetName=CHIPA_CATTN_SDA Pin=U16-1
+Added Pin To Net: NetName=AGND_VCM Pin=U16-3
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=U16-4
+Added Pin To Net: NetName=GND Pin=U16-5
+Added Pin To Net: NetName=CHIPA_CATTN_SCL Pin=U16-6
+Added Pin To Net: NetName=GND Pin=U16-7
+Added Pin To Net: NetName=CHIPA_Y0_CSP_SDA Pin=U18-1
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=U18-4
+Added Pin To Net: NetName=GND Pin=U18-5
+Added Pin To Net: NetName=CHIPA_Y0_CSP_SCL Pin=U18-6
+Added Pin To Net: NetName=GND Pin=U18-7
+Added Pin To Net: NetName=CHIPA_X0_CSN_SDA Pin=U21-1
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=U21-4
+Added Pin To Net: NetName=GND Pin=U21-5
+Added Pin To Net: NetName=CHIPA_X0_CSN_SCL Pin=U21-6
+Added Pin To Net: NetName=GND Pin=U21-7
+Added Pin To Net: NetName=CHIPA_CATTP_SDA Pin=U23-1
+Added Pin To Net: NetName=AGND_VCM Pin=U23-3
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=U23-4
+Added Pin To Net: NetName=GND Pin=U23-5
+Added Pin To Net: NetName=CHIPA_CATTP_SCL Pin=U23-6
+Added Pin To Net: NetName=GND Pin=U23-7
+Added Pin To Net: NetName=CHIPA_CATTN_SDA Pin=U25-1
+Added Pin To Net: NetName=AGND_VCM Pin=U25-3
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=U25-4
+Added Pin To Net: NetName=GND Pin=U25-5
+Added Pin To Net: NetName=CHIPA_CATTN_SCL Pin=U25-6
+Added Pin To Net: NetName=GND Pin=U25-7
+Added Pin To Net: NetName=CHIPA_X0_CSP_SDA Pin=U27-1
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=U27-4
+Added Pin To Net: NetName=GND Pin=U27-5
+Added Pin To Net: NetName=CHIPA_X0_CSP_SCL Pin=U27-6
+Added Pin To Net: NetName=GND Pin=U27-7
+Added Pin To Net: NetName=CHIPA_CATTP_SDA Pin=U29-1
+Added Pin To Net: NetName=AGND_VCM Pin=U29-3
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=U29-4
+Added Pin To Net: NetName=GND Pin=U29-5
+Added Pin To Net: NetName=CHIPA_CATTP_SCL Pin=U29-6
+Added Pin To Net: NetName=GND Pin=U29-7
+Added Pin To Net: NetName=CHIPA_Y0_CSN_SDA Pin=U31-1
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=U31-4
+Added Pin To Net: NetName=GND Pin=U31-5
+Added Pin To Net: NetName=CHIPA_Y0_CSN_SCL Pin=U31-6
+Added Pin To Net: NetName=GND Pin=U31-7
+Added Pin To Net: NetName=CHIPA_CATTN_SDA Pin=U33-1
+Added Pin To Net: NetName=AGND_VCM Pin=U33-3
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=U33-4
+Added Pin To Net: NetName=GND Pin=U33-5
+Added Pin To Net: NetName=CHIPA_CATTN_SCL Pin=U33-6
+Added Pin To Net: NetName=GND Pin=U33-7
+Added Pin To Net: NetName=CHIPA_Y0_CSP_SDA Pin=U35-1
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=U35-4
+Added Pin To Net: NetName=GND Pin=U35-5
+Added Pin To Net: NetName=CHIPA_Y0_CSP_SCL Pin=U35-6
+Added Pin To Net: NetName=GND Pin=U35-7
+Added Pin To Net: NetName=CHIPA_CATTP_SDA Pin=U36-1
+Added Pin To Net: NetName=AGND_VCM Pin=U36-3
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=U36-4
+Added Pin To Net: NetName=GND Pin=U36-5
+Added Pin To Net: NetName=CHIPA_CATTP_SCL Pin=U36-6
+Added Pin To Net: NetName=GND Pin=U36-7
+Added Pin To Net: NetName=PCB_DGND Pin=U48-3
+Added Pin To Net: NetName=ADDRY0 Pin=U49-2
+Added Pin To Net: NetName=RST_EXT Pin=U51-0
+Added Pin To Net: NetName=ACK_EXT Pin=U51-1
+Added Pin To Net: NetName=REQOFF_EXT Pin=U51-3
+Added Pin To Net: NetName=ADDRX0_EXT Pin=U51-4
+Added Pin To Net: NetName=ADDRY0_EXT Pin=U51-5
+Added Pin To Net: NetName=GND Pin=U51-GND1
+Added Pin To Net: NetName=GND Pin=U51-GND2
+Added Pin To Net: NetName=GND Pin=U51-GND3
+Added Pin To Net: NetName=GND Pin=U51-GND4
+Added Pin To Net: NetName=GND Pin=U51-GND5
+Added Pin To Net: NetName=SDI Pin=U52-12
+Added Pin To Net: NetName=SCLK Pin=U52-13
+Added Pin To Net: NetName=CSb_VDAC Pin=U52-14
+Added Pin To Net: NetName=LDACb Pin=U52-18
+Added Pin To Net: NetName=RESETb Pin=U52-19
+Added Pin To Net: NetName=SDI Pin=U54-12
+Added Pin To Net: NetName=SCLK Pin=U54-13
+Added Pin To Net: NetName=CSb_IDAC Pin=U54-14
+Added Pin To Net: NetName=LDACb Pin=U54-18
+Added Pin To Net: NetName=RESETb Pin=U54-19
+Added Pin To Net: NetName=A2 Pin=U63-1
+Added Pin To Net: NetName=A0 Pin=U63-4
+Added Pin To Net: NetName=A1 Pin=U63-5
+Added Pin To Net: NetName=VDD_5V_IN Pin=U63-6
+Added Pin To Net: NetName=VDD_5V_IN Pin=U63-7
+Added Pin To Net: NetName=NetP18_2 Pin=U63-13
+Added Pin To Net: NetName=VNEG Pin=U63-14
+Added Pin To Net: NetName=VNEG Pin=U63-15
+Added Pin To Net: NetName=GND Pin=U63-16
+Added Pin To Net: NetName=VNEG Pin=U63-17
+Added Pin To Net: NetName=VOCM_IN Pin=U65-2
+Added Pin To Net: NetName=VDD_5V_IN Pin=U65-3
+Added Pin To Net: NetName=PCB_AGND Pin=U65-6
+Added Pin To Net: NetName=VDD_5V_IN Pin=U65-7
+Added Pin To Net: NetName=PCB_DGND Pin=U66-3
+Added Pin To Net: NetName=VDD_3P3V_IN Pin=U66-5
+Added Pin To Net: NetName=NetC117_1 Pin=U68-1
+Added Pin To Net: NetName=VOCM_IN Pin=U68-2
+Added Pin To Net: NetName=VDD_5V_IN Pin=U68-3
+Added Pin To Net: NetName=NetC117_2 Pin=U68-4
+Added Pin To Net: NetName=NetC116_2 Pin=U68-5
+Added Pin To Net: NetName=PCB_AGND Pin=U68-6
+Added Pin To Net: NetName=VDD_5V_IN Pin=U68-7
+Added Pin To Net: NetName=NetC116_1 Pin=U68-8
+Change Net Name : Old Net Name=ADDRY0_EXT New Net Name=ADDRX1_EXT
+Change Net Name : Old Net Name=CHIPA_CATTN_SCL New Net Name=CATTN_SCL
+Change Net Name : Old Net Name=CHIPA_CATTN_SDA New Net Name=CATTN_SDA
+Change Net Name : Old Net Name=CHIPA_CATTP_SCL New Net Name=CATTP_SCL
+Change Net Name : Old Net Name=CHIPA_CATTP_SDA New Net Name=CATTP_SDA
+Change Net Name : Old Net Name=CHIPA_IBIAS_ADAPT_PRE New Net Name=IBIAS_ADAPT_PRE
+Change Net Name : Old Net Name=CHIPA_IBIAS_AFE_PRE New Net Name=IBIAS_AFE_PRE
+Change Net Name : Old Net Name=CHIPA_IBIAS_SLEW_PRE New Net Name=IBIAS_SLEW_PRE
+Change Net Name : Old Net Name=CHIPA_VBIAS_ADAPT New Net Name=VBIAS_ADAPT
+Change Net Name : Old Net Name=CHIPA_VBIAS_AFE New Net Name=VBIAS_AFE
+Change Net Name : Old Net Name=CHIPA_VBIAS_SLEW New Net Name=VBIAS_SLEW
+Change Net Name : Old Net Name=CHIPA_VINN_X0 New Net Name=VINN_X0
+Change Net Name : Old Net Name=CHIPA_VINN_X1 New Net Name=VINN_X1
+Change Net Name : Old Net Name=CHIPA_VINN_Y0 New Net Name=VINN_Y0
+Change Net Name : Old Net Name=CHIPA_VINN_Y1 New Net Name=VINN_Y1
+Change Net Name : Old Net Name=CHIPA_VINP_X0 New Net Name=VINP_X0
+Change Net Name : Old Net Name=CHIPA_VINP_X1 New Net Name=VINP_X1
+Change Net Name : Old Net Name=CHIPA_VINP_Y0 New Net Name=VINP_Y0
+Change Net Name : Old Net Name=CHIPA_VINP_Y1 New Net Name=VINP_Y1
+Change Net Name : Old Net Name=CHIPA_VN_X0 New Net Name=VN_X0
+Change Net Name : Old Net Name=CHIPA_VN_X1 New Net Name=VN_X1
+Change Net Name : Old Net Name=CHIPA_VN_Y0 New Net Name=VN_Y0
+Change Net Name : Old Net Name=CHIPA_VN_Y1 New Net Name=VN_Y1
+Change Net Name : Old Net Name=CHIPA_VOUTP_X0_INAMP New Net Name=VOUTP_X0_INAMP
+Change Net Name : Old Net Name=CHIPA_VP_X0 New Net Name=VP_X0
+Change Net Name : Old Net Name=CHIPA_VP_X1 New Net Name=VP_X1
+Change Net Name : Old Net Name=CHIPA_VP_Y0 New Net Name=VP_Y0
+Change Net Name : Old Net Name=CHIPA_VP_Y1 New Net Name=VP_Y1
+Change Net Name : Old Net Name=CHIPA_X0_CSN_SCL New Net Name=X0_CSN_SCL
+Change Net Name : Old Net Name=CHIPA_X0_CSN_SDA New Net Name=X0_CSN_SDA
+Change Net Name : Old Net Name=CHIPA_X0_CSP_SCL New Net Name=X0_CSP_SCL
+Change Net Name : Old Net Name=CHIPA_X0_CSP_SDA New Net Name=X0_CSP_SDA
+Change Net Name : Old Net Name=CHIPA_X1_CSN_SCL New Net Name=X1_CSN_SCL
+Change Net Name : Old Net Name=CHIPA_X1_CSN_SDA New Net Name=X1_CSN_SDA
+Change Net Name : Old Net Name=CHIPA_X1_CSP_SCL New Net Name=X1_CSP_SCL
+Change Net Name : Old Net Name=CHIPA_X1_CSP_SDA New Net Name=X1_CSP_SDA
+Change Net Name : Old Net Name=CHIPA_Y0_CSN_SCL New Net Name=Y0_CSN_SCL
+Change Net Name : Old Net Name=CHIPA_Y0_CSN_SDA New Net Name=Y0_CSN_SDA
+Change Net Name : Old Net Name=CHIPA_Y0_CSP_SCL New Net Name=Y0_CSP_SCL
+Change Net Name : Old Net Name=CHIPA_Y0_CSP_SDA New Net Name=Y0_CSP_SDA
+Change Net Name : Old Net Name=CHIPA_Y1_CSN_SCL New Net Name=Y1_CSN_SCL
+Change Net Name : Old Net Name=CHIPA_Y1_CSN_SDA New Net Name=Y1_CSN_SDA
+Change Net Name : Old Net Name=CHIPA_Y1_CSP_SCL New Net Name=Y1_CSP_SCL
+Change Net Name : Old Net Name=CHIPA_Y1_CSP_SDA New Net Name=Y1_CSP_SDA
+Change Net Name : Old Net Name=NetC4_1 New Net Name=NetC91_1
+Change Net Name : Old Net Name=NetC4_2 New Net Name=NetC91_2
+Change Net Name : Old Net Name=NetC5_1 New Net Name=NetC93_1
+Change Net Name : Old Net Name=NetC5_2 New Net Name=NetC93_2
+Change Net Name : Old Net Name=NetC13_2 New Net Name=NetC95_2
+Change Net Name : Old Net Name=NetC16_1 New Net Name=NetC102_1
+Change Net Name : Old Net Name=NetC17_2 New Net Name=NetC118_2
+Change Net Name : Old Net Name=NetC22_1 New Net Name=NetC122_1
+Change Net Name : Old Net Name=NetC47_1 New Net Name=NetC76_1
+Change Net Name : Old Net Name=NetC47_2 New Net Name=NetC76_2
+Change Net Name : Old Net Name=NetC52_1 New Net Name=NetC81_1
+Change Net Name : Old Net Name=NetC52_2 New Net Name=NetC81_2
+Change Net Name : Old Net Name=NetC59_1 New Net Name=NetC88_1
+Change Net Name : Old Net Name=NetC59_2 New Net Name=NetC88_2
+Change Net Name : Old Net Name=NetP5_2 New Net Name=NetP51_2
+Change Net Name : Old Net Name=NetP18_2 New Net Name=VOCM_SEL
+Change Net Name : Old Net Name=NetR3_1 New Net Name=NetR7_1
+Change Net Name : Old Net Name=NetR9_1 New Net Name=NetR53_1
+Change Net Name : Old Net Name=NetR10_1 New Net Name=NetR56_1
+Change Net Name : Old Net Name=NetR11_1 New Net Name=NetR10_1
+Change Net Name : Old Net Name=NetR12_1 New Net Name=NetR70_1
+Change Net Name : Old Net Name=NetR13_1 New Net Name=NetR72_1
+Change Net Name : Old Net Name=NetR14_1 New Net Name=NetR13_1
+Change Net Name : Old Net Name=NetR19_1 New Net Name=NetR14_1
+Change Net Name : Old Net Name=NetR21_1 New Net Name=NetR16_1
+Change Net Name : Old Net Name=NetR22_1 New Net Name=NetR18_1
+Change Net Name : Old Net Name=NetR23_1 New Net Name=NetR20_1
+Change Net Name : Old Net Name=NetR24_1 New Net Name=NetR22_1
+Change Net Name : Old Net Name=NetR27_1 New Net Name=NetR49_1
+Change Net Name : Old Net Name=NetR66_1 New Net Name=NetR28_1
+Change Net Name : Old Net Name=NetR85_1 New Net Name=NetR1_1
+Added Pin To Net: NetName=ADDRX1 Pin=J13-29
+Added Pin To Net: NetName=ADDRX1 Pin=J19-16
+Added Pin To Net: NetName=ADDRX1 Pin=P37-1
+Added Pin To Net: NetName=ADDRX1 Pin=U47-2
+Added Net: Name=ADDRX1
+Added Pin To Net: NetName=ADDRX2_EXT Pin=J18-C22
+Added Pin To Net: NetName=ADDRX2_EXT Pin=P34-2
+Added Pin To Net: NetName=ADDRX2_EXT Pin=U44-4
+Added Net: Name=ADDRX2_EXT
+Added Pin To Net: NetName=ADDRX2 Pin=J13-27
+Added Pin To Net: NetName=ADDRX2 Pin=J19-19
+Added Pin To Net: NetName=ADDRX2 Pin=P34-1
+Added Pin To Net: NetName=ADDRX2 Pin=U44-2
+Added Net: Name=ADDRX2
+Added Pin To Net: NetName=ADDRY0_EXT Pin=J18-C23
+Added Pin To Net: NetName=ADDRY0_EXT Pin=P39-2
+Added Pin To Net: NetName=ADDRY0_EXT Pin=U49-4
+Added Pin To Net: NetName=ADDRY0_EXT Pin=U51-7
+Added Net: Name=ADDRY0_EXT
+Added Pin To Net: NetName=CLK Pin=J13-17
+Added Pin To Net: NetName=CLK Pin=J16-1
+Added Net: Name=CLK
+Added Pin To Net: NetName=IBIAS_ADAPT Pin=J13-28
+Added Pin To Net: NetName=IBIAS_ADAPT Pin=P48-2
+Added Net: Name=IBIAS_ADAPT
+Added Pin To Net: NetName=IBIAS_AFE Pin=J13-26
+Added Pin To Net: NetName=IBIAS_AFE Pin=P47-2
+Added Net: Name=IBIAS_AFE
+Added Pin To Net: NetName=IBIAS_SLEW Pin=J13-24
+Added Pin To Net: NetName=IBIAS_SLEW Pin=P46-2
+Added Net: Name=IBIAS_SLEW
+Added Pin To Net: NetName=NetC92_1 Pin=C92-1
+Added Pin To Net: NetName=NetC92_1 Pin=R52-2
+Added Pin To Net: NetName=NetC92_1 Pin=R62-1
+Added Pin To Net: NetName=NetC92_1 Pin=U65-8
+Added Net: Name=NetC92_1
+Added Pin To Net: NetName=NetC92_2 Pin=C92-2
+Added Pin To Net: NetName=NetC92_2 Pin=R62-2
+Added Pin To Net: NetName=NetC92_2 Pin=R68-2
+Added Pin To Net: NetName=NetC92_2 Pin=U65-5
+Added Net: Name=NetC92_2
+Added Pin To Net: NetName=NetC94_1 Pin=C94-1
+Added Pin To Net: NetName=NetC94_1 Pin=R55-1
+Added Pin To Net: NetName=NetC94_1 Pin=R61-1
+Added Pin To Net: NetName=NetC94_1 Pin=U65-1
+Added Net: Name=NetC94_1
+Added Pin To Net: NetName=NetC94_2 Pin=C94-2
+Added Pin To Net: NetName=NetC94_2 Pin=R61-2
+Added Pin To Net: NetName=NetC94_2 Pin=R66-2
+Added Pin To Net: NetName=NetC94_2 Pin=U65-4
+Added Net: Name=NetC94_2
+Added Pin To Net: NetName=NetC96_2 Pin=C96-2
+Added Pin To Net: NetName=NetC96_2 Pin=U63-12
+Added Net: Name=NetC96_2
+Added Pin To Net: NetName=NetC107_1 Pin=C107-1
+Added Pin To Net: NetName=NetC107_1 Pin=U63-9
+Added Net: Name=NetC107_1
+Added Pin To Net: NetName=NetP52_2 Pin=P52-2
+Added Pin To Net: NetName=NetP52_2 Pin=R52-1
+Added Net: Name=NetP52_2
+Added Pin To Net: NetName=NetP54_3 Pin=P54-3
+Added Pin To Net: NetName=NetP54_3 Pin=R65-1
+Added Net: Name=NetP54_3
+Added Pin To Net: NetName=NetP55_3 Pin=P55-3
+Added Pin To Net: NetName=NetP55_3 Pin=R67-1
+Added Net: Name=NetP55_3
+Added Pin To Net: NetName=NetP56_3 Pin=P56-3
+Added Pin To Net: NetName=NetP56_3 Pin=R66-1
+Added Net: Name=NetP56_3
+Added Pin To Net: NetName=NetP57_3 Pin=P57-3
+Added Pin To Net: NetName=NetP57_3 Pin=R68-1
+Added Net: Name=NetP57_3
+Added Pin To Net: NetName=NetP67_2 Pin=P67-2
+Added Pin To Net: NetName=NetP67_2 Pin=R69-1
+Added Net: Name=NetP67_2
+Added Pin To Net: NetName=NetP68_3 Pin=P68-3
+Added Pin To Net: NetName=NetP68_3 Pin=R76-1
+Added Net: Name=NetP68_3
+Added Pin To Net: NetName=NetP69_3 Pin=P69-3
+Added Pin To Net: NetName=NetP69_3 Pin=R77-1
+Added Net: Name=NetP69_3
+Added Pin To Net: NetName=NetR6_1 Pin=R6-1
+Added Pin To Net: NetName=NetR6_1 Pin=U4-2
+Added Net: Name=NetR6_1
+Added Pin To Net: NetName=NetR8_1 Pin=R8-1
+Added Pin To Net: NetName=NetR8_1 Pin=U6-2
+Added Net: Name=NetR8_1
+Added Pin To Net: NetName=NetR9_1 Pin=R9-1
+Added Pin To Net: NetName=NetR9_1 Pin=U10-2
+Added Net: Name=NetR9_1
+Added Pin To Net: NetName=NetR11_1 Pin=R11-1
+Added Pin To Net: NetName=NetR11_1 Pin=U12-2
+Added Net: Name=NetR11_1
+Added Pin To Net: NetName=NetR12_1 Pin=R12-1
+Added Pin To Net: NetName=NetR12_1 Pin=U16-2
+Added Net: Name=NetR12_1
+Added Pin To Net: NetName=NetR15_1 Pin=R15-1
+Added Pin To Net: NetName=NetR15_1 Pin=U23-2
+Added Net: Name=NetR15_1
+Added Pin To Net: NetName=NetR17_1 Pin=R17-1
+Added Pin To Net: NetName=NetR17_1 Pin=U25-2
+Added Net: Name=NetR17_1
+Added Pin To Net: NetName=NetR19_1 Pin=R19-1
+Added Pin To Net: NetName=NetR19_1 Pin=U29-2
+Added Net: Name=NetR19_1
+Added Pin To Net: NetName=NetR21_1 Pin=R21-1
+Added Pin To Net: NetName=NetR21_1 Pin=U33-2
+Added Net: Name=NetR21_1
+Added Pin To Net: NetName=NetR23_1 Pin=R23-1
+Added Pin To Net: NetName=NetR23_1 Pin=U36-2
+Added Net: Name=NetR23_1
+Added Pin To Net: NetName=NetR57_1 Pin=R57-1
+Added Pin To Net: NetName=NetR57_1 Pin=U63-2
+Added Net: Name=NetR57_1
+Added Pin To Net: NetName=NetR58_1 Pin=R58-1
+Added Pin To Net: NetName=NetR58_1 Pin=U63-3
+Added Net: Name=NetR58_1
+Added Pin To Net: NetName=SER_CLK_EXT Pin=J18-D11
+Added Pin To Net: NetName=SER_CLK_EXT Pin=P30-1
+Added Pin To Net: NetName=SER_CLK_EXT Pin=U43-2
+Added Pin To Net: NetName=SER_CLK_EXT Pin=U50-1
+Added Net: Name=SER_CLK_EXT
+Added Pin To Net: NetName=SER_CLK Pin=J13-14
+Added Pin To Net: NetName=SER_CLK Pin=J19-34
+Added Pin To Net: NetName=SER_CLK Pin=P30-2
+Added Pin To Net: NetName=SER_CLK Pin=U43-4
+Added Net: Name=SER_CLK
+Added Pin To Net: NetName=SER_EN_EXT Pin=J18-D15
+Added Pin To Net: NetName=SER_EN_EXT Pin=P28-1
+Added Pin To Net: NetName=SER_EN_EXT Pin=U38-2
+Added Pin To Net: NetName=SER_EN_EXT Pin=U50-4
+Added Net: Name=SER_EN_EXT
+Added Pin To Net: NetName=SER_EN Pin=J13-20
+Added Pin To Net: NetName=SER_EN Pin=J19-43
+Added Pin To Net: NetName=SER_EN Pin=P28-2
+Added Pin To Net: NetName=SER_EN Pin=U38-4
+Added Net: Name=SER_EN
+Added Pin To Net: NetName=SER_IN_EXT Pin=J18-D12
+Added Pin To Net: NetName=SER_IN_EXT Pin=P27-1
+Added Pin To Net: NetName=SER_IN_EXT Pin=U37-2
+Added Pin To Net: NetName=SER_IN_EXT Pin=U50-2
+Added Net: Name=SER_IN_EXT
+Added Pin To Net: NetName=SER_IN Pin=J13-16
+Added Pin To Net: NetName=SER_IN Pin=J19-37
+Added Pin To Net: NetName=SER_IN Pin=P27-2
+Added Pin To Net: NetName=SER_IN Pin=U37-4
+Added Net: Name=SER_IN
+Added Pin To Net: NetName=SER_OUT_EXT Pin=J18-D14
+Added Pin To Net: NetName=SER_OUT_EXT Pin=P38-2
+Added Pin To Net: NetName=SER_OUT_EXT Pin=U48-4
+Added Pin To Net: NetName=SER_OUT_EXT Pin=U50-3
+Added Net: Name=SER_OUT_EXT
+Added Pin To Net: NetName=SER_OUT Pin=J13-18
+Added Pin To Net: NetName=SER_OUT Pin=J19-40
+Added Pin To Net: NetName=SER_OUT Pin=P38-1
+Added Pin To Net: NetName=SER_OUT Pin=U48-2
+Added Net: Name=SER_OUT
+Added Pin To Net: NetName=SPKGATE Pin=J13-38
+Added Pin To Net: NetName=SPKGATE Pin=J18-D26
+Added Pin To Net: NetName=SPKGATE Pin=J19-49
+Added Pin To Net: NetName=SPKGATE Pin=U50-5
+Added Net: Name=SPKGATE
+Added Pin To Net: NetName=STATE_OUT_EXT Pin=J18-D09
+Added Pin To Net: NetName=STATE_OUT_EXT Pin=P35-2
+Added Pin To Net: NetName=STATE_OUT_EXT Pin=U45-4
+Added Net: Name=STATE_OUT_EXT
+Added Pin To Net: NetName=STATE_OUT Pin=J13-12
+Added Pin To Net: NetName=STATE_OUT Pin=J19-31
+Added Pin To Net: NetName=STATE_OUT Pin=P35-1
+Added Pin To Net: NetName=STATE_OUT Pin=U45-2
+Added Net: Name=STATE_OUT
+Added Pin To Net: NetName=VCM_COMP Pin=P49-3
+Added Pin To Net: NetName=VCM_COMP Pin=P50-3
+Added Pin To Net: NetName=VCM_COMP Pin=U54-3
+Added Net: Name=VCM_COMP
+Added Pin To Net: NetName=VCM Pin=J11-1
+Added Pin To Net: NetName=VCM Pin=J11-2
+Added Pin To Net: NetName=VCM Pin=J11-3
+Added Pin To Net: NetName=VCM Pin=J11-5
+Added Pin To Net: NetName=VCM Pin=J11-7
+Added Pin To Net: NetName=VCM Pin=J11-8
+Added Pin To Net: NetName=VCM Pin=J11-9
+Added Pin To Net: NetName=VCM Pin=J11-11
+Added Pin To Net: NetName=VCM Pin=J11-13
+Added Pin To Net: NetName=VCM Pin=J11-14
+Added Pin To Net: NetName=VCM Pin=J11-15
+Added Pin To Net: NetName=VCM Pin=J11-17
+Added Pin To Net: NetName=VCM Pin=J11-18
+Added Pin To Net: NetName=VCM Pin=J11-22
+Added Pin To Net: NetName=VCM Pin=J11-23
+Added Pin To Net: NetName=VCM Pin=J11-26
+Added Pin To Net: NetName=VCM Pin=J11-27
+Added Pin To Net: NetName=VCM Pin=J11-33
+Added Pin To Net: NetName=VCM Pin=J11-34
+Added Pin To Net: NetName=VCM Pin=J11-40
+Added Pin To Net: NetName=VCM Pin=J11-S1
+Added Pin To Net: NetName=VCM Pin=J11-S2
+Added Pin To Net: NetName=VCM Pin=J12-5
+Added Pin To Net: NetName=VCM Pin=J12-13
+Added Pin To Net: NetName=VCM Pin=J12-19
+Added Pin To Net: NetName=VCM Pin=J12-23
+Added Pin To Net: NetName=VCM Pin=J12-29
+Added Pin To Net: NetName=VCM Pin=J12-30
+Added Pin To Net: NetName=VCM Pin=J12-35
+Added Pin To Net: NetName=VCM Pin=J12-36
+Added Pin To Net: NetName=VCM Pin=J12-37
+Added Pin To Net: NetName=VCM Pin=J12-39
+Added Pin To Net: NetName=VCM Pin=J12-40
+Added Pin To Net: NetName=VCM Pin=J12-S1
+Added Pin To Net: NetName=VCM Pin=J12-S2
+Added Pin To Net: NetName=VCM Pin=J13-34
+Added Pin To Net: NetName=VCM Pin=P12-1
+Added Pin To Net: NetName=VCM Pin=P44-1
+Added Pin To Net: NetName=VCM Pin=P61-1
+Added Pin To Net: NetName=VCM Pin=P62-1
+Added Pin To Net: NetName=VCM Pin=P73-3
+Added Pin To Net: NetName=VCM Pin=U52-9
+Added Net: Name=VCM
+Added Pin To Net: NetName=VDD_COMP Pin=J10-1
+Added Pin To Net: NetName=VDD_COMP Pin=J12-8
+Added Pin To Net: NetName=VDD_COMP Pin=P9-1
+Added Net: Name=VDD_COMP
+Added Pin To Net: NetName=VDD_OTA Pin=J9-1
+Added Pin To Net: NetName=VDD_OTA Pin=J12-18
+Added Pin To Net: NetName=VDD_OTA Pin=P8-1
+Added Net: Name=VDD_OTA
+Added Pin To Net: NetName=VDD_TAXEL_3V Pin=J8-1
+Added Pin To Net: NetName=VDD_TAXEL_3V Pin=J13-22
+Added Pin To Net: NetName=VDD_TAXEL_3V Pin=P7-1
+Added Net: Name=VDD_TAXEL_3V
+Added Pin To Net: NetName=VIN_SINGLEEND_OTA Pin=J24-2
+Added Pin To Net: NetName=VIN_SINGLEEND_OTA Pin=R54-2
+Added Pin To Net: NetName=VIN_SINGLEEND_OTA Pin=R63-1
+Added Net: Name=VIN_SINGLEEND_OTA
+Added Pin To Net: NetName=VIN_SINGLEEND_X0 Pin=J32-2
+Added Pin To Net: NetName=VIN_SINGLEEND_X0 Pin=R71-2
+Added Pin To Net: NetName=VIN_SINGLEEND_X0 Pin=R75-1
+Added Net: Name=VIN_SINGLEEND_X0
+Added Pin To Net: NetName=VIN_SINGLEEND_Y0 Pin=J25-2
+Added Pin To Net: NetName=VIN_SINGLEEND_Y0 Pin=R55-2
+Added Pin To Net: NetName=VIN_SINGLEEND_Y0 Pin=R64-1
+Added Net: Name=VIN_SINGLEEND_Y0
+Added Pin To Net: NetName=VINN_COMP Pin=J12-6
+Added Pin To Net: NetName=VINN_COMP Pin=J27-2
+Added Pin To Net: NetName=VINN_COMP Pin=P50-2
+Added Net: Name=VINN_COMP
+Added Pin To Net: NetName=VINN_OTA Pin=J12-16
+Added Pin To Net: NetName=VINN_OTA Pin=P55-2
+Added Net: Name=VINN_OTA
+Added Pin To Net: NetName=VINN_X0_0 Pin=P69-2
+Added Pin To Net: NetName=VINN_X0_0 Pin=P71-1
+Added Pin To Net: NetName=VINN_X0_0 Pin=R70-2
+Added Net: Name=VINN_X0_0
+Added Pin To Net: NetName=VINN_X0_2 Pin=J12-21
+Added Pin To Net: NetName=VINN_X0_2 Pin=U1-3
+Added Net: Name=VINN_X0_2
+Added Pin To Net: NetName=VINN_X0_3 Pin=J12-28
+Added Pin To Net: NetName=VINN_X0_3 Pin=U21-3
+Added Net: Name=VINN_X0_3
+Added Pin To Net: NetName=VINN_Y0_0 Pin=P57-2
+Added Pin To Net: NetName=VINN_Y0_0 Pin=P59-1
+Added Pin To Net: NetName=VINN_Y0_0 Pin=R53-2
+Added Net: Name=VINN_Y0_0
+Added Pin To Net: NetName=VINN_Y0_1 Pin=J11-6
+Added Pin To Net: NetName=VINN_Y0_1 Pin=U3-3
+Added Net: Name=VINN_Y0_1
+Added Pin To Net: NetName=VINN_Y0_2 Pin=J12-7
+Added Pin To Net: NetName=VINN_Y0_2 Pin=U13-3
+Added Net: Name=VINN_Y0_2
+Added Pin To Net: NetName=VINN_Y0_3 Pin=J12-31
+Added Pin To Net: NetName=VINN_Y0_3 Pin=U31-3
+Added Net: Name=VINN_Y0_3
+Added Pin To Net: NetName=VINP_COMP Pin=J12-4
+Added Pin To Net: NetName=VINP_COMP Pin=J26-2
+Added Pin To Net: NetName=VINP_COMP Pin=P49-2
+Added Net: Name=VINP_COMP
+Added Pin To Net: NetName=VINP_OTA Pin=J12-14
+Added Pin To Net: NetName=VINP_OTA Pin=P54-2
+Added Net: Name=VINP_OTA
+Added Pin To Net: NetName=VINP_X0_0 Pin=P68-2
+Added Pin To Net: NetName=VINP_X0_0 Pin=P70-1
+Added Pin To Net: NetName=VINP_X0_0 Pin=R72-2
+Added Net: Name=VINP_X0_0
+Added Pin To Net: NetName=VINP_X0_2 Pin=J12-11
+Added Pin To Net: NetName=VINP_X0_2 Pin=U7-3
+Added Net: Name=VINP_X0_2
+Added Pin To Net: NetName=VINP_X0_3 Pin=J12-38
+Added Pin To Net: NetName=VINP_X0_3 Pin=U27-3
+Added Net: Name=VINP_X0_3
+Added Pin To Net: NetName=VINP_Y0_0 Pin=P56-2
+Added Pin To Net: NetName=VINP_Y0_0 Pin=P58-1
+Added Pin To Net: NetName=VINP_Y0_0 Pin=R56-2
+Added Net: Name=VINP_Y0_0
+Added Pin To Net: NetName=VINP_Y0_1 Pin=J11-4
+Added Pin To Net: NetName=VINP_Y0_1 Pin=U9-3
+Added Net: Name=VINP_Y0_1
+Added Pin To Net: NetName=VINP_Y0_2 Pin=J12-9
+Added Pin To Net: NetName=VINP_Y0_2 Pin=U18-3
+Added Net: Name=VINP_Y0_2
+Added Pin To Net: NetName=VINP_Y0_3 Pin=J12-33
+Added Pin To Net: NetName=VINP_Y0_3 Pin=U35-3
+Added Net: Name=VINP_Y0_3
+Added Pin To Net: NetName=VN_X0_2 Pin=J12-17
+Added Pin To Net: NetName=VN_X0_2 Pin=R6-2
+Added Pin To Net: NetName=VN_X0_2 Pin=U1-2
+Added Net: Name=VN_X0_2
+Added Pin To Net: NetName=VN_X0_3 Pin=J12-32
+Added Pin To Net: NetName=VN_X0_3 Pin=R17-2
+Added Pin To Net: NetName=VN_X0_3 Pin=U21-2
+Added Net: Name=VN_X0_3
+Added Pin To Net: NetName=VN_Y0_1 Pin=J11-12
+Added Pin To Net: NetName=VN_Y0_1 Pin=R8-2
+Added Pin To Net: NetName=VN_Y0_1 Pin=U3-2
+Added Net: Name=VN_Y0_1
+Added Pin To Net: NetName=VN_Y0_2 Pin=J12-1
+Added Pin To Net: NetName=VN_Y0_2 Pin=R12-2
+Added Pin To Net: NetName=VN_Y0_2 Pin=U13-2
+Added Net: Name=VN_Y0_2
+Added Pin To Net: NetName=VN_Y0_3 Pin=J12-25
+Added Pin To Net: NetName=VN_Y0_3 Pin=R21-2
+Added Pin To Net: NetName=VN_Y0_3 Pin=U31-2
+Added Net: Name=VN_Y0_3
+Added Pin To Net: NetName=VOCM_EXT Pin=J33-2
+Added Pin To Net: NetName=VOCM_EXT Pin=P73-2
+Added Net: Name=VOCM_EXT
+Added Pin To Net: NetName=VOUT_COMP_EXT Pin=J23-2
+Added Pin To Net: NetName=VOUT_COMP_EXT Pin=P53-2
+Added Pin To Net: NetName=VOUT_COMP_EXT Pin=U50-11
+Added Pin To Net: NetName=VOUT_COMP_EXT Pin=U66-4
+Added Net: Name=VOUT_COMP_EXT
+Added Pin To Net: NetName=VOUT_COMP Pin=J12-2
+Added Pin To Net: NetName=VOUT_COMP Pin=P53-1
+Added Pin To Net: NetName=VOUT_COMP Pin=U66-2
+Added Net: Name=VOUT_COMP
+Added Pin To Net: NetName=VOUTN_OTA_INAMP Pin=C107-2
+Added Pin To Net: NetName=VOUTN_OTA_INAMP Pin=J28-2
+Added Pin To Net: NetName=VOUTN_OTA_INAMP Pin=U63-10
+Added Net: Name=VOUTN_OTA_INAMP
+Added Pin To Net: NetName=VOUTN_OTA Pin=J12-10
+Added Pin To Net: NetName=VOUTN_OTA Pin=P63-1
+Added Pin To Net: NetName=VOUTN_OTA Pin=R57-2
+Added Net: Name=VOUTN_OTA
+Added Pin To Net: NetName=VOUTN_X0_INAMP Pin=C122-2
+Added Pin To Net: NetName=VOUTN_X0_INAMP Pin=J30-2
+Added Pin To Net: NetName=VOUTN_X0_INAMP Pin=U67-10
+Added Net: Name=VOUTN_X0_INAMP
+Added Pin To Net: NetName=VOUTN_X0 Pin=J12-24
+Added Pin To Net: NetName=VOUTN_X0 Pin=P71-2
+Added Net: Name=VOUTN_X0
+Added Pin To Net: NetName=VOUTN_Y0_INAMP Pin=C102-2
+Added Pin To Net: NetName=VOUTN_Y0_INAMP Pin=J21-2
+Added Pin To Net: NetName=VOUTN_Y0_INAMP Pin=U62-10
+Added Net: Name=VOUTN_Y0_INAMP
+Added Pin To Net: NetName=VOUTN_Y0 Pin=J12-20
+Added Pin To Net: NetName=VOUTN_Y0 Pin=P59-2
+Added Net: Name=VOUTN_Y0
+Added Pin To Net: NetName=VOUTP_OTA_INAMP Pin=C96-1
+Added Pin To Net: NetName=VOUTP_OTA_INAMP Pin=J29-2
+Added Pin To Net: NetName=VOUTP_OTA_INAMP Pin=U63-11
+Added Net: Name=VOUTP_OTA_INAMP
+Added Pin To Net: NetName=VOUTP_OTA Pin=J12-12
+Added Pin To Net: NetName=VOUTP_OTA Pin=P60-1
+Added Pin To Net: NetName=VOUTP_OTA Pin=R58-2
+Added Net: Name=VOUTP_OTA
+Added Pin To Net: NetName=VOUTP_X0 Pin=J12-26
+Added Pin To Net: NetName=VOUTP_X0 Pin=P70-2
+Added Net: Name=VOUTP_X0
+Added Pin To Net: NetName=VOUTP_Y0_INAMP Pin=C95-1
+Added Pin To Net: NetName=VOUTP_Y0_INAMP Pin=J22-2
+Added Pin To Net: NetName=VOUTP_Y0_INAMP Pin=U62-11
+Added Net: Name=VOUTP_Y0_INAMP
+Added Pin To Net: NetName=VOUTP_Y0 Pin=J12-22
+Added Pin To Net: NetName=VOUTP_Y0 Pin=P58-2
+Added Net: Name=VOUTP_Y0
+Added Pin To Net: NetName=VP_X0_2 Pin=J12-15
+Added Pin To Net: NetName=VP_X0_2 Pin=R9-2
+Added Pin To Net: NetName=VP_X0_2 Pin=U7-2
+Added Net: Name=VP_X0_2
+Added Pin To Net: NetName=VP_X0_3 Pin=J12-34
+Added Pin To Net: NetName=VP_X0_3 Pin=R19-2
+Added Pin To Net: NetName=VP_X0_3 Pin=U27-2
+Added Net: Name=VP_X0_3
+Added Pin To Net: NetName=VP_Y0_1 Pin=J11-10
+Added Pin To Net: NetName=VP_Y0_1 Pin=R11-2
+Added Pin To Net: NetName=VP_Y0_1 Pin=U9-2
+Added Net: Name=VP_Y0_1
+Added Pin To Net: NetName=VP_Y0_2 Pin=J12-3
+Added Pin To Net: NetName=VP_Y0_2 Pin=R15-2
+Added Pin To Net: NetName=VP_Y0_2 Pin=U18-2
+Added Net: Name=VP_Y0_2
+Added Pin To Net: NetName=VP_Y0_3 Pin=J12-27
+Added Pin To Net: NetName=VP_Y0_3 Pin=R23-2
+Added Pin To Net: NetName=VP_Y0_3 Pin=U35-2
+Added Net: Name=VP_Y0_3
+Added Pin To Net: NetName=VTRIG_COMP Pin=J13-30
+Added Pin To Net: NetName=VTRIG_COMP Pin=P44-5
+Added Pin To Net: NetName=VTRIG_COMP Pin=U52-3
+Added Net: Name=VTRIG_COMP
+Added Pin To Net: NetName=VTUNE_PSEUDO Pin=J13-32
+Added Pin To Net: NetName=VTUNE_PSEUDO Pin=P44-3
+Added Pin To Net: NetName=VTUNE_PSEUDO Pin=U52-8
+Added Net: Name=VTUNE_PSEUDO
+Change Class Name : Old Net Name=demo_dermis_main_testboard New Net Name=demo_dermis_main_testboard_back
+Change Class Name : Old Net Name=demo_dermis_main_testboard_back New Net Name=demo_dermis_main_testboard_ibias
+Change Class Name : Old Net Name=demo_dermis_main_testboard_inamps New Net Name=demo_dermis_main_testboard
+Change Class Name : Old Net Name=demo_dermis_main_testboard_ncd2400 New Net Name=demo_dermis_main_testboard_inamps
+Added Class: Name=demo_dermis_main_testboard_ncd2400
+Added Member To Class: ClassName=demo_dermis_main_testboard_back Member=Component C37 10µ
+Added Member To Class: ClassName=demo_dermis_main_testboard_dig Member=Component C38 10µ
+Added Member To Class: ClassName=demo_dermis_main_testboard_dig Member=Component C39 10µ
+Added Member To Class: ClassName=demo_dermis_main_testboard_dig Member=Component C40 10µ
+Added Member To Class: ClassName=demo_dermis_main_testboard_dig Member=Component C42 10µ
+Added Member To Class: ClassName=demo_dermis_main_testboard_dig Member=Component C43 10µ
+Added Member To Class: ClassName=demo_dermis_main_testboard_dig Member=Component C45 approved sub OK
+Added Member To Class: ClassName=demo_dermis_main_testboard_dig Member=Component C46 approved sub OK
+Added Member To Class: ClassName=demo_dermis_main_testboard_dig Member=Component C52 10µ
+Added Member To Class: ClassName=demo_dermis_main_testboard_dig Member=Component C60 10µ
+Added Member To Class: ClassName=demo_dermis_main_testboard_dig Member=Component C61 approved sub OK
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component C64 approved sub OK
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component C65 10µ
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component C66 approved sub OK
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component C67 approved sub OK
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component C68 10µ
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component C69 approved sub OK
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component C70 10µ
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component C71 approved sub OK
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component C72 approved sub OK
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component C73 10µ
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component C74 approved sub OK
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component C75 10µ
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component C76 47p
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component C77 approved sub OK
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component C78 10µ
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component C79 approved sub OK
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component C80 10µ
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component C81 47p
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component C82 C3216X5R1A686M160AC
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component C83 C4532X7R1C336M250KC
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component C84 approved sub OK
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component C85 10µ
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component C86 approved sub OK
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component C87 10µ
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component C88 47p
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component C90 C0603C221K5RACTU
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component C92 CML0805C0G150JT50V
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component C94 CML0805C0G150JT50V
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component C96 CML0805C0G3R0CT50V
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component C99 approved sub OK
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component C101 10µ
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component C105 10µ
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component C107 CML0805C0G3R0CT50V
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component C109 C0603C221K5RACTU
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component C110 approved sub OK
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component C111 approved sub OK
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component C112 10µ
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component C113 10µ
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component C114 approved sub OK
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component C115 C0603C221K5RACTU
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component C116 CML0805C0G150JT50V
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component C117 CML0805C0G150JT50V
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component C120 approved sub OK
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component C121 10µ
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component C126 C0603C221K5RACTU
+Added Member To Class: ClassName=demo_dermis_main_testboard Member=Component J1 FCR7350R
+Added Member To Class: ClassName=demo_dermis_main_testboard Member=Component J2 FCR7350R
+Added Member To Class: ClassName=demo_dermis_main_testboard Member=Component J3 FCR7350R
+Added Member To Class: ClassName=demo_dermis_main_testboard Member=Component J4 FCR7350R
+Added Member To Class: ClassName=demo_dermis_main_testboard Member=Component J5 FCR7350R
+Added Member To Class: ClassName=demo_dermis_main_testboard Member=Component J6 FCR7350R
+Added Member To Class: ClassName=demo_dermis_main_testboard Member=Component J7 FCR7350R
+Added Member To Class: ClassName=demo_dermis_main_testboard Member=Component J8 FCR7350R
+Added Member To Class: ClassName=demo_dermis_main_testboard Member=Component J14 S1711-46R
+Added Member To Class: ClassName=demo_dermis_main_testboard Member=Component J16 VB335-75
+Added Member To Class: ClassName=demo_dermis_main_testboard_back Member=Component J17 901200761
+Added Member To Class: ClassName=demo_dermis_main_testboard_dig Member=Component J18 ASP-127797-01
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component J21 CONBNC002
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component J22 CONBNC002
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component J23 CONBNC002
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component J24 CONBNC002
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component J25 CONBNC002
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component J26 CONBNC002
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component J27 CONBNC002
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component J28 CONBNC002
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component J29 CONBNC002
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component J30 CONBNC002
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component J31 CONBNC002
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component J32 CONBNC002
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component J33 CONBNC002
+Added Member To Class: ClassName=demo_dermis_main_testboard Member=Component P1 Header 2
+Added Member To Class: ClassName=demo_dermis_main_testboard Member=Component P2 Header 2
+Added Member To Class: ClassName=demo_dermis_main_testboard Member=Component P3 Header 2
+Added Member To Class: ClassName=demo_dermis_main_testboard Member=Component P4 Header 2
+Added Member To Class: ClassName=demo_dermis_main_testboard Member=Component P5 Header 2
+Added Member To Class: ClassName=demo_dermis_main_testboard Member=Component P6 Header 2
+Added Member To Class: ClassName=demo_dermis_main_testboard Member=Component P7 Header 2
+Added Member To Class: ClassName=demo_dermis_main_testboard Member=Component P8 Header 2
+Added Member To Class: ClassName=demo_dermis_main_testboard Member=Component P9 Header 2
+Added Member To Class: ClassName=demo_dermis_main_testboard_dig Member=Component P27 Header 2
+Added Member To Class: ClassName=demo_dermis_main_testboard_dig Member=Component P28 Header 2
+Added Member To Class: ClassName=demo_dermis_main_testboard_dig Member=Component P29 Header 2
+Added Member To Class: ClassName=demo_dermis_main_testboard_dig Member=Component P30 Header 2
+Added Member To Class: ClassName=demo_dermis_main_testboard_dig Member=Component P32 Header 2
+Added Member To Class: ClassName=demo_dermis_main_testboard_dig Member=Component P33 Header 2
+Added Member To Class: ClassName=demo_dermis_main_testboard_dig Member=Component P34 Header 2
+Added Member To Class: ClassName=demo_dermis_main_testboard_dig Member=Component P35 Header 2
+Added Member To Class: ClassName=demo_dermis_main_testboard_dig Member=Component P36 Header 2
+Added Member To Class: ClassName=demo_dermis_main_testboard_dig Member=Component P38 Header 2
+Added Member To Class: ClassName=demo_dermis_main_testboard_dig Member=Component P39 Header 2
+Added Member To Class: ClassName=demo_dermis_main_testboard_dig Member=Component P40 Header 2
+Added Member To Class: ClassName=demo_dermis_main_testboard_dig Member=Component P41 Header 2
+Added Member To Class: ClassName=demo_dermis_main_testboard_dig Member=Component P42 Header 2
+Added Member To Class: ClassName=demo_dermis_main_testboard_dig Member=Component P43 Header 2
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component P44 Header 4X2
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component P45 Header 3
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component P46 Header 3
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component P47 Header 3
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component P48 Header 3
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component P49 Header 3
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component P50 Header 3
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component P51 Header 3
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component P52 Header 3
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component P53 Header 2
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component P54 Header 3
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component P55 Header 3
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component P56 Header 3
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component P57 Header 3
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component P58 Header 2
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component P59 Header 2
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component P60 Header 2
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component P61 Header 3
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component P62 Header 3
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component P63 Header 2
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component P64 Header 3
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component P65 Header 3
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component P66 Header 3
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component P67 Header 3
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component P68 Header 3
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component P69 Header 3
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component P70 Header 2
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component P71 Header 2
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component P73 Header 3
+Added Member To Class: ClassName=demo_dermis_main_testboard Member=Component R1 Thick Film
+Added Member To Class: ClassName=demo_dermis_main_testboard Member=Component R2 RCL06120000Z0EA
+Added Member To Class: ClassName=demo_dermis_main_testboard Member=Component R3 RCL06120000Z0EA
+Added Member To Class: ClassName=demo_dermis_main_testboard Member=Component R4 RCL06120000Z0EA
+Added Member To Class: ClassName=demo_dermis_main_testboard Member=Component R5 RCL06120000Z0EA
+Added Member To Class: ClassName=demo_dermis_main_testboard_back Member=Component R24 ERJ-3EKF1002V
+Added Member To Class: ClassName=demo_dermis_main_testboard_back Member=Component R25 ERJ-3EKF1002V
+Added Member To Class: ClassName=demo_dermis_main_testboard_back Member=Component R26 ERJ-3EKF1002V
+Added Member To Class: ClassName=demo_dermis_main_testboard_back Member=Component R27 ERJ-3EKF1002V
+Added Member To Class: ClassName=demo_dermis_main_testboard_back Member=Component R28 RNCF0603TKY10K0
+Added Member To Class: ClassName=demo_dermis_main_testboard_back Member=Component R29 ERJ-3EKF1002V
+Added Member To Class: ClassName=demo_dermis_main_testboard_back Member=Component R31 ERJ-3EKF1002V
+Added Member To Class: ClassName=demo_dermis_main_testboard_back Member=Component R32 ERJ-3EKF1002V
+Added Member To Class: ClassName=demo_dermis_main_testboard_back Member=Component R34 RNCF0603TKY10K0
+Added Member To Class: ClassName=demo_dermis_main_testboard_back Member=Component R36 ERJ-3EKF1002V
+Added Member To Class: ClassName=demo_dermis_main_testboard_back Member=Component R37 ERJ-3EKF1002V
+Added Member To Class: ClassName=demo_dermis_main_testboard_back Member=Component R38 ERJ-3EKF1002V
+Added Member To Class: ClassName=demo_dermis_main_testboard_back Member=Component R39 ERJ-3EKF1002V
+Added Member To Class: ClassName=demo_dermis_main_testboard_back Member=Component R40 ERJ-3EKF1002V
+Added Member To Class: ClassName=demo_dermis_main_testboard_back Member=Component R41 ERJ-3EKF1002V
+Added Member To Class: ClassName=demo_dermis_main_testboard_back Member=Component R42 ERJ-3EKF1002V
+Added Member To Class: ClassName=demo_dermis_main_testboard_back Member=Component R43 ERJ-3EKF1002V
+Added Member To Class: ClassName=demo_dermis_main_testboard_back Member=Component R44 ERJ-3EKF1002V
+Added Member To Class: ClassName=demo_dermis_main_testboard_back Member=Component R45 ERJ-3EKF1002V
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component R51 ERA6AEB1021V
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component R52 ERA6AEB1021V
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component R53 RMCF0603ZT0R00
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component R54 ERA-6AEB102V
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component R55 ERA-6AEB102V
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component R56 RMCF0603ZT0R00
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component R57 RMCF0603ZT0R00
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component R58 RMCF0603ZT0R00
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component R59 ERA-6AEB102V
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component R60 ERA-6AEB102V
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component R61 ERA-6AEB102V
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component R62 ERA-6AEB102V
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component R63 ERA6AEB52R3V
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component R64 ERA6AEB52R3V
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component R65 RMCF0603ZT0R00
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component R66 RMCF0603ZT0R00
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component R67 RMCF0603ZT0R00
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component R68 RMCF0603ZT0R00
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component R69 ERA6AEB1021V
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component R70 RMCF0603ZT0R00
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component R71 ERA-6AEB102V
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component R72 RMCF0603ZT0R00
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component R73 ERA-6AEB102V
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component R74 ERA-6AEB102V
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component R75 ERA6AEB52R3V
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component R76 RMCF0603ZT0R00
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component R77 RMCF0603ZT0R00
+Added Member To Class: ClassName=demo_dermis_main_testboard_dig Member=Component U37 SN74AUP1T17DCKR
+Added Member To Class: ClassName=demo_dermis_main_testboard_dig Member=Component U38 SN74AUP1T17DCKR
+Added Member To Class: ClassName=demo_dermis_main_testboard_dig Member=Component U39 SN74AUP1T17DCKR
+Added Member To Class: ClassName=demo_dermis_main_testboard_dig Member=Component U40 SN74AUP1T17DCKR
+Added Member To Class: ClassName=demo_dermis_main_testboard_dig Member=Component U41 SN74AUP1T17DCKR
+Added Member To Class: ClassName=demo_dermis_main_testboard_dig Member=Component U42 SN74AUP1T17DCKR
+Added Member To Class: ClassName=demo_dermis_main_testboard_dig Member=Component U48 SN74AUP1T17DCKR
+Added Member To Class: ClassName=demo_dermis_main_testboard_dig Member=Component U50 DEV-16771
+Added Member To Class: ClassName=demo_dermis_main_testboard_dig Member=Component U51 DEV-16771
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component U52 DAC7614EB
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component U53 ISL60002BIH325Z-T7A
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component U54 DAC7614EB
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component U55 TLV2771CDBVR
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component U56 BC807-25WT1G
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component U57 TLV2771CDBVR
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component U58 BC807-25WT1G
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component U59 LP3961ES-2.5
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component U60 TLV2771CDBVR
+Added Member To Class: ClassName=demo_dermis_main_testboard_ibias Member=Component U61 BC807-25WT1G
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component U63 PGA855RGTR
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component U65 THS4521IDR
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component U66 SN74AUP1T17DCKR
+Added Member To Class: ClassName=demo_dermis_main_testboard_inamps Member=Component U68 THS4521IDR
+Added Member To Class: ClassName=demo_dermis_main_testboard Member=Component VDD_1 Red
+Added Room: Name=demo_dermis_main_testboard
+Added Room: Name=demo_dermis_main_testboard_back
+Added Room: Name=demo_dermis_main_testboard_dig
+Added Room: Name=demo_dermis_main_testboard_ibias
+Added Room: Name=demo_dermis_main_testboard_inamps
+Added Room: Name=demo_dermis_main_testboard_ncd2400

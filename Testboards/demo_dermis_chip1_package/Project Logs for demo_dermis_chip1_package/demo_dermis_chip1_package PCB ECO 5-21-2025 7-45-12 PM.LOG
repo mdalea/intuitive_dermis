@@ -1,0 +1,4 @@
+Added Pin To Net: NetName=GND Pin=J4-1
+Added Pin To Net: NetName=GND Pin=J5-1
+Added Member To Class: ClassName=demo_dermis_chip1_package Member=Component J4 S1711-46R
+Added Member To Class: ClassName=demo_dermis_chip1_package Member=Component J5 S1711-46R

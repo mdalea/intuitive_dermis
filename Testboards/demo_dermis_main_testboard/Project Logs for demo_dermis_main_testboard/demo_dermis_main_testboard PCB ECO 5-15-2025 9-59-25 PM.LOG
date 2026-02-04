@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=ADDRX2_EXT Pin=J18-D09
+Removed Pin From Net: NetName=ADDRY0_EXT Pin=J18-D11
+Added Pin To Net: NetName=STATE_OUT_EXT Pin=J18-D09
+Added Pin To Net: NetName=SER_CLK_EXT Pin=J18-D11
+Added Pin To Net: NetName=PCB_DGND Pin=U37-3
+Added Pin To Net: NetName=PCB_DGND Pin=U38-3
+Added Pin To Net: NetName=PCB_DGND Pin=U43-3

@@ -1,0 +1,12 @@
+Added Pin To Net: NetName=VDD_COMP Pin=C11-1
+Added Pin To Net: NetName=GND Pin=C11-2
+Added Pin To Net: NetName=VDD_COMP Pin=C12-1
+Added Pin To Net: NetName=GND Pin=C12-2
+Added Pin To Net: NetName=VDD_OTA Pin=C19-1
+Added Pin To Net: NetName=GND Pin=C19-2
+Added Pin To Net: NetName=VDD_OTA Pin=C20-1
+Added Pin To Net: NetName=GND Pin=C20-2
+Added Member To Class: ClassName=demo_dermis_chip1_package Member=Component C11 approved sub OK
+Added Member To Class: ClassName=demo_dermis_chip1_package Member=Component C12 10µ
+Added Member To Class: ClassName=demo_dermis_chip1_package Member=Component C19 approved sub OK
+Added Member To Class: ClassName=demo_dermis_chip1_package Member=Component C20 10µ

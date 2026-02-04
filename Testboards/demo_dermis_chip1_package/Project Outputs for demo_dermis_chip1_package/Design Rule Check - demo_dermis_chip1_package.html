@@ -1,0 +1,827 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD19\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">5/22/2025</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">11:51:23 AM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:03</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc" class="file"><acronym title="U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc">U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">153</td></tr>
+</table>
+</td>
+</table><a name="IDXY2YZ2DBYAJWCBRM1QDBGM4IHI0N5WE5UHV4ZVNRFYYNW2ITOGNN"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDH4OY5YD3SQE0P1M3W3P3HMFIVJCF4DCTXMCOBZESFAQ2TZUCQXUH">Clearance Constraint (Gap=0.1mm) (All),(All)</a></td>
+<td class="column2">4</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDQBGXHBRZ3MOUOS0A5RHKADWVLE1X1U142GOTKPLCYF023BYNLF">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDSAEVFJCOGFWRFWVTEQSHDWKKJH1SQBEHAPK1ZIO2Z2FYT4KJJEJ">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">2</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDXZX3WYVNMXUALIMXWT5Z3P30YHRI0RPCDHOPWPO2AEL20TC2PQQB">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDBJXB3P3WNGY4IYW2AUS0IB0QAHOOOJNF2I2AC3GCOSCYUIQ00BEC">Width Constraint (Min=0.1mm) (Max=1.5mm) (Preferred=0.2mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDZQVLESYRD313J4VVGR0VSAM2MGAX43Z1DDEYP4OXPPMT1HWPB3GF">Power Plane Connect Rule(Relief Connect )(Expansion=0.15mm) (Conductor Width=0.4mm) (Air Gap=0.4mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID2RTNDYEWNK4EG1OP0TLQP1XCXENOAYQPOEIS3DNAXAHTK4PGKG3D">Minimum Annular Ring (Minimum=0.125mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDEG5RSHUEGKKIGTAA2RFVGONAVPJ41YCEUTKT50N2SBI4WDYQ1TC">Minimum Annular Ring (Minimum=0.125mm) (((ObjectKind = 'Pad') OR (ObjectKind = 'Via')) And (Layer = 'MultiLayer') And (HoleDiameter &gt; AsMM(0.45)))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDD2A2KDOY4GHIHM0MAUJCIHZ1NE4C0RF3GSRNL5K03GTJZ41QSXBH">Minimum Annular Ring (Minimum=0.125mm) (((ObjectKind = 'Pad') OR (ObjectKind = 'Via')) And (Layer = 'MultiLayer') And (HoleDiameter &lt;= AsMM(0.45)))</a></td>
+<td class="column2">100</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDB5BCC02WLPAPOS3XPSHMNR1J0NTBTUUK32FNCXH1YJOMYLA0Z4DB">Hole Size Constraint (Min=0.15mm) (Max=2mm) (All)</a></td>
+<td class="column2">4</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDT4MGTXSBTL0EKZ0230S30W0JFDJ4HAZDGCI1NSD5GQ1SGMGWQC5B">Hole To Hole Clearance (Gap=0.35mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDTA3VU52NNYJCGGUEYCLPH2FOAFRGMORJHLKQGBM0HYRSTGQ1ZA0L">Minimum Solder Mask Sliver (Gap=0.08mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDXKJMMSXFKS1QB4DZPS2ZJ5LHREF4F0L3NJVBKTKIXLXVFHOZG11P">Silk To Solder Mask (Clearance=0.2mm) (IsPad),(All)</a></td>
+<td class="column2">30</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDV4V0M5VJ4WGDPUOQBJGVMNTI5C2FP4DSC4VPA4OYN0IWR52VKZH">Silk to Silk (Clearance=0.2mm) (All),(All)</a></td>
+<td class="column2">5</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDQUBXPMJWXAUSIDTN3D4HSXVE2G2DJZOK2RAPNAF40H2DBORW2ZPJ">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">8</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDSUSBUMF1UU4BJGWIA0IPE4NXRE3TSDFQIYQXF2VFOD4A3CJRBL">Board Clearance Constraint (Gap=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDI2TRGQISNUYSB1YBCKUGHDNEEDD3IZD3CIE2HZD4X2VNCUP1SMUJ">Height Constraint (Min=0mm) (Max=25mm) (Prefered=12.5mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">153</td>
+</tr>
+</table><br><a name="IDH4OY5YD3SQE0P1M3W3P3HMFIVJCF4DCTXMCOBZESFAQ2TZUCQXUH"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Clearance Constraint (Gap=0.1mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1932.544mil|Location2.X=1937.732mil|Location1.Y=1797.583mil|Location2.Y=1802.771mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1932.544mil|Location2.X=1937.732mil|Location1.Y=1797.583mil|Location2.Y=1802.771mil|Absolute=True">Clearance Constraint: (0.1mm &lt; 0.1mm) Between Area Fill (12.133mm,26.419mm) (12.633mm,26.544mm) on Top Layer And Area Fill (12.135mm,26.195mm) (12.635mm,26.32mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2145.044mil|Location2.X=2150.231mil|Location1.Y=1889.119mil|Location2.Y=1894.305mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2145.044mil|Location2.X=2150.231mil|Location1.Y=1889.119mil|Location2.Y=1894.305mil|Absolute=True">Clearance Constraint: (0.1mm &lt; 0.1mm) Between Area Fill (17.17mm,28.882mm) (17.67mm,29.007mm) on Top Layer And Area Fill (17.395mm,28.874mm) (17.895mm,28.999mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2215.92mil|Location2.X=2221.107mil|Location1.Y=1908.449mil|Location2.Y=1913.637mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2215.92mil|Location2.X=2221.107mil|Location1.Y=1908.449mil|Location2.Y=1913.637mil|Absolute=True">Clearance Constraint: (0.1mm &lt; 0.1mm) Between Area Fill (18.971mm,28.873mm) (19.47mm,28.998mm) on Top Layer And Track (19.445mm,29.149mm)(19.445mm,32.079mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2118.47mil|Location2.X=2123.657mil|Location1.Y=2094.061mil|Location2.Y=2099.247mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2118.47mil|Location2.X=2123.657mil|Location1.Y=2094.061mil|Location2.Y=2099.247mil|Absolute=True">Clearance Constraint: (0.1mm &lt; 0.1mm) Between Track (16.745mm,29.122mm)(16.745mm,34.004mm) on Top Layer And Track (16.97mm,33.9mm)(16.97mm,29.203mm) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDSAEVFJCOGFWRFWVTEQSHDWKKJH1SQBEHAPK1ZIO2Z2FYT4KJJEJ"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Un-Routed Net Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2202.736mil|Location2.X=2419.152mil|Location1.Y=1812.166mil|Location2.Y=1771.426mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2202.736mil|Location2.X=2419.152mil|Location1.Y=1812.166mil|Location2.Y=1771.426mil|Absolute=True">Un-Routed Net Constraint: Net VCM Between Track (21.472mm,29.214mm)(21.472mm,30.615mm) on Top Layer And Track (21.889mm,22.739mm)(21.889mm,23.099mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1852.382mil|Location2.X=2052.461mil|Location1.Y=1669.172mil|Location2.Y=1886.89mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1852.382mil|Location2.X=2052.461mil|Location1.Y=1669.172mil|Location2.Y=1886.89mil|Absolute=True">Un-Routed Net Constraint: Net VCM Between Track (8.79mm,25.582mm)(12.573mm,25.582mm) on Top Layer And Track (7.522mm,26.032mm)(12.575mm,26.032mm) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDD2A2KDOY4GHIHM0MAUJCIHZ1NE4C0RF3GSRNL5K03GTJZ41QSXBH"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Minimum Annular Ring (Minimum=0.125mm) (((ObjectKind = 'Pad') OR (ObjectKind = 'Via')) And (Layer = 'MultiLayer') And (HoleDiameter &lt;= AsMM(0.45)))</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1864.454mil|Location2.X=1870.626mil|Location1.Y=2635.064mil|Location2.Y=2641.236mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1864.454mil|Location2.X=1870.626mil|Location1.Y=2635.064mil|Location2.Y=2641.236mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (10.418mm,47.454mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1866.944mil|Location2.X=1873.116mil|Location1.Y=1484.576mil|Location2.Y=1490.748mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1866.944mil|Location2.X=1873.116mil|Location1.Y=1484.576mil|Location2.Y=1490.748mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (10.481mm,18.232mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1879.257mil|Location2.X=1885.428mil|Location1.Y=823.647mil|Location2.Y=829.818mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1879.257mil|Location2.X=1885.428mil|Location1.Y=823.647mil|Location2.Y=829.818mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (10.794mm,1.444mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1884.886mil|Location2.X=1891.058mil|Location1.Y=2655.28mil|Location2.Y=2661.452mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1884.886mil|Location2.X=1891.058mil|Location1.Y=2655.28mil|Location2.Y=2661.452mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (10.937mm,47.967mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1886.836mil|Location2.X=1893.008mil|Location1.Y=2309.04mil|Location2.Y=2315.212mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1886.836mil|Location2.X=1893.008mil|Location1.Y=2309.04mil|Location2.Y=2315.212mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (10.987mm,39.173mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1888.732mil|Location2.X=1894.904mil|Location1.Y=1522.75mil|Location2.Y=1528.922mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1888.732mil|Location2.X=1894.904mil|Location1.Y=1522.75mil|Location2.Y=1528.922mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (11.035mm,19.201mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1900.895mil|Location2.X=1907.066mil|Location1.Y=844.887mil|Location2.Y=851.058mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1900.895mil|Location2.X=1907.066mil|Location1.Y=844.887mil|Location2.Y=851.058mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (11.344mm,1.984mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1906.068mil|Location2.X=1912.24mil|Location1.Y=2282.82mil|Location2.Y=2288.992mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1906.068mil|Location2.X=1912.24mil|Location1.Y=2282.82mil|Location2.Y=2288.992mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (11.475mm,38.507mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1907.632mil|Location2.X=1913.804mil|Location1.Y=1490.678mil|Location2.Y=1496.85mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1907.632mil|Location2.X=1913.804mil|Location1.Y=1490.678mil|Location2.Y=1496.85mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (11.515mm,18.387mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1911.402mil|Location2.X=1917.574mil|Location1.Y=2643.706mil|Location2.Y=2649.878mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1911.402mil|Location2.X=1917.574mil|Location1.Y=2643.706mil|Location2.Y=2649.878mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (11.61mm,47.674mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1921.442mil|Location2.X=1927.614mil|Location1.Y=863.626mil|Location2.Y=869.798mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1921.442mil|Location2.X=1927.614mil|Location1.Y=863.626mil|Location2.Y=869.798mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (11.866mm,2.459mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1921.214mil|Location2.X=1927.386mil|Location1.Y=1521.914mil|Location2.Y=1528.086mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1921.214mil|Location2.X=1927.386mil|Location1.Y=1521.914mil|Location2.Y=1528.086mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (11.86mm,19.18mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1943.426mil|Location2.X=1949.598mil|Location1.Y=883.598mil|Location2.Y=889.77mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1943.426mil|Location2.X=1949.598mil|Location1.Y=883.598mil|Location2.Y=889.77mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (12.424mm,2.967mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1943.692mil|Location2.X=1949.864mil|Location1.Y=1490.276mil|Location2.Y=1496.448mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1943.692mil|Location2.X=1949.864mil|Location1.Y=1490.276mil|Location2.Y=1496.448mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (12.431mm,18.376mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1945.418mil|Location2.X=1951.59mil|Location1.Y=2691.166mil|Location2.Y=2697.338mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1945.418mil|Location2.X=1951.59mil|Location1.Y=2691.166mil|Location2.Y=2697.338mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (12.475mm,48.879mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1946.324mil|Location2.X=1952.496mil|Location1.Y=2306.816mil|Location2.Y=2312.988mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1946.324mil|Location2.X=1952.496mil|Location1.Y=2306.816mil|Location2.Y=2312.988mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (12.498mm,39.117mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1961.48mil|Location2.X=1967.652mil|Location1.Y=1522.11mil|Location2.Y=1528.282mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1961.48mil|Location2.X=1967.652mil|Location1.Y=1522.11mil|Location2.Y=1528.282mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (12.882mm,19.185mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1962.426mil|Location2.X=1968.598mil|Location1.Y=904.04mil|Location2.Y=910.212mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1962.426mil|Location2.X=1968.598mil|Location1.Y=904.04mil|Location2.Y=910.212mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (12.907mm,3.486mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1964.738mil|Location2.X=1970.91mil|Location1.Y=2650.388mil|Location2.Y=2656.56mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1964.738mil|Location2.X=1970.91mil|Location1.Y=2650.388mil|Location2.Y=2656.56mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (12.965mm,47.843mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1970.596mil|Location2.X=1976.768mil|Location1.Y=2252.21mil|Location2.Y=2258.382mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1970.596mil|Location2.X=1976.768mil|Location1.Y=2252.21mil|Location2.Y=2258.382mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (13.114mm,37.73mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1983.332mil|Location2.X=1989.504mil|Location1.Y=1491.796mil|Location2.Y=1497.968mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1983.332mil|Location2.X=1989.504mil|Location1.Y=1491.796mil|Location2.Y=1497.968mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (13.438mm,18.415mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1984.914mil|Location2.X=1991.086mil|Location1.Y=920.2mil|Location2.Y=926.372mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1984.914mil|Location2.X=1991.086mil|Location1.Y=920.2mil|Location2.Y=926.372mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (13.478mm,3.896mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1985.596mil|Location2.X=1991.768mil|Location1.Y=2288.824mil|Location2.Y=2294.996mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1985.596mil|Location2.X=1991.768mil|Location1.Y=2288.824mil|Location2.Y=2294.996mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (13.495mm,38.66mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2001.836mil|Location2.X=2008.008mil|Location1.Y=1522.11mil|Location2.Y=1528.282mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2001.836mil|Location2.X=2008.008mil|Location1.Y=1522.11mil|Location2.Y=1528.282mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (13.908mm,19.185mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2002.958mil|Location2.X=2009.13mil|Location1.Y=941.442mil|Location2.Y=947.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2002.958mil|Location2.X=2009.13mil|Location1.Y=941.442mil|Location2.Y=947.614mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (13.936mm,4.436mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2002.938mil|Location2.X=2009.11mil|Location1.Y=2733.312mil|Location2.Y=2739.484mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2002.938mil|Location2.X=2009.11mil|Location1.Y=2733.312mil|Location2.Y=2739.484mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (13.936mm,49.95mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2021.304mil|Location2.X=2027.476mil|Location1.Y=1490.97mil|Location2.Y=1497.142mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2021.304mil|Location2.X=2027.476mil|Location1.Y=1490.97mil|Location2.Y=1497.142mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (14.402mm,18.394mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2023.882mil|Location2.X=2030.054mil|Location1.Y=2284.336mil|Location2.Y=2290.508mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2023.882mil|Location2.X=2030.054mil|Location1.Y=2284.336mil|Location2.Y=2290.508mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (14.467mm,38.546mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2024.316mil|Location2.X=2030.488mil|Location1.Y=961.934mil|Location2.Y=968.106mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2024.316mil|Location2.X=2030.488mil|Location1.Y=961.934mil|Location2.Y=968.106mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (14.479mm,4.957mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2041.166mil|Location2.X=2047.338mil|Location1.Y=1523.076mil|Location2.Y=1529.248mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2041.166mil|Location2.X=2047.338mil|Location1.Y=1523.076mil|Location2.Y=1529.248mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (14.907mm,19.21mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2043.232mil|Location2.X=2049.404mil|Location1.Y=985.97mil|Location2.Y=992.142mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2043.232mil|Location2.X=2049.404mil|Location1.Y=985.97mil|Location2.Y=992.142mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (14.959mm,5.567mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2062.15mil|Location2.X=2068.322mil|Location1.Y=1490.694mil|Location2.Y=1496.866mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2062.15mil|Location2.X=2068.322mil|Location1.Y=1490.694mil|Location2.Y=1496.866mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (15.439mm,18.387mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2064.374mil|Location2.X=2070.546mil|Location1.Y=1009.158mil|Location2.Y=1015.33mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2064.374mil|Location2.X=2070.546mil|Location1.Y=1009.158mil|Location2.Y=1015.33mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (15.496mm,6.156mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2064.512mil|Location2.X=2070.684mil|Location1.Y=2284.118mil|Location2.Y=2290.29mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2064.512mil|Location2.X=2070.684mil|Location1.Y=2284.118mil|Location2.Y=2290.29mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (15.499mm,38.54mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2079.886mil|Location2.X=2086.058mil|Location1.Y=1029.63mil|Location2.Y=1035.802mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2079.886mil|Location2.X=2086.058mil|Location1.Y=1029.63mil|Location2.Y=1035.802mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (15.89mm,6.676mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2080.536mil|Location2.X=2086.708mil|Location1.Y=1522.13mil|Location2.Y=1528.302mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2080.536mil|Location2.X=2086.708mil|Location1.Y=1522.13mil|Location2.Y=1528.302mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (15.906mm,19.185mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2091.146mil|Location2.X=2097.318mil|Location1.Y=2752.052mil|Location2.Y=2758.224mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2091.146mil|Location2.X=2097.318mil|Location1.Y=2752.052mil|Location2.Y=2758.224mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (16.176mm,50.426mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2101.242mil|Location2.X=2107.414mil|Location1.Y=1047.6mil|Location2.Y=1053.772mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2101.242mil|Location2.X=2107.414mil|Location1.Y=1047.6mil|Location2.Y=1053.772mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (16.432mm,7.132mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2104.256mil|Location2.X=2110.428mil|Location1.Y=1491.284mil|Location2.Y=1497.456mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2104.256mil|Location2.X=2110.428mil|Location1.Y=1491.284mil|Location2.Y=1497.456mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (16.509mm,18.402mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2104.296mil|Location2.X=2110.468mil|Location1.Y=2283.352mil|Location2.Y=2289.524mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2104.296mil|Location2.X=2110.468mil|Location1.Y=2283.352mil|Location2.Y=2289.524mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (16.51mm,38.521mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2121.068mil|Location2.X=2127.24mil|Location1.Y=2780.222mil|Location2.Y=2786.394mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2121.068mil|Location2.X=2127.24mil|Location1.Y=2780.222mil|Location2.Y=2786.394mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (16.936mm,51.141mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2122.052mil|Location2.X=2128.224mil|Location1.Y=1522.722mil|Location2.Y=1528.894mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2122.052mil|Location2.X=2128.224mil|Location1.Y=1522.722mil|Location2.Y=1528.894mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (16.961mm,19.201mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2125.596mil|Location2.X=2131.768mil|Location1.Y=1061.954mil|Location2.Y=1068.126mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2125.596mil|Location2.X=2131.768mil|Location1.Y=1061.954mil|Location2.Y=1068.126mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (17.051mm,7.497mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2131.266mil|Location2.X=2137.438mil|Location1.Y=1091.008mil|Location2.Y=1097.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2131.266mil|Location2.X=2137.438mil|Location1.Y=1091.008mil|Location2.Y=1097.18mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (17.195mm,8.235mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2142.366mil|Location2.X=2148.538mil|Location1.Y=1489.65mil|Location2.Y=1495.822mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2142.366mil|Location2.X=2148.538mil|Location1.Y=1489.65mil|Location2.Y=1495.822mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (17.477mm,18.36mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2144.768mil|Location2.X=2150.94mil|Location1.Y=2284.946mil|Location2.Y=2291.118mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2144.768mil|Location2.X=2150.94mil|Location1.Y=2284.946mil|Location2.Y=2291.118mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (17.538mm,38.561mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2154.906mil|Location2.X=2161.078mil|Location1.Y=1103.548mil|Location2.Y=1109.72mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2154.906mil|Location2.X=2161.078mil|Location1.Y=1103.548mil|Location2.Y=1109.72mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (17.795mm,8.554mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2160.89mil|Location2.X=2167.062mil|Location1.Y=1520.832mil|Location2.Y=1527.004mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2160.89mil|Location2.X=2167.062mil|Location1.Y=1520.832mil|Location2.Y=1527.004mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (17.947mm,19.153mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2165.142mil|Location2.X=2171.314mil|Location1.Y=2304mil|Location2.Y=2310.172mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2165.142mil|Location2.X=2171.314mil|Location1.Y=2304mil|Location2.Y=2310.172mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (18.055mm,39.045mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2178.076mil|Location2.X=2184.248mil|Location1.Y=1115.064mil|Location2.Y=1121.236mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2178.076mil|Location2.X=2184.248mil|Location1.Y=1115.064mil|Location2.Y=1121.236mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (18.384mm,8.846mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2181.76mil|Location2.X=2187.932mil|Location1.Y=1489.138mil|Location2.Y=1495.31mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2181.76mil|Location2.X=2187.932mil|Location1.Y=1489.138mil|Location2.Y=1495.31mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (18.478mm,18.347mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2184.492mil|Location2.X=2190.664mil|Location1.Y=2286.206mil|Location2.Y=2292.378mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2184.492mil|Location2.X=2190.664mil|Location1.Y=2286.206mil|Location2.Y=2292.378mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (18.547mm,38.593mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2200.284mil|Location2.X=2206.456mil|Location1.Y=1520.32mil|Location2.Y=1526.492mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2200.284mil|Location2.X=2206.456mil|Location1.Y=1520.32mil|Location2.Y=1526.492mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (18.948mm,19.14mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2203.98mil|Location2.X=2210.152mil|Location1.Y=2305.674mil|Location2.Y=2311.846mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2203.98mil|Location2.X=2210.152mil|Location1.Y=2305.674mil|Location2.Y=2311.846mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (19.042mm,39.088mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2219.474mil|Location2.X=2225.646mil|Location1.Y=1150.458mil|Location2.Y=1156.63mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2219.474mil|Location2.X=2225.646mil|Location1.Y=1150.458mil|Location2.Y=1156.63mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (19.436mm,9.745mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2221.156mil|Location2.X=2227.328mil|Location1.Y=1489.138mil|Location2.Y=1495.31mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2221.156mil|Location2.X=2227.328mil|Location1.Y=1489.138mil|Location2.Y=1495.31mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (19.478mm,18.347mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2221.894mil|Location2.X=2228.066mil|Location1.Y=2286.206mil|Location2.Y=2292.378mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2221.894mil|Location2.X=2228.066mil|Location1.Y=2286.206mil|Location2.Y=2292.378mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (19.497mm,38.593mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2241.038mil|Location2.X=2247.21mil|Location1.Y=1523.734mil|Location2.Y=1529.906mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2241.038mil|Location2.X=2247.21mil|Location1.Y=1523.734mil|Location2.Y=1529.906mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (19.983mm,19.226mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2202.308mil|Location2.X=2208.48mil|Location1.Y=1129.828mil|Location2.Y=1136mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2202.308mil|Location2.X=2208.48mil|Location1.Y=1129.828mil|Location2.Y=1136mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (19mm,9.221mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2241.756mil|Location2.X=2247.928mil|Location1.Y=2305.458mil|Location2.Y=2311.63mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2241.756mil|Location2.X=2247.928mil|Location1.Y=2305.458mil|Location2.Y=2311.63mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (20.001mm,39.082mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2243.548mil|Location2.X=2249.72mil|Location1.Y=1165.34mil|Location2.Y=1171.512mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2243.548mil|Location2.X=2249.72mil|Location1.Y=1165.34mil|Location2.Y=1171.512mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (20.047mm,10.123mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2919.858mil|Location2.X=2926.029mil|Location1.Y=1811.33mil|Location2.Y=1817.501mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2919.858mil|Location2.X=2926.029mil|Location1.Y=1811.33mil|Location2.Y=1817.501mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (37.225mm,26.531mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2920.477mil|Location2.X=2926.649mil|Location1.Y=1741.048mil|Location2.Y=1747.219mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2920.477mil|Location2.X=2926.649mil|Location1.Y=1741.048mil|Location2.Y=1747.219mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (37.241mm,24.746mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2936.383mil|Location2.X=2942.554mil|Location1.Y=1783.804mil|Location2.Y=1789.975mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2936.383mil|Location2.X=2942.554mil|Location1.Y=1783.804mil|Location2.Y=1789.975mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (37.645mm,25.832mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2945.256mil|Location2.X=2951.427mil|Location1.Y=1876.844mil|Location2.Y=1883.015mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2945.256mil|Location2.X=2951.427mil|Location1.Y=1876.844mil|Location2.Y=1883.015mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (37.87mm,28.195mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2948.491mil|Location2.X=2954.662mil|Location1.Y=1746.507mil|Location2.Y=1752.679mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2948.491mil|Location2.X=2954.662mil|Location1.Y=1746.507mil|Location2.Y=1752.679mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (37.953mm,24.885mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2951.52mil|Location2.X=2957.691mil|Location1.Y=1822.432mil|Location2.Y=1828.603mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2951.52mil|Location2.X=2957.691mil|Location1.Y=1822.432mil|Location2.Y=1828.603mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (38.029mm,26.813mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2953.43mil|Location2.X=2959.601mil|Location1.Y=1689.04mil|Location2.Y=1695.212mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2953.43mil|Location2.X=2959.601mil|Location1.Y=1689.04mil|Location2.Y=1695.212mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (38.078mm,23.425mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2963.576mil|Location2.X=2969.747mil|Location1.Y=1768.494mil|Location2.Y=1774.665mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2963.576mil|Location2.X=2969.747mil|Location1.Y=1768.494mil|Location2.Y=1774.665mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (38.336mm,25.443mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2969.722mil|Location2.X=2975.893mil|Location1.Y=1851.706mil|Location2.Y=1857.877mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2969.722mil|Location2.X=2975.893mil|Location1.Y=1851.706mil|Location2.Y=1857.877mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (38.492mm,27.557mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2970.934mil|Location2.X=2977.105mil|Location1.Y=2126.082mil|Location2.Y=2132.253mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2970.934mil|Location2.X=2977.105mil|Location1.Y=2126.082mil|Location2.Y=2132.253mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (38.523mm,34.526mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2979.564mil|Location2.X=2985.735mil|Location1.Y=2038.772mil|Location2.Y=2044.943mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2979.564mil|Location2.X=2985.735mil|Location1.Y=2038.772mil|Location2.Y=2044.943mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (38.742mm,32.308mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2981.708mil|Location2.X=2987.879mil|Location1.Y=1998.82mil|Location2.Y=2004.991mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2981.708mil|Location2.X=2987.879mil|Location1.Y=1998.82mil|Location2.Y=2004.991mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (38.796mm,31.293mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2982.522mil|Location2.X=2988.693mil|Location1.Y=2195.766mil|Location2.Y=2201.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2982.522mil|Location2.X=2988.693mil|Location1.Y=2195.766mil|Location2.Y=2201.937mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (38.817mm,36.296mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2984.85mil|Location2.X=2991.021mil|Location1.Y=2077.56mil|Location2.Y=2083.731mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2984.85mil|Location2.X=2991.021mil|Location1.Y=2077.56mil|Location2.Y=2083.731mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (38.876mm,33.293mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2985.58mil|Location2.X=2991.751mil|Location1.Y=2157.37mil|Location2.Y=2163.541mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2985.58mil|Location2.X=2991.751mil|Location1.Y=2157.37mil|Location2.Y=2163.541mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (38.895mm,35.321mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2986.422mil|Location2.X=2992.593mil|Location1.Y=1813.804mil|Location2.Y=1819.975mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2986.422mil|Location2.X=2992.593mil|Location1.Y=1813.804mil|Location2.Y=1819.975mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (38.916mm,26.594mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2986.762mil|Location2.X=2992.933mil|Location1.Y=1959.45mil|Location2.Y=1965.621mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2986.762mil|Location2.X=2992.933mil|Location1.Y=1959.45mil|Location2.Y=1965.621mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (38.925mm,30.293mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2988.936mil|Location2.X=2995.107mil|Location1.Y=1920.08mil|Location2.Y=1926.251mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2988.936mil|Location2.X=2995.107mil|Location1.Y=1920.08mil|Location2.Y=1926.251mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (38.98mm,29.293mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2989.69mil|Location2.X=2995.861mil|Location1.Y=1883.608mil|Location2.Y=1889.779mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2989.69mil|Location2.X=2995.861mil|Location1.Y=1883.608mil|Location2.Y=1889.779mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (38.999mm,28.367mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3003.834mil|Location2.X=3010.005mil|Location1.Y=2177.82mil|Location2.Y=2183.991mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3003.834mil|Location2.X=3010.005mil|Location1.Y=2177.82mil|Location2.Y=2183.991mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (39.358mm,35.84mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3003.98mil|Location2.X=3010.151mil|Location1.Y=2214.254mil|Location2.Y=2220.425mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3003.98mil|Location2.X=3010.151mil|Location1.Y=2214.254mil|Location2.Y=2220.425mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (39.362mm,36.765mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3006.19mil|Location2.X=3012.361mil|Location1.Y=2098.01mil|Location2.Y=2104.181mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3006.19mil|Location2.X=3012.361mil|Location1.Y=2098.01mil|Location2.Y=2104.181mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (39.418mm,33.813mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3006.672mil|Location2.X=3012.843mil|Location1.Y=2134.84mil|Location2.Y=2141.011mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3006.672mil|Location2.X=3012.843mil|Location1.Y=2134.84mil|Location2.Y=2141.011mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (39.43mm,34.748mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3008.768mil|Location2.X=3014.939mil|Location1.Y=1979.134mil|Location2.Y=1985.305mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3008.768mil|Location2.X=3014.939mil|Location1.Y=1979.134mil|Location2.Y=1985.305mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (39.484mm,30.793mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3009.16mil|Location2.X=3015.331mil|Location1.Y=2057.874mil|Location2.Y=2064.045mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3009.16mil|Location2.X=3015.331mil|Location1.Y=2057.874mil|Location2.Y=2064.045mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (39.494mm,32.793mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3009.65mil|Location2.X=3015.821mil|Location1.Y=2018.504mil|Location2.Y=2024.675mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3009.65mil|Location2.X=3015.821mil|Location1.Y=2018.504mil|Location2.Y=2024.675mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (39.506mm,31.793mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3011.962mil|Location2.X=3018.133mil|Location1.Y=1939.764mil|Location2.Y=1945.935mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3011.962mil|Location2.X=3018.133mil|Location1.Y=1939.764mil|Location2.Y=1945.935mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (39.565mm,29.793mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3012.146mil|Location2.X=3018.317mil|Location1.Y=1900.394mil|Location2.Y=1906.565mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3012.146mil|Location2.X=3018.317mil|Location1.Y=1900.394mil|Location2.Y=1906.565mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (39.569mm,28.793mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3016.304mil|Location2.X=3022.475mil|Location1.Y=1870.34mil|Location2.Y=1876.511mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3016.304mil|Location2.X=3022.475mil|Location1.Y=1870.34mil|Location2.Y=1876.511mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (39.675mm,28.03mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3309.73mil|Location2.X=3315.901mil|Location1.Y=2056.56mil|Location2.Y=2062.731mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3309.73mil|Location2.X=3315.901mil|Location1.Y=2056.56mil|Location2.Y=2062.731mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (47.128mm,32.76mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3328.312mil|Location2.X=3334.483mil|Location1.Y=2077.032mil|Location2.Y=2083.203mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3328.312mil|Location2.X=3334.483mil|Location1.Y=2077.032mil|Location2.Y=2083.203mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (47.6mm,33.28mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3339.258mil|Location2.X=3345.429mil|Location1.Y=2100.852mil|Location2.Y=2107.023mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3339.258mil|Location2.X=3345.429mil|Location1.Y=2100.852mil|Location2.Y=2107.023mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (47.878mm,33.885mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3368.115mil|Location2.X=3374.286mil|Location1.Y=2106.324mil|Location2.Y=2112.495mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3368.115mil|Location2.X=3374.286mil|Location1.Y=2106.324mil|Location2.Y=2112.495mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (48.611mm,34.024mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3375.542mil|Location2.X=3381.713mil|Location1.Y=2132.746mil|Location2.Y=2138.917mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3375.542mil|Location2.X=3381.713mil|Location1.Y=2132.746mil|Location2.Y=2138.917mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (48.8mm,34.695mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3390.612mil|Location2.X=3396.783mil|Location1.Y=2156.3mil|Location2.Y=2162.471mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3390.612mil|Location2.X=3396.783mil|Location1.Y=2156.3mil|Location2.Y=2162.471mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (49.182mm,35.293mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3417.642mil|Location2.X=3423.814mil|Location1.Y=2163.805mil|Location2.Y=2169.976mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3417.642mil|Location2.X=3423.814mil|Location1.Y=2163.805mil|Location2.Y=2169.976mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (49.869mm,35.484mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3423.312mil|Location2.X=3429.483mil|Location1.Y=2216.836mil|Location2.Y=2223.007mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3423.312mil|Location2.X=3429.483mil|Location1.Y=2216.836mil|Location2.Y=2223.007mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (50.013mm,36.831mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3425.502mil|Location2.X=3431.673mil|Location1.Y=2190.784mil|Location2.Y=2196.955mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3425.502mil|Location2.X=3431.673mil|Location1.Y=2190.784mil|Location2.Y=2196.955mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (50.069mm,36.169mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1844.021mil|Location2.X=1850.192mil|Location1.Y=822.072mil|Location2.Y=828.243mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1844.021mil|Location2.X=1850.192mil|Location1.Y=822.072mil|Location2.Y=828.243mil|Absolute=True">Minimum Annular Ring: (0.1mm &lt; 0.125mm) Via (9.899mm,1.404mm) from Top Layer to Bottom Layer (Annular Ring=0.1mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDB5BCC02WLPAPOS3XPSHMNR1J0NTBTUUK32FNCXH1YJOMYLA0Z4DB"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Hole Size Constraint (Min=0.15mm) (Max=2mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1512.466mil|Location2.X=1631.826mil|Location1.Y=2608.982mil|Location2.Y=2728.342mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1512.466mil|Location2.X=1631.826mil|Location1.Y=2608.982mil|Location2.Y=2728.342mil|Absolute=True">Hole Size Constraint: (3mm &gt; 2mm) Pad Free-1(2.915mm,48.429mm) on Multi-Layer Actual Hole Size = 3mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3325.95mil|Location2.X=3445.311mil|Location1.Y=2609.061mil|Location2.Y=2728.421mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3325.95mil|Location2.X=3445.311mil|Location1.Y=2609.061mil|Location2.Y=2728.421mil|Absolute=True">Hole Size Constraint: (3mm &gt; 2mm) Pad Free-2(48.978mm,48.431mm) on Multi-Layer Actual Hole Size = 3mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1504.06mil|Location2.X=1623.42mil|Location1.Y=829.178mil|Location2.Y=948.538mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1504.06mil|Location2.X=1623.42mil|Location1.Y=829.178mil|Location2.Y=948.538mil|Absolute=True">Hole Size Constraint: (3mm &gt; 2mm) Pad Free-3(2.701mm,3.222mm) on Multi-Layer Actual Hole Size = 3mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3313.214mil|Location2.X=3432.575mil|Location1.Y=829.179mil|Location2.Y=948.539mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3313.214mil|Location2.X=3432.575mil|Location1.Y=829.179mil|Location2.Y=948.539mil|Absolute=True">Hole Size Constraint: (3mm &gt; 2mm) Pad Free-4(48.654mm,3.222mm) on Multi-Layer Actual Hole Size = 3mm</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDXKJMMSXFKS1QB4DZPS2ZJ5LHREF4F0L3NJVBKTKIXLXVFHOZG11P"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk To Solder Mask (Clearance=0.2mm) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2145.793mil|Location2.X=2154.917mil|Location1.Y=940.538mil|Location2.Y=949.662mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2145.793mil|Location2.X=2154.917mil|Location1.Y=940.538mil|Location2.Y=949.662mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.14mm &lt; 0.2mm) Between Pad C10-1(17.567mm,3.905mm) on Bottom Layer And Text "C10" (18.403mm,7.357mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.14mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2439.577mil|Location2.X=2448.701mil|Location1.Y=1176.605mil|Location2.Y=1185.729mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2439.577mil|Location2.X=2448.701mil|Location1.Y=1176.605mil|Location2.Y=1185.729mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.179mm &lt; 0.2mm) Between Pad C1-1(25.516mm,10.127mm) on Bottom Layer And Track (25.04mm,10.8mm)(25.992mm,10.8mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.179mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2945.658mil|Location2.X=2954.782mil|Location1.Y=2528.195mil|Location2.Y=2537.319mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2945.658mil|Location2.X=2954.782mil|Location1.Y=2528.195mil|Location2.Y=2537.319mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.179mm &lt; 0.2mm) Between Pad C11-1(38.37mm,44.458mm) on Bottom Layer And Track (37.894mm,45.13mm)(38.846mm,45.13mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.179mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2945.658mil|Location2.X=2954.782mil|Location1.Y=2554.241mil|Location2.Y=2563.365mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2945.658mil|Location2.X=2954.782mil|Location1.Y=2554.241mil|Location2.Y=2563.365mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.179mm &lt; 0.2mm) Between Pad C11-2(38.37mm,46.158mm) on Bottom Layer And Track (37.894mm,45.486mm)(38.846mm,45.486mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.179mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2439.577mil|Location2.X=2448.701mil|Location1.Y=1202.65mil|Location2.Y=1211.774mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2439.577mil|Location2.X=2448.701mil|Location1.Y=1202.65mil|Location2.Y=1211.774mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.179mm &lt; 0.2mm) Between Pad C1-2(25.516mm,11.827mm) on Bottom Layer And Track (25.04mm,11.155mm)(25.992mm,11.155mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.179mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2872.83mil|Location2.X=2881.954mil|Location1.Y=2607.318mil|Location2.Y=2616.442mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2872.83mil|Location2.X=2881.954mil|Location1.Y=2607.318mil|Location2.Y=2616.442mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.187mm &lt; 0.2mm) Between Pad C12-2(36.106mm,46.218mm) on Bottom Layer And Text "C12" (36.048mm,49.706mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.187mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1782.391mil|Location2.X=1791.515mil|Location1.Y=888.889mil|Location2.Y=898.013mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1782.391mil|Location2.X=1791.515mil|Location1.Y=888.889mil|Location2.Y=898.013mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.179mm &lt; 0.2mm) Between Pad C13-1(8.823mm,2.819mm) on Bottom Layer And Track (8.347mm,3.492mm)(9.299mm,3.492mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.179mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1782.391mil|Location2.X=1791.515mil|Location1.Y=914.936mil|Location2.Y=924.059mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1782.391mil|Location2.X=1791.515mil|Location1.Y=914.936mil|Location2.Y=924.059mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.179mm &lt; 0.2mm) Between Pad C13-2(8.823mm,4.519mm) on Bottom Layer And Track (8.347mm,3.847mm)(9.299mm,3.847mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.179mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1690.428mil|Location2.X=1699.552mil|Location1.Y=967.616mil|Location2.Y=976.74mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1690.428mil|Location2.X=1699.552mil|Location1.Y=967.616mil|Location2.Y=976.74mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.2mm &lt; 0.2mm) Between Pad C14-2(6.559mm,4.58mm) on Bottom Layer And Text "C14" (6.501mm,8.068mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.2mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2013.447mil|Location2.X=2022.571mil|Location1.Y=1580.2mil|Location2.Y=1589.324mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2013.447mil|Location2.X=2022.571mil|Location1.Y=1580.2mil|Location2.Y=1589.324mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.199mm &lt; 0.2mm) Between Pad C15-1(14.749mm,20.424mm) on Bottom Layer And Track (14.077mm,19.948mm)(14.077mm,20.9mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.199mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1986.762mil|Location2.X=1995.886mil|Location1.Y=1543.157mil|Location2.Y=1552.281mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1986.762mil|Location2.X=1995.886mil|Location1.Y=1543.157mil|Location2.Y=1552.281mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.192mm &lt; 0.2mm) Between Pad C15-2(13.049mm,20.424mm) on Bottom Layer And Track (13.721mm,19.948mm)(13.721mm,20.9mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.192mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2110.097mil|Location2.X=2119.221mil|Location1.Y=1594.199mil|Location2.Y=1603.323mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2110.097mil|Location2.X=2119.221mil|Location1.Y=1594.199mil|Location2.Y=1603.323mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.179mm &lt; 0.2mm) Between Pad C16-1(17.147mm,20.734mm) on Bottom Layer And Track (16.671mm,21.407mm)(17.623mm,21.407mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.179mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2110.097mil|Location2.X=2119.221mil|Location1.Y=1620.245mil|Location2.Y=1629.37mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2110.097mil|Location2.X=2119.221mil|Location1.Y=1620.245mil|Location2.Y=1629.37mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.179mm &lt; 0.2mm) Between Pad C16-2(17.147mm,22.434mm) on Bottom Layer And Track (16.671mm,21.762mm)(17.623mm,21.762mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.179mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3174.989mil|Location2.X=3184.113mil|Location1.Y=2531.305mil|Location2.Y=2540.429mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3174.989mil|Location2.X=3184.113mil|Location1.Y=2531.305mil|Location2.Y=2540.429mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.179mm &lt; 0.2mm) Between Pad C19-1(44.195mm,44.537mm) on Bottom Layer And Track (43.719mm,45.209mm)(44.671mm,45.209mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.179mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3174.989mil|Location2.X=3184.113mil|Location1.Y=2557.351mil|Location2.Y=2566.475mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3174.989mil|Location2.X=3184.113mil|Location1.Y=2557.351mil|Location2.Y=2566.475mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.179mm &lt; 0.2mm) Between Pad C19-2(44.195mm,46.237mm) on Bottom Layer And Track (43.719mm,45.565mm)(44.671mm,45.565mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.179mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3082.466mil|Location2.X=3091.59mil|Location1.Y=2606.505mil|Location2.Y=2615.629mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3082.466mil|Location2.X=3091.59mil|Location1.Y=2606.505mil|Location2.Y=2615.629mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.045mm &lt; 0.2mm) Between Pad C20-2(41.931mm,46.297mm) on Bottom Layer And Text "C20" (41.873mm,49.785mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.045mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2269.714mil|Location2.X=2278.838mil|Location1.Y=1092.846mil|Location2.Y=1101.97mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2269.714mil|Location2.X=2278.838mil|Location1.Y=1092.846mil|Location2.Y=1101.97mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.129mm &lt; 0.2mm) Between Pad C3-1(20.903mm,8.005mm) on Bottom Layer And Text "C3" (21.915mm,9.71mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.129mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2257.975mil|Location2.X=2267.099mil|Location1.Y=1052.142mil|Location2.Y=1061.266mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2257.975mil|Location2.X=2267.099mil|Location1.Y=1052.142mil|Location2.Y=1061.266mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.179mm &lt; 0.2mm) Between Pad C3-1(20.903mm,8.005mm) on Bottom Layer And Track (20.427mm,7.332mm)(21.379mm,7.332mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.179mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2272.939mil|Location2.X=2282.063mil|Location1.Y=986.989mil|Location2.Y=996.113mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2272.939mil|Location2.X=2282.063mil|Location1.Y=986.989mil|Location2.Y=996.113mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.048mm &lt; 0.2mm) Between Pad C3-2(20.903mm,6.305mm) on Bottom Layer And Text "C7" (20.998mm,5.679mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.048mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2293.237mil|Location2.X=2299.486mil|Location1.Y=1012.36mil|Location2.Y=1018.61mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2293.237mil|Location2.X=2299.486mil|Location1.Y=1012.36mil|Location2.Y=1018.61mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.2mm) Between Pad C3-2(20.903mm,6.305mm) on Bottom Layer And Text "C8" (22.316mm,6.605mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2257.975mil|Location2.X=2267.099mil|Location1.Y=1026.097mil|Location2.Y=1035.221mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2257.975mil|Location2.X=2267.099mil|Location1.Y=1026.097mil|Location2.Y=1035.221mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.179mm &lt; 0.2mm) Between Pad C3-2(20.903mm,6.305mm) on Bottom Layer And Track (20.427mm,6.977mm)(21.379mm,6.977mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.179mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2386.206mil|Location2.X=2392.456mil|Location1.Y=1114.524mil|Location2.Y=1120.773mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2386.206mil|Location2.X=2392.456mil|Location1.Y=1114.524mil|Location2.Y=1120.773mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.2mm) Between Pad C4-1(23.198mm,8.36mm) on Bottom Layer And Text "C4" (24.126mm,9.158mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2339.453mil|Location2.X=2348.577mil|Location1.Y=1010.923mil|Location2.Y=1020.047mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2339.453mil|Location2.X=2348.577mil|Location1.Y=1010.923mil|Location2.Y=1020.047mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.156mm &lt; 0.2mm) Between Pad C4-2(23.198mm,6.46mm) on Bottom Layer And Text "C8" (22.316mm,6.605mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.156mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2425.795mil|Location2.X=2434.919mil|Location1.Y=914.554mil|Location2.Y=923.678mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2425.795mil|Location2.X=2434.919mil|Location1.Y=914.554mil|Location2.Y=923.678mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.179mm &lt; 0.2mm) Between Pad C5-1(25.166mm,4.51mm) on Bottom Layer And Track (24.689mm,3.838mm)(25.642mm,3.838mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.179mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2425.795mil|Location2.X=2434.919mil|Location1.Y=888.508mil|Location2.Y=897.632mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2425.795mil|Location2.X=2434.919mil|Location1.Y=888.508mil|Location2.Y=897.632mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.179mm &lt; 0.2mm) Between Pad C5-2(25.166mm,2.81mm) on Bottom Layer And Track (24.689mm,3.482mm)(25.642mm,3.482mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.179mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2246.701mil|Location2.X=2255.825mil|Location1.Y=910.113mil|Location2.Y=919.237mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2246.701mil|Location2.X=2255.825mil|Location1.Y=910.113mil|Location2.Y=919.237mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.017mm &lt; 0.2mm) Between Pad C7-1(20.241mm,3.419mm) on Bottom Layer And Text "C7" (20.998mm,5.679mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.017mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2231.915mil|Location2.X=2241.039mil|Location1.Y=871.626mil|Location2.Y=880.75mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2231.915mil|Location2.X=2241.039mil|Location1.Y=871.626mil|Location2.Y=880.75mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.179mm &lt; 0.2mm) Between Pad C7-1(20.241mm,3.419mm) on Bottom Layer And Track (19.765mm,2.747mm)(20.717mm,2.747mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.179mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2231.915mil|Location2.X=2241.039mil|Location1.Y=845.581mil|Location2.Y=854.705mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2231.915mil|Location2.X=2241.039mil|Location1.Y=845.581mil|Location2.Y=854.705mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.179mm &lt; 0.2mm) Between Pad C7-2(20.241mm,1.719mm) on Bottom Layer And Track (19.765mm,2.392mm)(20.717mm,2.392mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.179mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2037.507mil|Location2.X=2046.631mil|Location1.Y=866.848mil|Location2.Y=875.972mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2037.507mil|Location2.X=2046.631mil|Location1.Y=866.848mil|Location2.Y=875.972mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.179mm &lt; 0.2mm) Between Pad C9-1(15.303mm,3.298mm) on Bottom Layer And Track (14.827mm,2.626mm)(15.779mm,2.626mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.179mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2037.507mil|Location2.X=2046.631mil|Location1.Y=840.803mil|Location2.Y=849.927mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2037.507mil|Location2.X=2046.631mil|Location1.Y=840.803mil|Location2.Y=849.927mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.179mm &lt; 0.2mm) Between Pad C9-2(15.303mm,1.598mm) on Bottom Layer And Track (14.827mm,2.27mm)(15.779mm,2.27mm) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0.179mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDV4V0M5VJ4WGDPUOQBJGVMNTI5C2FP4DSC4VPA4OYN0IWR52VKZH"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk to Silk (Clearance=0.2mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2285.764mil|Location2.X=2294.888mil|Location1.Y=971.566mil|Location2.Y=980.69mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2285.764mil|Location2.X=2294.888mil|Location1.Y=971.566mil|Location2.Y=980.69mil|Absolute=True">Silk To Silk Clearance Constraint: (0.064mm &lt; 0.2mm) Between Text "C7" (20.998mm,5.679mm) on Bottom Overlay And Text "C8" (22.316mm,6.605mm) on Bottom Overlay Silk Text to Silk Clearance [0.064mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2296.221mil|Location2.X=2305.345mil|Location1.Y=1026.006mil|Location2.Y=1035.13mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2296.221mil|Location2.X=2305.345mil|Location1.Y=1026.006mil|Location2.Y=1035.13mil|Absolute=True">Silk To Silk Clearance Constraint: (0.195mm &lt; 0.2mm) Between Text "C8" (22.316mm,6.605mm) on Bottom Overlay And Track (20.427mm,6.977mm)(21.379mm,6.977mm) on Bottom Overlay Silk Text to Silk Clearance [0.195mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2328.497mil|Location2.X=2337.621mil|Location1.Y=1022.53mil|Location2.Y=1031.654mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2328.497mil|Location2.X=2337.621mil|Location1.Y=1022.53mil|Location2.Y=1031.654mil|Absolute=True">Silk To Silk Clearance Constraint: (0.063mm &lt; 0.2mm) Between Text "C8" (22.316mm,6.605mm) on Bottom Overlay And Track (22.298mm,6.81mm)(22.298mm,8.41mm) on Bottom Overlay Silk Text to Silk Clearance [0.063mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3142.851mil|Location2.X=3151.975mil|Location1.Y=2069.786mil|Location2.Y=2078.91mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3142.851mil|Location2.X=3151.975mil|Location1.Y=2069.786mil|Location2.Y=2078.91mil|Absolute=True">Silk To Silk Clearance Constraint: (0.187mm &lt; 0.2mm) Between Text "georges.gielen@kuleuven.be" (42.273mm,36.681mm) on Top Overlay And Text "maria.rosa@kuleuven.be" (43.06mm,36.661mm) on Top Overlay Silk Text to Silk Clearance [0.187mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3261.895mil|Location2.X=3271.019mil|Location1.Y=2538.671mil|Location2.Y=2547.795mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3261.895mil|Location2.X=3271.019mil|Location1.Y=2538.671mil|Location2.Y=2547.795mil|Absolute=True">Silk To Silk Clearance Constraint: (0.143mm &lt; 0.2mm) Between Text "VDD_OTA" (45.929mm,47.207mm) on Bottom Overlay And Track (46.272mm,42.144mm)(46.272mm,49.565mm) on Bottom Overlay Silk Text to Silk Clearance [0.143mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDQUBXPMJWXAUSIDTN3D4HSXVE2G2DJZOK2RAPNAF40H2DBORW2ZPJ"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Net Antennae (Tolerance=0mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1977.603mil|Location2.X=1995.664mil|Location1.Y=1889.671mil|Location2.Y=1914.754mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1977.603mil|Location2.X=1995.664mil|Location1.Y=1889.671mil|Location2.Y=1914.754mil|Absolute=True">Net Antennae: Track (13.365mm,28.794mm)(13.365mm,36.406mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1995.319mil|Location2.X=2013.38mil|Location1.Y=1891.421mil|Location2.Y=1916.504mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1995.319mil|Location2.X=2013.38mil|Location1.Y=1891.421mil|Location2.Y=1916.504mil|Absolute=True">Net Antennae: Track (13.815mm,28.839mm)(13.815mm,28.839mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2013.075mil|Location2.X=2031.136mil|Location1.Y=1889.413mil|Location2.Y=1914.496mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2013.075mil|Location2.X=2031.136mil|Location1.Y=1889.413mil|Location2.Y=1914.496mil|Absolute=True">Net Antennae: Track (14.266mm,28.787mm)(14.266mm,35.61mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2030.811mil|Location2.X=2048.872mil|Location1.Y=1889.393mil|Location2.Y=1914.476mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2030.811mil|Location2.X=2048.872mil|Location1.Y=1889.393mil|Location2.Y=1914.476mil|Absolute=True">Net Antennae: Track (14.717mm,28.787mm)(14.718mm,28.788mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2951.736mil|Location2.X=2969.797mil|Location1.Y=1773.055mil|Location2.Y=1798.138mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2951.736mil|Location2.X=2969.797mil|Location1.Y=1773.055mil|Location2.Y=1798.138mil|Absolute=True">Net Antennae: Track (37.645mm,25.832mm)(38.108mm,25.832mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1946.5mil|Location2.X=1964.56mil|Location1.Y=1780.929mil|Location2.Y=1806.012mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1946.5mil|Location2.X=1964.56mil|Location1.Y=1780.929mil|Location2.Y=1806.012mil|Absolute=True">Net Antennae: Track (7.522mm,26.032mm)(12.575mm,26.032mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1946.421mil|Location2.X=1964.482mil|Location1.Y=1763.211mil|Location2.Y=1788.294mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1946.421mil|Location2.X=1964.482mil|Location1.Y=1763.211mil|Location2.Y=1788.294mil|Absolute=True">Net Antennae: Track (8.79mm,25.582mm)(12.573mm,25.582mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1945.299mil|Location2.X=1963.317mil|Location1.Y=1807.542mil|Location2.Y=1832.554mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=U:\Desktop\Testboard\demo_dermis_chip1_package\demo_dermis_chip1_package.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1945.299mil|Location2.X=1963.317mil|Location1.Y=1807.542mil|Location2.Y=1832.554mil|Absolute=True">Net Antennae: Track (8.844mm,26.707mm)(12.544mm,26.707mm) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

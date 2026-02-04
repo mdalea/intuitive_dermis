@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=CT_MODE Pin=J19-93
+Removed Pin From Net: NetName=GND Pin=J19-94
+Added Pin To Net: NetName=GND Pin=J19-93
+Added Pin To Net: NetName=CT_MODE Pin=J19-94
